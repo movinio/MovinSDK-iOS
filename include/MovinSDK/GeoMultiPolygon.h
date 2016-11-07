@@ -13,12 +13,19 @@
 /**
  * @abstract Contains the polygons of this collection.
  */
-@property(readonly, nonnull) NSArray<GeoPolygon *>* polygons;
+@property(readonly, nonnull) NSArray<GeoPolygon*>* polygons;
 
 /**
  * @abstract Initializes a GeoMultiPolygon with the specified polygons.
  * @param polygons The polygons to initialize the collection with.
  * @return A GeoMultiPolygon object containing the specified collection of polygons.
  */
-- initWithPolygons:(nonnull NSArray<GeoPolygon *>*)polygons;
+- (nonnull id)initWithPolygons:(nonnull NSArray<GeoPolygon*>*)polygons;
+
+/**
+ * @abstract Returns a value indicating whether this instance and the specified GeoMultiPolygon.
+ * @param multiPolygon The other GeoMultiPolygon.
+ * @return YES if the values are equal, NO otherwise.
+ */
+- (BOOL)isEqualToMultiPolygon:(nonnull GeoMultiPolygon*)multiPolygon;
 @end

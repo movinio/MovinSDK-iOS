@@ -12,12 +12,19 @@
 /**
  * @abstract Contains the rings of this polygon.
  */
-@property(readonly, nonnull) NSArray<GeoLinearRing *> *rings;
+@property(readonly, nonnull) NSArray<GeoLinearRing*>* rings;
 
 /**
  * @abstract Initializes a GeoPolygon with the specified rings.
  * @param points The rings to initialize the ring with.
  * @return A GeoPolygon object containing the specified rings.
  */
-- (nonnull id)initWithRings:(nonnull NSArray<GeoLinearRing *>*)rings;
+- (nonnull id)initWithRings:(nonnull NSArray<GeoLinearRing*>*)rings;
+
+/**
+ * @abstract Returns a value indicating whether this instance and the specified GeoPolygon.
+ * @param polygon The other GeoPolygon.
+ * @return YES if the values are equal, NO otherwise.
+ */
+- (BOOL)isEqualToPolygon:(nonnull GeoPolygon*)polygon;
 @end

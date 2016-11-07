@@ -14,15 +14,15 @@
 /**
  * @abstract Gets the latitude of this geo coordinate.
  */
-@property (readonly) double lat;
+@property(readonly) double lat;
 /**
  * @abstract Gets the longitude of this geo coordinate.
  */
-@property (readonly) double lng;
+@property(readonly) double lng;
 /**
  * @abstract Gets a CLLocationCoordinate2D instance representing the same geographical coordinate.
  */
-@property (readonly) CLLocationCoordinate2D CLLocation;
+@property(readonly) CLLocationCoordinate2D CLLocation;
 
 /**
  * @abstract Initializes a new GeoLatLng coordinate with a latitude and longitude values.
@@ -30,7 +30,22 @@
  * @param lng The longitude.
  * @return A GeoLatLng object with the specified latitude and longitude values.
  */
--(id) initWithLat:(double) lat andLng:(double) lng;
+- (nonnull id)initWithLat:(double)lat
+                   andLng:(double)lng;
 
+/**
+ * @abstract Returns a value indicating whether this instance and the specified GeoLatLng.
+ * @param latLng The other GeoLatLng.
+ * @return YES if the values are equal, NO otherwise.
+ */
+- (BOOL)isEqualToLatLng:(nullable GeoLatLng*)latLng;
+
+/**
+ * @abstract Returns a newly created point with the specified latitude and longitude
+ * @param lat The latitude of the point.
+ * @param lng The longitude of the point.
+ * @return A newly created point with the specified latitude and longitude
+ */
++ (nonnull GeoLatLng*)pointWithLat:(double)lat andLng:(double)lng;
 @end
 

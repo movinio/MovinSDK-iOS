@@ -32,7 +32,14 @@
  * @abstract Gets the zoom levels available in this layer.
  */
 @property(nonnull, readonly) NSDictionary<NSNumber*, MovinMapZoomLevel*>* zoomLevels;
-
+/**
+ * @abstract Gets minimum zoom level available for this layer.
+ */
+@property(readonly) float minZoomLevel;
+/**
+ * @abstract Gets the maximum zoom level available for this layer.
+ */
+@property(readonly) float maxZoomLevel;
 /**
  * @abstract Initializes a new MovinMapLayer object with the specified tile manifest, name, tile width, tile height and zoom levels.
  * @param name The name of the layer.

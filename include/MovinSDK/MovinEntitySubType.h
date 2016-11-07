@@ -11,6 +11,7 @@
 
 
 @class UIImage;
+@class MovinScaledPOIUrl;
 
 @interface MovinEntitySubType : MovinDataObject
 /**
@@ -33,13 +34,19 @@
  * @abstract Gets the size of the point of interest image specified in poiUrl.
  */
 @property(readonly, nullable) MovinImagePoint* poiSize;
-
 /**
- * @abstract Initializes a new MovinEntitySubType object with the specified JSON data.
- * @param json The JSON data.
- * @return A MovinEntitySubType object with the specified JSON data.
+ * @abstract Gets a value indicating whether this sub type has scaled POI values.
  */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)json;
+@property(readonly) BOOL hasScaledPois;
+@property(readonly, nullable) NSArray<MovinScaledPOIUrl*>* scaledPoiUrls;
+/**
+ * @abstract Initializes a new MovinEntitySubType object with the specified name and base type name.
+ * @param name The name of the sub type.
+ * @param baseType The name of the base type.
+ * @return A MovinEntitySubType object with the specified name and base type.
+ */
+- (nonnull id)initWithName:(nullable NSString*)name
+               andBaseType:(nullable NSString*)baseType;
 
 /**
  * @abstract Returns the POI image of this sub type.

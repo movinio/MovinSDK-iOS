@@ -12,12 +12,19 @@
 /**
  * @abstract Contains the points of this collection.
  */
-@property(readonly, nonnull) NSArray<GeoLatLng *> *points;
+@property(readonly, nonnull) NSArray<GeoLatLng*>* points;
 
 /**
  * @abstract Initializes a GeoMultiPoint with the specified points.
  * @param points The points to initialize the collection with.
  * @return A GeoMultiPoint object containing the specified collection of points.
  */
-- initWithPoints:(nonnull NSArray<GeoLatLng *> *)points;
+- (nonnull id)initWithPoints:(nonnull NSArray<GeoLatLng*>*)points;
+
+/**
+ * @abstract Returns a value indicating whether this instance and the specified GeoMultiPoint.
+ * @param multiPoint The other GeoMultiPoint.
+ * @return YES if the values are equal, NO otherwise.
+ */
+- (BOOL)isEqualToMultiPoint:(nonnull GeoMultiPoint*)multiPoint;
 @end

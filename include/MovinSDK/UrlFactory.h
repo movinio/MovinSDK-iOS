@@ -20,9 +20,6 @@
 
 + (void)setApikey:(NSString*)apikey;
 
-+ (void)setUseHttps:(BOOL)useHttps;
-
-
 // Core
 + (NSString*)getBaseURL;
 
@@ -35,6 +32,8 @@
 + (NSString*)getMapUrlForMap:(MovinMap*)map
                 andBuildings:(BOOL)buildings
                  andEntities:(BOOL)entities;
+
++ (NSString*)getStylesUrl;
 
 + (NSString*)getBeaconGroupsURLForMap:(MovinMap*)map
                            andBeacons:(BOOL)beacons;

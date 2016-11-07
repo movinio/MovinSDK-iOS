@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MovinFeatureObject.h"
+#import "MovinSDKCore.h"
 
 @class MovinEntitySubType;
 @class MovinPositioningEngine;
@@ -18,13 +19,14 @@
 @class MovinBuilding;
 @class MovinTileProvider;
 @class MovinTileManifest;
+@class MovinTileStyle;
 
-typedef void(^DownloadDataCallback)(BOOL success, NSError* _Nullable error);
 typedef void(^BeaconGroupsCallback)(NSArray<MovinBeaconGroup*>* _Nullable beaconGroups, NSError* _Nullable error);
 typedef void(^BeaconsCallback)(NSArray<MovinBeacon*>* _Nullable beacons, NSError* _Nullable error);
 typedef void(^BuildingsCallback)(NSArray<MovinBuilding*>* _Nullable buildings, NSError* _Nullable error);
 typedef void(^EntitiesCallback)(NSArray<MovinEntity*>* _Nullable entities, NSError* _Nullable error);
 typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, NSError* _Nullable error);
+typedef void(^TileStylesCallback)(NSArray<MovinTileStyle*>* _Nullable tileStyles, NSError* _Nullable error);
 
 @interface MovinMap : MovinFeatureObject
 
@@ -85,14 +87,14 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
 - (void)downloadBeaconDataWithCallback:(nullable DownloadDataCallback)callback;
 
 /**
- * @abstract Attempts to download the map data. After downloading the data the callback, if present, will be invoked.
+ * @abstract Attempts to download the map data. After downloading the data, the callback, if present, will be invoked.
  * If the data has already been loaded the callback will be invoked immediately.
  * @param callback The callback to invoke once the downloading has been completed.
  */
 - (void)downloadMapDataWithCallback:(nullable DownloadDataCallback)callback;
 
 /**
- * @abstract Attempts to download the tile manifest. After downloading the file the callback, if present, will be
+ * @abstract Attempts to download the tile manifest. After downloading the file, the callback, if present, will be
  * invoked. If the manifest has already been loaded the callback will be invoked immediately.
  * @param callback The callback to invoke once the downloading has been completed.
  */

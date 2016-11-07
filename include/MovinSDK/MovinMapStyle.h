@@ -8,6 +8,7 @@
 @class MovinTileManifest;
 @class MovinTileProvider;
 @class MovinMapLayer;
+@class MovinTileStyle;
 
 
 @interface MovinMapStyle : NSObject
@@ -15,6 +16,12 @@
  * @abstract Gets the tile manifest this layer is a member of.
  */
 @property(nullable, readonly, weak) MovinTileManifest* tileManifest;
+
+/**
+ * @abstract Gets the associated map style.
+ */
+@property(nullable, readonly) MovinTileStyle* tileStyle;
+
 /**
  * @abstract Gets the name of this layer.
  */

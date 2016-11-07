@@ -40,6 +40,7 @@
 #import <MovinSDK/MovinTileProvider.h>
 #import <MovinSDK/MovinFloorChangedListener.h>
 #import <MovinSDK/MovinImagePoint.h>
+#import <MovinSDK/MovinScaledPOIUrl.h>
 
 #import <MovinSDK/MovinMapStyle.h>
 #import <MovinSDK/MovinMapLayer.h>
@@ -56,11 +57,7 @@
 // Positioning Engine
 #import <MovinSDK/MovinPositioner.h>
 #import <MovinSDK/MovinPositioningEngine.h>
-
-//
-// Routing Manager
-//#import <MovinSDK/MovinRoutingManager.h>
-//#import <MovinSDK/Route.h>
+#import <MovinSDK/MovinSmoothCompass.h>
 
 //
 // Analytics
@@ -69,3 +66,11 @@
 //
 // UI
 #import <MovinSDK/MovinFloorSwitcher.h>
+
+//
+// Tile Style
+#import <MovinSDK/MovinFontFamily.h>
+#import <MovinSDK/MovinTileStyle.h>
+#import <MovinSDK/MovinTileStyleLayer.h>
+#import <MovinSDK/MovinTileStyleRule.h>
+#import <MovinSDK/MovinTileStyleTextRule.h>

@@ -11,6 +11,7 @@
 @class MovinCacheProtocol;
 @class MovinMap;
 @class MovinBeaconScanner;
+@class MovinTileStyle;
 
 /**
  * @typedef MovinService
@@ -55,6 +56,9 @@ typedef enum {
     MovinCacheableDataAll = 63
 } MovinCacheableData;
 
+// Handler for async requests
+typedef void(^DownloadDataCallback)(BOOL success, NSError* _Nullable error);
+
 @interface MovinSDK : NSObject
 /**
  * @abstract Initializes the MovinSDK, which validates the given customer and apikey. The device will be checked for compatibility with Bluetooth Low Energy and some primary components are initialized.
@@ -83,8 +87,9 @@ typedef enum {
 // Constructors
 /**
  * @abstract Returns the singleton instance of MovinBeaconScanner.
- * @param error A pointer to a NSError object. This error will be given a value if an error has occurred. An error may occur if the SDK has not yet been initialized.
- * @return The singleton instance of MovinBeaconScanner
+ * @param error A pointer to a NSError object. This error will be given a value if an error has occurred. An error may
+ * occur if the SDK has not yet been initialized or if bluetooth is not available.
+ * @return The singleton instance of MovinBeaconScanner.
  */
 +(nullable MovinBeaconScanner*) getBeaconScanner:(NSError* _Nullable * _Nullable) error;
 
@@ -104,6 +109,24 @@ typedef enum {
  */
 +(nullable MovinMap*) getMapWithId: (nonnull NSString *)id andError: (NSError* _Nullable * _Nullable) error;
 
+// Styles
+/**
+ * @abstract Returns a collection of available styles.
+ * @param error A pointer to a NSError object. This error will be given a value if an error has occurred.
+ * @return A collection of available styles.
+ */
++ (nullable NSArray<MovinTileStyle*>*)getStyles:(NSError* _Nullable * _Nullable)error;
+
+/**
+ * @abstract Returns a MovinTileStyle object with the specified name. If the specified name is not available an error
+ * is set.
+ * @param name The name of the style.
+ * @param error A pointer to a NSError object. This error will be given a value if an error has occurred.
+ * @return A MovinTileStyle object with the specified name. If the specified id is not available an error is set.
+ */
++ (nullable MovinTileStyle*)getStyleWithName:(nonnull NSString*)name
+                           andError:(NSError* _Nullable * _Nullable)error;
+
 // Status getters
 /**
  * @abstract Returns whether or not the MovinSDK has already been initialized or not.
@@ -118,9 +141,9 @@ typedef enum {
 +(BOOL) getServiceSupported:(MovinService) service;
 
 // Caching
-///**
-// * @abstract Clears the cached files stored by the Movin SDK.
-// */
+/**
+ * @abstract Clears the cached files stored by the Movin SDK.
+ */
 +(void) clearCache;
 
 /**

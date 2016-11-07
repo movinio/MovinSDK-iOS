@@ -29,6 +29,16 @@
 @property(nonnull, readonly) NSDictionary<NSString*, MovinMapStyle*>* styles;
 
 /**
+ * @abstract Gets the default layer.
+ */
+@property(nonnull, readonly) MovinMapLayer* defaultLayer;
+
+/**
+ * @abstract Gets the default style.
+ */
+@property(nonnull, readonly) MovinMapStyle* defaultStyle;
+
+/**
  * @abstract Initializes a new MovinTileManifest object with the specified version, map, layers and styles.
  * @param version The version number of the latest tile package.
  * @param map The map of which the tile manifest represents the tiles.

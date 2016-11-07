@@ -12,12 +12,19 @@
 /**
  * @abstract Contains the points of this line string.
  */
-@property(readonly, nonnull) NSArray<GeoLatLng *> *points;
+@property(readonly, nonnull) NSArray<GeoLatLng*>* points;
 
 /**
  * @abstract Initializes a GeoLinearRing with the specified points.
  * @param points The points to initialize the ring with.
  * @return A GeoLinearRing object containing the specified points.
  */
-- initWithPoints:(nonnull NSArray<GeoLatLng *> *)points;
+- (nonnull id)initWithPoints:(nonnull NSArray<GeoLatLng*>*)points;
+
+/**
+ * @abstract Returns a value indicating whether this instance and the specified GeoLineString.
+ * @param lineString The other GeoLineString.
+ * @return YES if the values are equal, NO otherwise.
+ */
+- (BOOL)isEqualToLineString:(nonnull GeoLineString*)lineString;
 @end

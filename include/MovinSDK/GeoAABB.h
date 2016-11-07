@@ -40,16 +40,42 @@
  */
 @property(readonly) double size;
 /**
+ * @abstract Gets the top-left coordinates.
+ */
+@property(readonly, nonnull) GeoLatLng* topLeft;
+/**
+ * @abstract Gets the top-right coordinates.
+ */
+@property(readonly, nonnull) GeoLatLng* topRight;
+/**
+ * @abstract Gets the bottom-left coordinates.
+ */
+@property(readonly, nonnull) GeoLatLng* bottomLeft;
+/**
+ * @abstract Gets the bottom-right coordinates.
+ */
+@property(readonly, nonnull) GeoLatLng* bottomRight;
+
+/**
  * @abstract Initializes a new GeoAABB object with the specified origin and size.
  * @param origin The origin.
  * @param width The width.
  * @param height The height.
  * @returns An GeoAABB object with the specified origin and size.
  */
-- (nonnull id)initWithOrigin:(nonnull GeoLatLng*)origin andWidth:(double)width andHeight:(double)height;
+- (nonnull id)initWithOrigin:(nonnull GeoLatLng*)origin
+                    andWidth:(double)width
+                   andHeight:(double)height;
 
 /**
  * Gets a value indicating whether the specified box intersects with this instance.
  */
-- (BOOL)intersectsWithAABB:(nonnull GeoAABB*) box;
+- (BOOL)intersectsWithAABB:(nonnull GeoAABB*)box;
+
+/**
+ * @abstract Returns a value indicating whether this instance and the specified GeoAABB.
+ * @param aabb The other GeoAABB.
+ * @return YES if the values are equal, NO otherwise.
+ */
+- (BOOL)isEqualToAABB:(nonnull GeoAABB*)aabb;
 @end

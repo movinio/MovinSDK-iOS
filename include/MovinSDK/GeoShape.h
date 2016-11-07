@@ -42,6 +42,13 @@
 - (BOOL)containsPoint:(nonnull GeoLatLng*)point;
 
 /**
+ * @abstract Returns a value indicating whether the specified shape is completely encased within the boundaries of this shape.
+ * @param shape The shape for which to check whether it's inside the boundaries of this shape.
+ * @return YES if the shape is located within the boundaries of this shape; NO otherwise.
+ */
+- (BOOL)containsShape:(nonnull GeoShape*)shape;
+
+/**
  * @abstract Returns a value indicating whether the specified line intersects with this shape.
  * @param start The starting point of the line.
  * @param end The end point of the line.

@@ -4,12 +4,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BeaconIdentifier.h"
 #import "MovinDataObject.h"
 
 @class MovinBeaconGroup;
 @class GeoLatLng;
 @class FloorPosition;
+@class BeaconIdentifier;
 
 @interface MovinBeacon : MovinDataObject
 /**

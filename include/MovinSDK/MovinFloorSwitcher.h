@@ -47,22 +47,22 @@
  * @abstract Gets or sets the margin between the floor switcher button and the floors list.
  */
 @property float margin;
-
 /**
  * @abstract Gets or sets the duration of the floors list.
  */
 @property float animationDuration;
-
 /**
  * @abstract Gets or sets the tile provider this instance will switch the floor of.
  */
 @property MovinTileProvider* tileProvider;
-
 /**
  * @abstract Gets or sets a value indicating whether the floors list is visible (YES) or hidden (NO).
  */
 @property BOOL isOpen;
-
+/**
+ * @abstract Gets or sets a value indicating whether the floor switcher is enabled and visible.
+ */
+@property BOOL enabled;
 /**
  * @abstract Initializes a new MovinFloorSwitcher object with the specified tile provider.
  * @param tileProvider The tile provider to switch the floor of.
