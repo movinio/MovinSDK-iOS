@@ -13,34 +13,42 @@
 @class UIImage;
 @class MovinScaledPOIUrl;
 
+/**
+ * @class MovinEntitySubType
+ * @brief Represents a (sub-)type of an entity.
+ */
 @interface MovinEntitySubType : MovinDataObject
 /**
- * @abstract Gets the base type of this sub type.
+ * @brief Gets the base type of this sub type.
  */
 @property(readonly, nonnull) NSString* baseType;
 /**
- * @abstract Gets the description of this sub type.
+ * @brief Gets the description of this sub type.
  */
 @property(readonly, nullable) NSString* descriptionText;
 /**
- * @abstract Gets the point of interest image URL of this sub type.
+ * @brief Gets the point of interest image URL of this sub type.
  */
 @property(readonly, nullable) NSString* poiUrl;
 /**
- * @abstract Gets the anchor location of the point of interest image specified in poiUrl. The x and y values range between 0.0 and 1.0.
+ * @brief Gets the anchor location of the point of interest image specified in poiUrl. The x and y values range between 0.0 and 1.0.
  */
 @property(readonly, nullable) MovinImagePoint* poiAnchor;
 /**
- * @abstract Gets the size of the point of interest image specified in poiUrl.
+ * @brief Gets the size of the point of interest image specified in poiUrl.
  */
 @property(readonly, nullable) MovinImagePoint* poiSize;
 /**
- * @abstract Gets a value indicating whether this sub type has scaled POI values.
+ * @brief Gets a value indicating whether this sub type has scaled POI values.
  */
 @property(readonly) BOOL hasScaledPois;
-@property(readonly, nullable) NSArray<MovinScaledPOIUrl*>* scaledPoiUrls;
 /**
- * @abstract Initializes a new MovinEntitySubType object with the specified name and base type name.
+ * @brief Gets the URLs of the scaled POI images.
+ */
+@property(readonly, nullable) NSArray<MovinScaledPOIUrl*>* scaledPoiUrls;
+
+/**
+ * @brief Initializes a new MovinEntitySubType object with the specified name and base type name.
  * @param name The name of the sub type.
  * @param baseType The name of the base type.
  * @return A MovinEntitySubType object with the specified name and base type.
@@ -49,8 +57,8 @@
                andBaseType:(nullable NSString*)baseType;
 
 /**
- * @abstract Returns the POI image of this sub type.
+ * @brief Returns the POI image of this sub type.
  * @param callback The callback which will be invoked once the POI image has been downloaded.
  */
-- (void)getPoiImage:(nonnull void(^)(UIImage* _Nullable image, NSError* _Nullable error))callback;
+- (void)getPoiImage:(nonnull void (^)(UIImage* _Nullable image, NSError* _Nullable error))callback;
 @end

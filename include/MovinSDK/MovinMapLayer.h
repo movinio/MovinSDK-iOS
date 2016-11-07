@@ -11,37 +11,42 @@
 @class MovinMapStyle;
 @class MovinTileManifest;
 
+/**
+ * @class MovinMapLayer
+ * @brief Represents a tile layer of a map.
+ */
 @interface MovinMapLayer : NSObject
 /**
- * @abstract Gets the tile manifest this layer is a member of.
+ * @brief Gets the tile manifest this layer is a member of.
  */
 @property(nullable, readonly, weak) MovinTileManifest* tileManifest;
 /**
- * @abstract Gets the name of this layer.
+ * @brief Gets the name of this layer.
  */
 @property(nonnull, readonly) NSString* name;
 /**
- * @abstract Gets the width of the tiles in this layer.
+ * @brief Gets the width of the tiles in this layer.
  */
 @property(readonly) int tileWidth;
 /**
- * @abstract Gets the height of the tiles in this layer.
+ * @brief Gets the height of the tiles in this layer.
  */
 @property(readonly) int tileHeight;
 /**
- * @abstract Gets the zoom levels available in this layer.
+ * @brief Gets the zoom levels available in this layer.
  */
 @property(nonnull, readonly) NSDictionary<NSNumber*, MovinMapZoomLevel*>* zoomLevels;
 /**
- * @abstract Gets minimum zoom level available for this layer.
+ * @brief Gets minimum zoom level available for this layer.
  */
 @property(readonly) float minZoomLevel;
 /**
- * @abstract Gets the maximum zoom level available for this layer.
+ * @brief Gets the maximum zoom level available for this layer.
  */
 @property(readonly) float maxZoomLevel;
 /**
- * @abstract Initializes a new MovinMapLayer object with the specified tile manifest, name, tile width, tile height and zoom levels.
+ * @brief Initializes a new MovinMapLayer object with the specified tile manifest, name, tile width, tile height and zoom levels.
+ * @param tileManifest The tile manifest the layer is a member of.
  * @param name The name of the layer.
  * @param tileWidth The width of the tiles in the layer.
  * @param tileHeight The height of the tiles in the layer.
@@ -55,13 +60,13 @@
                      andZoomLevels:(nonnull NSDictionary<NSNumber*, MovinMapZoomLevel*>*)zoomLevels;
 
 /**
- * @abstract Create a MovinTileProvider for this layer with the specified style.
+ * @brief Create a MovinTileProvider for this layer with the specified style.
  */
 - (nullable MovinTileProvider*)createTileProviderWithStyle:(nonnull MovinMapStyle*)style
                                                   andError:(NSError* _Nullable* _Nullable)error;
 
 /**
- * @abstract Create a MovinTileProvider for this layer with the style with the specified name.
+ * @brief Create a MovinTileProvider for this layer with the style with the specified name.
  */
 - (nullable MovinTileProvider*)createTileProviderWithStyleName:(nonnull NSString*)styleName
                                                       andError:(NSError* _Nullable* _Nullable)error;

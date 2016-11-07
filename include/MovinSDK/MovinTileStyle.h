@@ -10,14 +10,18 @@
 @class MovinMap;
 @class MovinEntitySubType;
 
+/**
+ * @class MovinTileStyle
+ * @brief Represents a tile style.
+ */
 @interface MovinTileStyle : MovinDataObject
 /**
- * @abstract Gets the layers of this tile style.
+ * @brief Gets the layers of this tile style.
  */
 @property(readonly, nonnull) NSArray<MovinTileStyleLayer*>* layers;
 
 /**
- * @abstract Gets the layer for the specified sub type.
+ * @brief Gets the layer for the specified sub type.
  * @param subType The sub type to find the layer for.
  * @returns The found layer or nil if no layer could be found.
  */

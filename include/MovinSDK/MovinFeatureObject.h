@@ -8,15 +8,18 @@
 
 @class GeoShape;
 
-
+/**
+ * @class MovinFeatureObject
+ * @brief Represents a data object with a geometric shape.
+ */
 @interface MovinFeatureObject : MovinDataObject
 /**
- * @abstract Gets the geometric shape of this instance.
+ * @brief Gets the geometric shape of this instance.
  */
 @property(nonnull, readonly) GeoShape* geometry;
 
 /**
- * @abstract Initializes a new MovinFeatureObject object with the specified JSON data.
+ * @brief Initializes a new MovinFeatureObject object with the specified JSON data.
  * @param json The JSON data.
  * @return A MovinFeatureObject object with the specified JSON data.
  */

@@ -10,13 +10,17 @@
 @class MovinEntitySubType;
 @class MovinTileStyle;
 
+/**
+ * @class MovinTileStyleLayer
+ * @brief Represents a single layer in a tile style.
+ */
 @interface MovinTileStyleLayer : MovinDataObject
 /**
- * @abstract Gets the sub type this layer contains the rules of.
+ * @brief Gets the sub type this layer contains the rules of.
  */
 @property(readonly) MovinEntitySubType* subType;
 /**
- * @abstract Gets the rules associated with this layer.
+ * @brief Gets the rules associated with this layer.
  */
 @property(readonly) NSArray<MovinTileStyleRule*>* rules;
 @end

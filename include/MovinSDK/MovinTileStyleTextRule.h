@@ -8,35 +8,39 @@
 
 @class MovinFontFamily;
 
+/**
+ * @class MovinTileStyleTextRule
+ * @brief Represents a single text-style rule for a layer in a tile style.
+ */
 @interface MovinTileStyleTextRule : MovinTileStyleRule
 /**
- * @abstract Gets font size. How to translate this font size in an actual size is dependent on the
+ * @brief Gets font size. How to translate this font size in an actual size is dependent on the
  * `textScaling` property.
  */
 @property(readonly) float fontSize;
 /**
- * @abstract Gets the font family. This can either be a common font available on most devices or a font which must be
+ * @brief Gets the font family. This can either be a common font available on most devices or a font which must be
  * downloaded first.
  */
 @property(readonly) MovinFontFamily* fontFamily;
 /**
- * @abstract Gets a value indicating whether the font is bold.
+ * @brief Gets a value indicating whether the font is bold.
  */
 @property(readonly) BOOL isBold;
 /**
- * @abstract Gets a value indicating whether the font is italic.
+ * @brief Gets a value indicating whether the font is italic.
  */
 @property(readonly) BOOL isItalics;
 /**
- * @abstract Gets a value indicating whether the text has a text halo.
+ * @brief Gets a value indicating whether the text has a text halo.
  */
 @property(readonly) BOOL hasTextHalo;
 /**
- * @abstract Gets the color of the text halo.
+ * @brief Gets the color of the text halo.
  */
 @property(readonly) UIColor* textHaloColor;
 /**
- * @abstract Gets the width or thickness of the text halo.
+ * @brief Gets the width or thickness of the text halo.
  */
 @property(readonly) float textHaloWidth;
 

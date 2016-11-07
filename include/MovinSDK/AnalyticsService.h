@@ -8,25 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AnalyticsService : NSObject
-
 /**
- * @abstract Gets the number of updates which still need to be sent to the server.
+ * @class AnalyticsService
+ * @brief The analytics service which collects analytical data and sends it to the server.
+ */
+@interface AnalyticsService : NSObject
+/**
+ * @brief Gets the number of updates which still need to be sent to the server.
  */
 @property(readonly) NSUInteger pendingUpdates;
 /**
- * @abstract Returns the shared instance of the AnalyticsService, or nil if the state is false
+ * @brief Returns the shared instance of the AnalyticsService, or nil if the MovinSDK has not yet been initialized.
  */
 + (nullable AnalyticsService*)instance;
-
 /**
- * @abstract provides the AnalyticsID through the given callback. When the AnalyticsService is still busy with initializing, the callback is called once it is finished, otherwise it will be called immediately.
- * @param callback The callback to invoke once the AnalyticsService knows the AnalyticsID
+ * @brief provides the AnalyticsID through the given callback. The callback will be invoked when the initialization of
+ * the service has been finished. If the service has already been initialized, the callback is invoked immediately.
+ * @param callback The callback to invoke once the AnalyticsService knows the analytics id.
  */
 - (void)getAnalyticsIdWithCallback:(nullable void (^)(NSString* _Nullable analyticsId, NSError* _Nullable error))callback;
-
 /**
- * @abstract Sends all remaining updates to the server.
+ * @brief Sends all remaining updates to the server.
  */
 -(void)flushPendingUpdates;
 @end

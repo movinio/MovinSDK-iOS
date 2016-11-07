@@ -50,14 +50,17 @@
 //
 // Beacon Scanner
 #import <MovinSDK/MovinBeaconScanner.h>
+#import <MovinSDK/MovinBeaconScannerListener.h>
 #import <MovinSDK/MovinLocationManager.h>
 #import <MovinSDK/MovinRangedBeacon.h>
 
 //
 // Positioning Engine
 #import <MovinSDK/MovinPositioner.h>
+#import <MovinSDK/MovinPositioningListener.h>
 #import <MovinSDK/MovinPositioningEngine.h>
 #import <MovinSDK/MovinSmoothCompass.h>
+#import <MovinSDK/MovinSmoothCompassDelegate.h>
 
 //
 // Analytics

@@ -6,58 +6,62 @@
 #import <Foundation/Foundation.h>
 #import "GeoShape.h"
 
+/**
+ * @class GeoAABB
+ * @brief Represents a geographical axis aligned bounding box.
+ */
 @interface GeoAABB : GeoShape
 /**
- * @abstract Gets the origin of this axis aligned bounding box.
+ * @brief Gets the origin of this axis aligned bounding box.
  */
 @property(readonly, nonnull) GeoLatLng* origin;
 /**
- * @abstract Gets the width of this axis aligned bounding box.
+ * @brief Gets the width of this axis aligned bounding box.
  */
 @property(readonly) double width;
 /**
- * @abstract Gets the height of this axis aligned bounding box.
+ * @brief Gets the height of this axis aligned bounding box.
  */
 @property(readonly) double height;
 /**
- * @abstract Gets the leftmost longitude coordinate.
+ * @brief Gets the leftmost longitude coordinate.
  */
 @property(readonly) double leftLng;
 /**
- * @abstract Gets the rightmost longitude coordinate.
+ * @brief Gets the rightmost longitude coordinate.
  */
 @property(readonly) double rightLng;
 /**
- * @abstract Gets the topmost latitude coordinate.
+ * @brief Gets the topmost latitude coordinate.
  */
 @property(readonly) double topLat;
 /**
- * @abstract Gets the bottommost latitude coordinate.
+ * @brief Gets the bottommost latitude coordinate.
  */
 @property(readonly) double bottomLat;
 /**
- * @abstract Gets the size of this box.
+ * @brief Gets the size of this box.
  */
 @property(readonly) double size;
 /**
- * @abstract Gets the top-left coordinates.
+ * @brief Gets the top-left coordinates.
  */
 @property(readonly, nonnull) GeoLatLng* topLeft;
 /**
- * @abstract Gets the top-right coordinates.
+ * @brief Gets the top-right coordinates.
  */
 @property(readonly, nonnull) GeoLatLng* topRight;
 /**
- * @abstract Gets the bottom-left coordinates.
+ * @brief Gets the bottom-left coordinates.
  */
 @property(readonly, nonnull) GeoLatLng* bottomLeft;
 /**
- * @abstract Gets the bottom-right coordinates.
+ * @brief Gets the bottom-right coordinates.
  */
 @property(readonly, nonnull) GeoLatLng* bottomRight;
 
 /**
- * @abstract Initializes a new GeoAABB object with the specified origin and size.
+ * @brief Initializes a new GeoAABB object with the specified origin and size.
  * @param origin The origin.
  * @param width The width.
  * @param height The height.
@@ -73,7 +77,7 @@
 - (BOOL)intersectsWithAABB:(nonnull GeoAABB*)box;
 
 /**
- * @abstract Returns a value indicating whether this instance and the specified GeoAABB.
+ * @brief Returns a value indicating whether this instance and the specified GeoAABB.
  * @param aabb The other GeoAABB.
  * @return YES if the values are equal, NO otherwise.
  */

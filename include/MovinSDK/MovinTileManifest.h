@@ -9,10 +9,13 @@
 @class MovinMapLayer;
 @class MovinMapStyle;
 
-
+/**
+ * @class MovinTileManifest
+ * @brief Represents the tile manifest.
+ */
 @interface MovinTileManifest : NSObject
 /**
- * @abstract Gets the version number of the latest tile package.
+ * @brief Gets the version number of the latest tile package.
  */
 @property int version;
 /**
@@ -20,26 +23,26 @@
  */
 @property(nullable, readonly, weak) MovinMap* map;
 /**
- * @abstract Gets the available map layers for the map tiles.
+ * @brief Gets the available map layers for the map tiles.
  */
 @property(nonnull, readonly) NSDictionary<NSString*, MovinMapLayer*>* layers;
 /**
- * @abstract Gets the available map styles for the map tiles.
+ * @brief Gets the available map styles for the map tiles.
  */
 @property(nonnull, readonly) NSDictionary<NSString*, MovinMapStyle*>* styles;
 
 /**
- * @abstract Gets the default layer.
+ * @brief Gets the default layer.
  */
 @property(nonnull, readonly) MovinMapLayer* defaultLayer;
 
 /**
- * @abstract Gets the default style.
+ * @brief Gets the default style.
  */
 @property(nonnull, readonly) MovinMapStyle* defaultStyle;
 
 /**
- * @abstract Initializes a new MovinTileManifest object with the specified version, map, layers and styles.
+ * @brief Initializes a new MovinTileManifest object with the specified version, map, layers and styles.
  * @param version The version number of the latest tile package.
  * @param map The map of which the tile manifest represents the tiles.
  * @param layers The available map layers.

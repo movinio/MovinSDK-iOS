@@ -12,14 +12,30 @@
 @class MovinMapLayer;
 @class MovinMapStyle;
 
+/**
+ * @class MovinTileProvider
+ * @brief Provides tile images.
+ */
 @interface MovinTileProvider : NSObject
+/**
+ * @brief Gets the style of this tile provider.
+ */
 @property(nonnull, readonly) MovinMapStyle* style;
+/**
+ * @brief Gets the layer of this tile provider.
+ */
 @property(nonnull, readonly) MovinMapLayer* layer;
+/**
+ * @brief Gets or sets the floor the tile provider is currently providing tiles for.
+ */
 @property double floor;
+/**
+ * @brief Gets or sets whether this tile provider will follow the floor the device is currently located at.
+ */
 @property BOOL followFloor;
 
 /**
- * @abstract Initializes a new MovinTileProvider object with the specified layer and style.
+ * @brief Initializes a new MovinTileProvider object with the specified layer and style.
  * @param layer The map layer to provide tiles for.
  * @param style The map style to provide tiles for.
  * @return A MovinTileProvider object with the specified layer and style.
@@ -28,20 +44,20 @@
                    andStyle:(nonnull MovinMapStyle*)style;
 
 /**
- * @abstract Adds the specified floor changed listener to this instance. Once the active floor has changed, the
+ * @brief Adds the specified floor changed listener to this instance. Once the active floor has changed, the
  * listener will be notified.
  * @param listener An instance which implements the MovinFloorChangedListener protocol.
  */
 - (void)addFloorChangedListener:(nonnull id <MovinFloorChangedListener>)listener;
 
 /**
- * @abstract Removes the specified floor changed listener from this instance.
+ * @brief Removes the specified floor changed listener from this instance.
  * @param listener An instance which implements the MovinFloorChangedListener protocol.
  */
 - (void)removeFloorChangedListener:(nonnull id <MovinFloorChangedListener>)listener;
 
 /**
- * @abstract Gets the tile at the specified x, y and zoom. Once the tile has been loaded, the specified callback will
+ * @brief Gets the tile at the specified x, y and zoom. Once the tile has been loaded, the specified callback will
  * be invokes with the tile image or an error if the image failed to load. The tile image will be nil when no image is
  * available for the specified location or an error occurred.
  * @param x The X-coordinate of the tile.
