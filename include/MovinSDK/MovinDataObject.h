@@ -6,33 +6,34 @@
 #import <Foundation/Foundation.h>
 
 /**
- * @class MovinDataObject
- * @brief Represents an object which can be initialized with JSON data.
+ * Represents an object which can be initialized with JSON data.
  */
 @interface MovinDataObject : NSObject
 /**
- * @brief Gets the identity of this instance.
+ * Gets the identity of this instance.
  */
 @property(readonly, nonnull) NSString* id;
 /**
- * @brief Gets the name of this instance.
+ * Gets the name of this instance.
  */
 @property(readonly, nullable) NSString* name;
 
 /**
- * @brief Gets a collection of properties of this instance.
+ * Gets a collection of properties of this instance.
  */
 @property(readonly, nonnull) NSDictionary* properties;
 
 /**
- * @brief Initializes a new MovinDataObject object with the specified JSON data.
+ * Initializes a new MovinDataObject object with the specified JSON data.
+ *
  * @param json The JSON data.
  * @return A MovinDataObject object with the specified JSON data.
  */
 - (nonnull id)initWithJson:(nonnull NSDictionary*)json;
 
 /**
- * @brief Initializes a new MovinDataObject object with the specified JSON data and properties.
+ * Initializes a new MovinDataObject object with the specified JSON data and properties.
+ *
  * @param json The JSON data.
  * @param properties The properties of the instance.
  * @return A MovinDataObject object with the specified JSON data and properties.
@@ -41,8 +42,9 @@
              andProperties:(nonnull NSDictionary*)properties;
 
 /**
- * @brief Sets a callback which can be invoked to determine which image files should be downloaded and cached for the
+ * Sets a callback which can be invoked to determine which image files should be downloaded and cached for the
  * specified property key.
+ *
  * @code
  * [building setCacheableImageExtractorForKey:@"buildingImage" andCallback: ^(NSString* value){
  *     NSArray* result;

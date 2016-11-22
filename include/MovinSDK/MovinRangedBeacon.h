@@ -13,34 +13,34 @@
 @class BeaconIdentifier;
 
 /**
- * @class MovinRangedBeacon
- * @brief Represents a ranging result of a single beacon.
+ * Represents a ranging result of a single beacon.
  */
 @interface MovinRangedBeacon : NSObject
 
 /**
- * @brief Gets the associated MovinBeacon of this ranged beacon. Can be nil.
+ * Gets the associated MovinBeacon of this ranged beacon. Can be nil.
  */
 @property(readonly, nullable) MovinBeacon* beacon;
 /**
- * @brief Gets the estimated distance in meters of the device to this beacon.
+ * Gets the estimated distance in meters of the device to this beacon.
  */
 @property(readonly) double distance;
 /**
- * @brief Gets the signal strength in dBm with which this beacon was measured.
+ * Gets the signal strength in dBm with which this beacon was measured.
  */
 @property(readonly) int rssi;
 /**
- * @brief Gets the CLProximity of this beacon, this is one of IMMEDIATE, NEAR, FAR or UNKNOWN.
+ * Gets the CLProximity of this beacon, this is one of IMMEDIATE, NEAR, FAR or UNKNOWN.
  */
 @property(readonly) CLProximity proximity;
 /**
- * @brief Gets the beacon specific data, UUID, Major and Minor. Also accessible through the beacon property if that is not nil.
+ * Gets the beacon specific data, UUID, major and minor. Also accessible through the beacon property if that is not nil.
  */
 @property(readonly, nonnull) BeaconIdentifier* beaconIdentifier;
 
 /**
- * @brief Initializes a new MovinRangedBeacon.
+ * Initializes a new MovinRangedBeacon.
+ *
  * @param beacon The corresponding MovinBeacon.
  * @param distance The distance in meters. This is the accuracy parameter of a CLBeacon.
  * @param rssi The RSSI at which the beacon was measured in dBm.

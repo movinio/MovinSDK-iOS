@@ -7,13 +7,13 @@
 #import "MovinPositioningListener.h"
 
 /**
- * @class InlineMovinPositioningListener
- * @brief Inline positioning listener.
+ * Inline positioning listener.
  */
 @interface InlineMovinPositioningListener : NSObject<MovinPositioningListener>
 
 /**
- * @brief Initializes a new InlineMovinPositioningListener object.
+ * Initializes a new InlineMovinPositioningListener object.
+ *
  * @param initializedBlock Block to invoke once the positioner has been initialized.
  * @param updatedPositionBlock Block to invoke once the position has been updated.
  * @param lostConnectionBlock Block to invoke once the the connection has been lost.

@@ -15,7 +15,6 @@
 
 //
 // GeoJSON
-#import <MovinSDK/GeoJSON.h>
 #import <MovinSDK/GeoAABB.h>
 #import <MovinSDK/GeoShape.h>
 #import <MovinSDK/GeoGeometryCollection.h>

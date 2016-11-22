@@ -9,24 +9,25 @@
 @class GeoPolygon;
 
 /**
- * @class GeoMultiPolygon
- * @brief Represents a collection of geographical polygons.
+ * Represents a collection of geographical polygons.
  */
 @interface GeoMultiPolygon : GeoShape
 /**
- * @brief Contains the polygons of this collection.
+ * Contains the polygons of this collection.
  */
 @property(readonly, nonnull) NSArray<GeoPolygon*>* polygons;
 
 /**
- * @brief Initializes a GeoMultiPolygon with the specified polygons.
+ * Initializes a GeoMultiPolygon with the specified polygons.
+ *
  * @param polygons The polygons to initialize the collection with.
  * @return A GeoMultiPolygon object containing the specified collection of polygons.
  */
 - (nonnull id)initWithPolygons:(nonnull NSArray<GeoPolygon*>*)polygons;
 
 /**
- * @brief Returns a value indicating whether this instance and the specified GeoMultiPolygon.
+ * Returns a value indicating whether this instance and the specified GeoMultiPolygon.
+ *
  * @param multiPolygon The other GeoMultiPolygon.
  * @return YES if the values are equal, NO otherwise.
  */

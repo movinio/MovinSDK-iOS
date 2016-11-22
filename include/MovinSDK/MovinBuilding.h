@@ -11,27 +11,27 @@
 @class MovinMap;
 
 /**
- * @class MovinBuilding
- * @brief Represents a building.
+ * Represents a building.
  */
 @interface MovinBuilding : MovinFeatureObject
 /**
- * @brief Gets the description of this building.
+ * Gets the description of this building.
  */
 @property(readonly, nonnull) NSString* descriptionText;
 
 /**
- * @brief Gets the entities located within this building.
+ * Gets the entities located within this building.
  */
 @property(readonly, nonnull) NSArray<MovinEntity*>* entities;
 
 /**
- * @brief Gets the map this instance is a member of.
+ * Gets the map this instance is a member of.
  */
 @property(readonly, nullable, weak) MovinMap* map;
 
 /**
- * @brief Initializes a new MovinBuilding object with the specified building and JSON data.
+ * Initializes a new MovinBuilding object with the specified building and JSON data.
+ *
  * @param map The map the building is a member of.
  * @param json The JSON data.
  * @return A MovinBuilding object with the specified building JSON data.

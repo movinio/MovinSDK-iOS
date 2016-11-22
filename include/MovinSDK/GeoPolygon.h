@@ -9,24 +9,25 @@
 @class GeoLinearRing;
 
 /**
- * @class GeoPolygon
- * @brief Represents a geographical polygon.
+ * Represents a geographical polygon.
  */
 @interface GeoPolygon : GeoShape
 /**
- * @brief Contains the rings of this polygon.
+ * Contains the rings of this polygon.
  */
 @property(readonly, nonnull) NSArray<GeoLinearRing*>* rings;
 
 /**
- * @brief Initializes a GeoPolygon with the specified rings.
+ * Initializes a GeoPolygon with the specified rings.
+ *
  * @param rings The rings to initialize the ring with.
  * @return A GeoPolygon object containing the specified rings.
  */
 - (nonnull id)initWithRings:(nonnull NSArray<GeoLinearRing*>*)rings;
 
 /**
- * @brief Returns a value indicating whether this instance and the specified GeoPolygon.
+ * Returns a value indicating whether this instance and the specified GeoPolygon.
+ *
  * @param polygon The other GeoPolygon.
  * @return YES if the values are equal, NO otherwise.
  */

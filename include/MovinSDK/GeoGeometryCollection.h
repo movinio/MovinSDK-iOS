@@ -7,24 +7,25 @@
 #import "GeoShape.h"
 
 /**
- * @class GeoGeometryCollection
- * @brief Represents a collection of geometries.
+ * Represents a collection of geometries.
  */
 @interface GeoGeometryCollection : GeoShape
 /**
- * @brief Contains the geometries of this geometry collection.
+ * Contains the geometries of this geometry collection.
  */
 @property(readonly, nonnull) NSArray<GeoShape*>* geometries;
 
 /**
- * @brief Initializes a GeoGeometryCollection with the specified geometries.
+ * Initializes a GeoGeometryCollection with the specified geometries.
+ *
  * @param geometries The geometries to initialize the collection with.
  * @return A GeoGeometryCollection object containing the specified collection of geometries.
  */
 - (nonnull id)initWithGeometries:(nonnull NSArray<GeoShape*>*)geometries;
 
 /**
- * @brief Returns a value indicating whether this instance and the specified GeoGeometryCollection.
+ * Returns a value indicating whether this instance and the specified GeoGeometryCollection.
+ *
  * @param geometryCollection The other GeoGeometryCollection.
  * @return YES if the values are equal, NO otherwise.
  */

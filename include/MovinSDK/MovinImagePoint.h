@@ -7,27 +7,27 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 /**
- * @class MovinImagePoint
- * @brief Represents a point on an image.
+ * Represents a point on an image.
  */
 @interface MovinImagePoint : NSObject
 
 /**
- * @brief Gets the X-coordinate of this point.
+ * Gets the X-coordinate of this point.
  */
 @property(readonly) double x;
 /**
- * @brief Gets the Y-coordinate of this point.
+ * Gets the Y-coordinate of this point.
  */
 @property(readonly) double y;
 
 /**
- * @brief Gets a CGPoint object representing the same value as this point.
+ * Gets a CGPoint object representing the same value as this point.
  */
 @property(readonly) CGPoint CGPoint;
 
 /**
- * @brief Initializes a new MovinImagePoint object with the specified x and y coordinates.
+ * Initializes a new MovinImagePoint object with the specified x and y coordinates.
+ *
  * @param x The X-coordinate.
  * @param y The Y-coordinate.
  * @return A MovinImagePoint object with the specified x and y coordinates.
@@ -36,7 +36,8 @@
                    andY:(double)y;
 
 /**
- * @brief Parses the specified data into an instance of MovinImagePoint.
+ * Parses the specified data into an instance of MovinImagePoint.
+ *
  * @param jsonData The JSON data to parse.
  * @returns An MovinImagePoint object with the values specified in the json data.
  */

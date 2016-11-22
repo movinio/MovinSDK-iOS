@@ -7,21 +7,21 @@
 #import "MovinDataObject.h"
 
 /**
- * @class MovinScaledPOIUrl
- * @brief Represents an URL of a POI image for a specific screen scale.
+ * Represents an URL of a POI image for a specific screen scale.
  */
 @interface MovinScaledPOIUrl : MovinDataObject
 /**
- * @brief Gets the scale of the POI image which can be found at the URL.
+ * Gets the scale of the POI image which can be found at the URL.
  */
 @property (readonly)double scale;
 /**
- * @brief Gets the URL of of the POI image.
+ * Gets the URL of of the POI image.
  */
 @property (readonly)NSString* url;
 
 /**
- * @brief Gets the image this MovinScaledPOIUrl represents.
+ * Gets the image this MovinScaledPOIUrl represents.
+ *
  * @param callback The callback to invoke once the image has been loaded.
  */
 - (void)getImage:(void (^)(UIImage*, NSError*))callback;

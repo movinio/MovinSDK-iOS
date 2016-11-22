@@ -9,24 +9,25 @@
 @class GeoLatLng;
 
 /**
- * @class GeoLineString
- * @brief Represents a string of geographical lines.
+ * Represents a string of geographical lines.
  */
 @interface GeoLineString : GeoShape
 /**
- * @brief Contains the points of this line string.
+ * Contains the points of this line string.
  */
 @property(readonly, nonnull) NSArray<GeoLatLng*>* points;
 
 /**
- * @brief Initializes a GeoLinearRing with the specified points.
+ * Initializes a GeoLinearRing with the specified points.
+ *
  * @param points The points to initialize the ring with.
  * @return A GeoLinearRing object containing the specified points.
  */
 - (nonnull id)initWithPoints:(nonnull NSArray<GeoLatLng*>*)points;
 
 /**
- * @brief Returns a value indicating whether this instance and the specified GeoLineString.
+ * Returns a value indicating whether this instance and the specified GeoLineString.
+ *
  * @param lineString The other GeoLineString.
  * @return YES if the values are equal, NO otherwise.
  */

@@ -11,25 +11,25 @@
 #import "GeoShape.h"
 
 /**
- * @class GeoLatLng
- * @brief Represents a geographical point.
+ * Represents a geographical point.
  */
 @interface GeoLatLng : GeoShape
 /**
- * @brief Gets the latitude of this geo coordinate.
+ * Gets the latitude of this geo coordinate.
  */
 @property(readonly) double lat;
 /**
- * @brief Gets the longitude of this geo coordinate.
+ * Gets the longitude of this geo coordinate.
  */
 @property(readonly) double lng;
 /**
- * @brief Gets a CLLocationCoordinate2D instance representing the same geographical coordinate.
+ * Gets a CLLocationCoordinate2D instance representing the same geographical coordinate.
  */
 @property(readonly) CLLocationCoordinate2D CLLocation;
 
 /**
- * @brief Initializes a new GeoLatLng coordinate with a latitude and longitude values.
+ * Initializes a new GeoLatLng coordinate with a latitude and longitude values.
+ *
  * @param lat The latitude.
  * @param lng The longitude.
  * @return A GeoLatLng object with the specified latitude and longitude values.
@@ -38,14 +38,16 @@
                    andLng:(double)lng;
 
 /**
- * @brief Returns a value indicating whether this instance and the specified GeoLatLng.
+ * Returns a value indicating whether this instance and the specified GeoLatLng.
+ *
  * @param latLng The other GeoLatLng.
  * @return YES if the values are equal, NO otherwise.
  */
 - (BOOL)isEqualToLatLng:(nullable GeoLatLng*)latLng;
 
 /**
- * @brief Returns a newly created point with the specified latitude and longitude
+ * Returns a newly created point with the specified latitude and longitude*
+ *
  * @param lat The latitude of the point.
  * @param lng The longitude of the point.
  * @return A newly created point with the specified latitude and longitude

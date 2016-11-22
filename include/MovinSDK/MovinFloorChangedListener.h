@@ -8,13 +8,13 @@
 @class MovinTileProvider;
 
 /**
- * @protocol MovinFloorChangedListener
- * @brief Defines methods that a listener of MovinTileProvider would need to implement to listen to floor changes.
+ * Defines methods that a listener of MovinTileProvider would need to implement to listen to floor changes.
  */
 @protocol MovinFloorChangedListener<NSObject>
 
 /**
- * @brief Method called when the floor of the specified tile provider has changed.
+ * Method called when the floor of the specified tile provider has changed.
+ *
  * @param tileProvider The tile provider whose floor has changed.
  * @param newFloor The floor to which te specified tile provider has changed.
  */

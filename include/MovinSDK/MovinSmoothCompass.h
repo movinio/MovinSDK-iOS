@@ -10,8 +10,7 @@
 @protocol MovinSmoothCompassDelegate;
 
 /**
- * @enum MovinCompassOffset
- * @brief Contains the offsets at which the smooth compass can operate.
+ * Contains the offsets at which the smooth compass can operate.
  */
 typedef enum MovinCompassOffset {
     /// No compass offset.
@@ -23,34 +22,33 @@ typedef enum MovinCompassOffset {
 } MovinCompassOffset;
 
 /**
- * @class MovinSmoothCompass
- * @brief Represents a compass which rotates smoothly.
+ * Represents a compass which rotates smoothly.
  */
 @interface MovinSmoothCompass : NSObject
 /**
- * @brief Gets or sets the interval at which the heading of the compass will be updated.
+ * Gets or sets the interval at which the heading of the compass will be updated.
  */
 @property NSTimeInterval updateInterval;
 /**
- * @brief Gets or sets the delegate to which events will be broadcasted.
+ * Gets or sets the delegate to which events will be broadcasted.
  */
 @property id <MovinSmoothCompassDelegate> delegate;
 
 /**
- * @brief Gets or sets the offset at which this smooth canvas will operate.
+ * Gets or sets the offset at which this smooth canvas will operate.
  */
 @property MovinCompassOffset offset;
 
 /**
- * @brief Gets or sets the minimum heading offset of the compass for this instance to report a change.
+ * Gets or sets the minimum heading offset of the compass for this instance to report a change.
  */
 @property CLLocationDirection headingThreshold;
 /**
- * @brief Gets or sets the speed in degrees per second this instance will change its heading.
+ * Gets or sets the speed in degrees per second this instance will change its heading.
  */
 @property CLLocationDirection turnSpeed;
 /**
- * @brief Gets or sets the maximum duration in seconds a turn may take.
+ * Gets or sets the maximum duration in seconds a turn may take.
  */
 @property double maxTurnDuration;
 @end

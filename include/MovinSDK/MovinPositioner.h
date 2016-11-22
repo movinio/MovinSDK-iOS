@@ -13,51 +13,72 @@
 @class FloorPosition;
 
 /**
- * @class MovinPositioner
- * @brief Represents a position provider.
+ * Represents a position provider.
  */
 @interface MovinPositioner : NSObject
 
+/**
+ * Internal method. Do not call.
+ */
 - (void)onStart;
 
+/**
+ * Internal method. Do not call.
+ */
 - (void)onStop;
 
 /**
- * @brief Starts the MovinPositioner
+ * Starts the MovinPositioner.
  */
 - (void)start;
 
 /**
- * @brief Stops the MovinPositioner
+ * Stops the MovinPositioner.
  */
 - (void)stop;
 
 /**
- * @brief Returns whether or not the MovinPositioner is started
- * @return If the positioner is started or not
+ * Returns whether or not the MovinPositioner is started.
  */
-- (BOOL)isStarted;
+@property (readonly) BOOL isStarted;
 
 /**
- * @brief Adds a positioning listener
- * @param listener Any class instance that has implemented the MovinPositioningListener protocol
+ * Adds a positioning listener.
+ *
+ * @param listener Any class instance that has implemented the MovinPositioningListener protocol.
  */
 - (void)addPositioningListener:(nonnull id <MovinPositioningListener>)listener;
 
 /**
- * @brief Removes an earlier added positioning listener
- * @param listener The earlier added listener to remove
+ * Removes an earlier added positioning listener.
+ *
+ * @param listener The earlier added listener to remove.
  */
 - (void)removePositioningListener:(nonnull id <MovinPositioningListener>)listener;
 
+/**
+ * Internal method. Do not call.
+ */
 - (void)callInitialized:(BOOL)success
                   error:(nullable NSError*)error;
 
+/**
+ * Internal method. Do not call.
+ */
 - (void)callUpdatePosition:(nonnull FloorPosition*)position;
 
+/**
+ * Internal method. Do not call.
+ */
 - (void)callUnknownLocation;
 
+/**
+ * Internal method. Do not call.
+ */
 - (void)callLostConnection;
 
+/**
+ * Internal method. Do not call.
+ */
 - (nonnull NSArray*)getPositioningListeners;
 @end
