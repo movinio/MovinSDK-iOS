@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MovinSmoothCompass Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/MovinSmoothCompass" class="dashAnchor"></a>
+    <a title="MovinSmoothCompass Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">MovinSDK Docs</a> (98% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">MovinSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        MovinSmoothCompass Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Core.html">Core</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinSDK.html">MovinSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalyticsService.html">AnalyticsService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconIdentifier.html">BeaconIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FloorPosition.html">FloorPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBeacon.html">MovinBeacon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBeaconGroup.html">MovinBeaconGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBuilding.html">MovinBuilding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinCacheProtocol.html">MovinCacheProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinCacheableData.html">MovinCacheableData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinDataObject.html">MovinDataObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinEntity.html">MovinEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinEntitySubType.html">MovinEntitySubType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinFeatureObject.html">MovinFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinFontFamily.html">MovinFontFamily</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinImagePoint.html">MovinImagePoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMap.html">MovinMap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMapZoomLevel.html">MovinMapZoomLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinScaledPOIUrl.html">MovinScaledPOIUrl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinService.html">MovinService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinSDKCore.h@T@DownloadDataCallback">DownloadDataCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@BeaconGroupsCallback">BeaconGroupsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@BeaconsCallback">BeaconsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@BuildingsCallback">BuildingsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@EntitiesCallback">EntitiesCallback</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Maps.html">Maps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileManifest.html">MovinTileManifest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Maps.html#/c:MovinMap.h@T@TileManifestCallback">TileManifestCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileProvider.html">MovinTileProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinFloorChangedListener.html">MovinFloorChangedListener</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Positioning.html">Positioning</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBeaconScanner.html">MovinBeaconScanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinBeaconScannerListener.html">MovinBeaconScannerListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositioner.html">MovinPositioner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositioningEngine.html">MovinPositioningEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinPositioningListener.html">MovinPositioningListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRangedBeacon.html">MovinRangedBeacon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinLocationManager.html">MovinLocationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinSmoothCompass.html">MovinSmoothCompass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinSmoothCompassDelegate.html">MovinSmoothCompassDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../User Interface.html">User Interface</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinFloorSwitcher.html">MovinFloorSwitcher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Style.html">Style</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMapLayer.html">MovinMapLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMapStyle.html">MovinMapStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyle.html">MovinTileStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyleLayer.html">MovinTileStyleLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyleRule.html">MovinTileStyleRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyleTextRule.html">MovinTileStyleTextRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinTileStyleRotation.html">MovinTileStyleRotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinTileStyleScaling.html">MovinTileStyleScaling</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Geometry.html">Geometry</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/GeoAABB.html">GeoAABB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoGeometryCollection.html">GeoGeometryCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoLatLng.html">GeoLatLng</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoLineString.html">GeoLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoLinearRing.html">GeoLinearRing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoMultiLineString.html">GeoMultiLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoMultiPoint.html">GeoMultiPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoMultiPolygon.html">GeoMultiPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoPolygon.html">GeoPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoShape.html">GeoShape</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Google Maps.html">Google Maps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSMapView.html">MovinGMSMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSImageRenderer.html">MovinGMSImageRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSImageRendererManager.html">MovinGMSImageRendererManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinGMSImageRendererManagerDelegate.html">MovinGMSImageRendererManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSLabel.html">MovinGMSLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSMarker.html">MovinGMSMarker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSTileLayer.html">MovinGMSTileLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/MovinCompassOffset.html">MovinCompassOffset</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MovinSmoothCompass</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinSmoothCompass</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents a compass which rotates smoothly.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinSmoothCompass(py)updateInterval"></a>
+                    <a name="//apple_ref/objc/Property/updateInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinSmoothCompass(py)updateInterval">updateInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets or sets the interval at which the heading of the compass will be updated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">updateInterval</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">updateInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinSmoothCompass(py)delegate"></a>
+                    <a name="//apple_ref/objc/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinSmoothCompass(py)delegate">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets or sets the delegate to which events will be broadcasted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/MovinSmoothCompassDelegate.html">MovinSmoothCompassDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinSmoothCompass(py)offset"></a>
+                    <a name="//apple_ref/objc/Property/offset" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinSmoothCompass(py)offset">offset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets or sets the offset at which this smooth canvas will operate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n"><a href="../Enums/MovinCompassOffset.html">MovinCompassOffset</a></span> <span class="n">offset</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Enums/MovinCompassOffset.html">MovinCompassOffset</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinSmoothCompass(py)headingThreshold"></a>
+                    <a name="//apple_ref/objc/Property/headingThreshold" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinSmoothCompass(py)headingThreshold">headingThreshold</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets or sets the minimum heading offset of the compass for this instance to report a change.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">CLLocationDirection</span> <span class="n">headingThreshold</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">headingThreshold</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinSmoothCompass(py)turnSpeed"></a>
+                    <a name="//apple_ref/objc/Property/turnSpeed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinSmoothCompass(py)turnSpeed">turnSpeed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets or sets the speed in degrees per second this instance will change its heading.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">CLLocationDirection</span> <span class="n">turnSpeed</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">turnSpeed</span><span class="p">:</span> <span class="kt">Int32</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinSmoothCompass(py)maxTurnDuration"></a>
+                    <a name="//apple_ref/objc/Property/maxTurnDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinSmoothCompass(py)maxTurnDuration">maxTurnDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets or sets the maximum duration in seconds a turn may take.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">maxTurnDuration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">maxTurnDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2016 <a class="link" href="http://movin.io" target="_blank" rel="external">Movin</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

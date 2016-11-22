@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GeoAABB Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/GeoAABB" class="dashAnchor"></a>
+    <a title="GeoAABB Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">MovinSDK Docs</a> (98% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">MovinSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        GeoAABB Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Core.html">Core</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinSDK.html">MovinSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalyticsService.html">AnalyticsService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconIdentifier.html">BeaconIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FloorPosition.html">FloorPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBeacon.html">MovinBeacon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBeaconGroup.html">MovinBeaconGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBuilding.html">MovinBuilding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinCacheProtocol.html">MovinCacheProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinCacheableData.html">MovinCacheableData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinDataObject.html">MovinDataObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinEntity.html">MovinEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinEntitySubType.html">MovinEntitySubType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinFeatureObject.html">MovinFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinFontFamily.html">MovinFontFamily</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinImagePoint.html">MovinImagePoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMap.html">MovinMap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMapZoomLevel.html">MovinMapZoomLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinScaledPOIUrl.html">MovinScaledPOIUrl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinService.html">MovinService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinSDKCore.h@T@DownloadDataCallback">DownloadDataCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@BeaconGroupsCallback">BeaconGroupsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@BeaconsCallback">BeaconsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@BuildingsCallback">BuildingsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@EntitiesCallback">EntitiesCallback</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Maps.html">Maps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileManifest.html">MovinTileManifest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Maps.html#/c:MovinMap.h@T@TileManifestCallback">TileManifestCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileProvider.html">MovinTileProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinFloorChangedListener.html">MovinFloorChangedListener</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Positioning.html">Positioning</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBeaconScanner.html">MovinBeaconScanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinBeaconScannerListener.html">MovinBeaconScannerListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositioner.html">MovinPositioner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositioningEngine.html">MovinPositioningEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinPositioningListener.html">MovinPositioningListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRangedBeacon.html">MovinRangedBeacon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinLocationManager.html">MovinLocationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinSmoothCompass.html">MovinSmoothCompass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinSmoothCompassDelegate.html">MovinSmoothCompassDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../User Interface.html">User Interface</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinFloorSwitcher.html">MovinFloorSwitcher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Style.html">Style</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMapLayer.html">MovinMapLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMapStyle.html">MovinMapStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyle.html">MovinTileStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyleLayer.html">MovinTileStyleLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyleRule.html">MovinTileStyleRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyleTextRule.html">MovinTileStyleTextRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinTileStyleRotation.html">MovinTileStyleRotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinTileStyleScaling.html">MovinTileStyleScaling</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Geometry.html">Geometry</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/GeoAABB.html">GeoAABB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoGeometryCollection.html">GeoGeometryCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoLatLng.html">GeoLatLng</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoLineString.html">GeoLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoLinearRing.html">GeoLinearRing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoMultiLineString.html">GeoMultiLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoMultiPoint.html">GeoMultiPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoMultiPolygon.html">GeoMultiPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoPolygon.html">GeoPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoShape.html">GeoShape</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Google Maps.html">Google Maps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSMapView.html">MovinGMSMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSImageRenderer.html">MovinGMSImageRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSImageRendererManager.html">MovinGMSImageRendererManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinGMSImageRendererManagerDelegate.html">MovinGMSImageRendererManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSLabel.html">MovinGMSLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSMarker.html">MovinGMSMarker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSTileLayer.html">MovinGMSTileLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/MovinCompassOffset.html">MovinCompassOffset</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>GeoAABB</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">GeoAABB</span> <span class="p">:</span> <span class="nc">GeoShape</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents a geographical axis aligned bounding box.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)origin"></a>
+                    <a name="//apple_ref/objc/Property/origin" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)origin">origin</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the origin of this axis aligned bounding box.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="n">origin</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">origin</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)width"></a>
+                    <a name="//apple_ref/objc/Property/width" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)width">width</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the width of this axis aligned bounding box.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">width</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)height"></a>
+                    <a name="//apple_ref/objc/Property/height" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)height">height</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the height of this axis aligned bounding box.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">height</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)leftLng"></a>
+                    <a name="//apple_ref/objc/Property/leftLng" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)leftLng">leftLng</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the leftmost longitude coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">leftLng</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">leftLng</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)rightLng"></a>
+                    <a name="//apple_ref/objc/Property/rightLng" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)rightLng">rightLng</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the rightmost longitude coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">rightLng</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">rightLng</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)topLat"></a>
+                    <a name="//apple_ref/objc/Property/topLat" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)topLat">topLat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the topmost latitude coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">topLat</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">topLat</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)bottomLat"></a>
+                    <a name="//apple_ref/objc/Property/bottomLat" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)bottomLat">bottomLat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the bottommost latitude coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">bottomLat</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">bottomLat</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)size"></a>
+                    <a name="//apple_ref/objc/Property/size" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)size">size</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the size of this box.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="kt">double</span> <span class="n">size</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)topLeft"></a>
+                    <a name="//apple_ref/objc/Property/topLeft" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)topLeft">topLeft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the top-left coordinates.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="n">topLeft</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">topLeft</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)topRight"></a>
+                    <a name="//apple_ref/objc/Property/topRight" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)topRight">topRight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the top-right coordinates.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="n">topRight</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">topRight</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)bottomLeft"></a>
+                    <a name="//apple_ref/objc/Property/bottomLeft" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)bottomLeft">bottomLeft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the bottom-left coordinates.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="n">bottomLeft</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">bottomLeft</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(py)bottomRight"></a>
+                    <a name="//apple_ref/objc/Property/bottomRight" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(py)bottomRight">bottomRight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the bottom-right coordinates.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="n">bottomRight</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">bottomRight</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(im)initWithOrigin:andWidth:andHeight:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithOrigin:andWidth:andHeight:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(im)initWithOrigin:andWidth:andHeight:">-initWithOrigin:andWidth:andHeight:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a new GeoAABB object with the specified origin and size.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithOrigin</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">origin</span>
+                    <span class="nf">andWidth</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">width</span>
+                   <span class="nf">andHeight</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">height</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">origin</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span><span class="p">,</span> <span class="n">andWidth</span> <span class="nv">width</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">andHeight</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>origin</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The origin.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>width</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The width.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>height</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The height.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(im)intersectsWithAABB:"></a>
+                    <a name="//apple_ref/objc/Method/-intersectsWithAABB:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(im)intersectsWithAABB:">-intersectsWithAABB:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets a value indicating whether the specified box intersects with this instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">intersectsWithAABB</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">GeoAABB</span> <span class="o">*</span><span class="p">)</span><span class="nv">box</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">intersects</span><span class="p">(</span><span class="n">with</span> <span class="nv">box</span><span class="p">:</span> <span class="kt">GeoAABB</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoAABB(im)isEqualToAABB:"></a>
+                    <a name="//apple_ref/objc/Method/-isEqualToAABB:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoAABB(im)isEqualToAABB:">-isEqualToAABB:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a value indicating whether this instance and the specified GeoAABB.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isEqualToAABB</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">GeoAABB</span> <span class="o">*</span><span class="p">)</span><span class="nv">aabb</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="n">to</span> <span class="nv">aabb</span><span class="p">:</span> <span class="kt">GeoAABB</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aabb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other GeoAABB.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the values are equal, NO otherwise.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2016 <a class="link" href="http://movin.io" target="_blank" rel="external">Movin</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
