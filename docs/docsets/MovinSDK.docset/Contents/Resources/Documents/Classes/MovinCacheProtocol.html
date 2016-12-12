@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MovinCacheProtocol Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/MovinCacheProtocol" class="dashAnchor"></a>
+    <a title="MovinCacheProtocol Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">MovinSDK Docs</a> (98% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">MovinSDK Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        MovinCacheProtocol Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Core.html">Core</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinSDK.html">MovinSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalyticsService.html">AnalyticsService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BeaconIdentifier.html">BeaconIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FloorPosition.html">FloorPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBeacon.html">MovinBeacon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBeaconGroup.html">MovinBeaconGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBuilding.html">MovinBuilding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinCacheProtocol.html">MovinCacheProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinCacheableData.html">MovinCacheableData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinDataObject.html">MovinDataObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinEntity.html">MovinEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinEntitySubType.html">MovinEntitySubType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinFeatureObject.html">MovinFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinFontFamily.html">MovinFontFamily</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinImagePoint.html">MovinImagePoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMap.html">MovinMap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMapZoomLevel.html">MovinMapZoomLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinScaledPOIUrl.html">MovinScaledPOIUrl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinService.html">MovinService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinSDKCore.h@T@DownloadDataCallback">DownloadDataCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@BeaconGroupsCallback">BeaconGroupsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@BeaconsCallback">BeaconsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@BuildingsCallback">BuildingsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Core.html#/c:MovinMap.h@T@EntitiesCallback">EntitiesCallback</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Maps.html">Maps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileManifest.html">MovinTileManifest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Maps.html#/c:MovinMap.h@T@TileManifestCallback">TileManifestCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileProvider.html">MovinTileProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinFloorChangedListener.html">MovinFloorChangedListener</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Positioning.html">Positioning</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinBeaconScanner.html">MovinBeaconScanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinBeaconScannerListener.html">MovinBeaconScannerListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositioner.html">MovinPositioner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositioningEngine.html">MovinPositioningEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinPositioningListener.html">MovinPositioningListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRangedBeacon.html">MovinRangedBeacon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinLocationManager.html">MovinLocationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinSmoothCompass.html">MovinSmoothCompass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinSmoothCompassDelegate.html">MovinSmoothCompassDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../User Interface.html">User Interface</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinFloorSwitcher.html">MovinFloorSwitcher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Style.html">Style</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMapLayer.html">MovinMapLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinMapStyle.html">MovinMapStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyle.html">MovinTileStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyleLayer.html">MovinTileStyleLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyleRule.html">MovinTileStyleRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTileStyleTextRule.html">MovinTileStyleTextRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinTileStyleRotation.html">MovinTileStyleRotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinTileStyleScaling.html">MovinTileStyleScaling</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Geometry.html">Geometry</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/GeoAABB.html">GeoAABB</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoGeometryCollection.html">GeoGeometryCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoLatLng.html">GeoLatLng</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoLineString.html">GeoLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoLinearRing.html">GeoLinearRing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoMultiLineString.html">GeoMultiLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoMultiPoint.html">GeoMultiPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoMultiPolygon.html">GeoMultiPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoPolygon.html">GeoPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GeoShape.html">GeoShape</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Google Maps.html">Google Maps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSMapView.html">MovinGMSMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSImageRenderer.html">MovinGMSImageRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSImageRendererManager.html">MovinGMSImageRendererManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinGMSImageRendererManagerDelegate.html">MovinGMSImageRendererManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSLabel.html">MovinGMSLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSMarker.html">MovinGMSMarker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinGMSTileLayer.html">MovinGMSTileLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/MovinCompassOffset.html">MovinCompassOffset</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MovinCacheProtocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinCacheProtocol</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents a protocol which defines the caching behaviour for a specific data type.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(py)allowCaching"></a>
+                    <a name="//apple_ref/objc/Property/allowCaching" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(py)allowCaching">allowCaching</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets a value indicating whether caching is allowed according to this caching protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">allowCaching</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">allowCaching</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(py)allowSyncing"></a>
+                    <a name="//apple_ref/objc/Property/allowSyncing" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(py)allowSyncing">allowSyncing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets a value indicating whether the cache should be synced after it has been downloaded for the first time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">allowSyncing</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">allowSyncing</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(py)refreshRate"></a>
+                    <a name="//apple_ref/objc/Property/refreshRate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(py)refreshRate">refreshRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the refresh rate of the cache. After the interval specified by this refresh rate the cache
+will be synchronized with the server. A value of 0 will ensure the cache is being synchronized every time the SDK is
+being initialized. If no Wi-Fi connection is available the cache will only be synchronized if the forced refresh rate
+has elapsed as well.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">refreshRate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">refreshRate</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(py)forcedRefreshRate"></a>
+                    <a name="//apple_ref/objc/Property/forcedRefreshRate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(py)forcedRefreshRate">forcedRefreshRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the forced refresh of the cache. If the interval specified by refreshRate has passed but
+no Wi-Fi connection is available, the cache will still be synchronized if the forced refresh interval has passed.
+A value of 0 will never allow syncing over WWAN (Mobile Data) at all.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">forcedRefreshRate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">forcedRefreshRate</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(py)timeoutWithAvailableCache"></a>
+                    <a name="//apple_ref/objc/Property/timeoutWithAvailableCache" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(py)timeoutWithAvailableCache">timeoutWithAvailableCache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the timeout interval for requests sent out while an expired cached version of the response is available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">timeoutWithAvailableCache</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">timeoutWithAvailableCache</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(py)timeout"></a>
+                    <a name="//apple_ref/objc/Property/timeout" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(py)timeout">timeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the timeout interval for request sent out while no cached version of the response is available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">timeout</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)initWithAllowCaching:andAllowSyncing:andRefreshRate:andForcedRefreshRate:andtimeoutWithAvailableCache:andTimeout:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithAllowCaching:andAllowSyncing:andRefreshRate:andForcedRefreshRate:andtimeoutWithAvailableCache:andTimeout:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)initWithAllowCaching:andAllowSyncing:andRefreshRate:andForcedRefreshRate:andtimeoutWithAvailableCache:andTimeout:">-initWithAllowCaching:andAllowSyncing:andRefreshRate:andForcedRefreshRate:andtimeoutWithAvailableCache:andTimeout:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a new MovinCacheProtocol object with the specified caching options.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithAllowCaching</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">allowCaching</span>
+                 <span class="nf">andAllowSyncing</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">allowSyncing</span>
+                  <span class="nf">andRefreshRate</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">refreshRate</span>
+            <span class="nf">andForcedRefreshRate</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">forcedRefreshRate</span>
+    <span class="nf">andtimeoutWithAvailableCache</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">timeoutWithAvailableCache</span>
+                      <span class="nf">andTimeout</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">timeout</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">allowCaching</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">andAllowSyncing</span> <span class="nv">allowSyncing</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">andRefreshRate</span> <span class="nv">refreshRate</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">andForcedRefreshRate</span> <span class="nv">forcedRefreshRate</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">andtimeoutWithAvailableCache</span> <span class="nv">timeoutWithAvailableCache</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">andTimeout</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowCaching</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value indicating whether caching is allowed according to this caching protocol.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowSyncing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value indicating whether the cache should be synced after it has been downloaded for the first
+time.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>refreshRate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The refresh rate of the cache. After the interval specified by this refresh rate the cache
+will be synchronized with the server. A value of 0 will ensure the cache is being synchronized every time the SDK is
+being initialized. If no Wi-Fi connection is available the cache will only be synchronized if the forced refresh rate
+has elapsed as well.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>forcedRefreshRate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The forced refresh of the cache. If the interval specified by refreshRate has passed but
+no Wi-Fi connection is available, the cache will still be synchronized if the forced refresh interval has passed.
+A value of 0 will disable this functionality.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeoutWithAvailableCache</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The timeout interval for requests sent out while an expired cached version of the
+response is available.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The timeout interval for request sent out while no cached version of the response is available.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A MovinCacheProtocol object with the specified caching options.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(cm)standard"></a>
+                    <a name="//apple_ref/objc/Method/+standard" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(cm)standard">+standard</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A default cache protocol. This protocol allows caching and does not limit syncing to Wi-Fi. The
+refresh rate is set to 0 meaning the cache will be synced at every startup. The timeout for requests with available
+cache is set to 10 seconds. Requests without a cached response available is set to 60 seconds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">MovinCacheProtocol</span> <span class="o">*</span><span class="p">)</span><span class="n">standard</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">standard</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">MovinCacheProtocol</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(cm)doNotCache"></a>
+                    <a name="//apple_ref/objc/Method/+doNotCache" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(cm)doNotCache">+doNotCache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A do-not-cache cache protocol. This protocol does not allow any caching to occur. The timeout is set to
+60 seconds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">MovinCacheProtocol</span> <span class="o">*</span><span class="p">)</span><span class="n">doNotCache</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">doNotCache</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">MovinCacheProtocol</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)withAllowCaching:"></a>
+                    <a name="//apple_ref/objc/Method/-withAllowCaching:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)withAllowCaching:">-withAllowCaching:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a copy of this instance with allowCaching set to the specified value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">MovinCacheProtocol</span> <span class="o">*</span><span class="p">)</span><span class="nf">withAllowCaching</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">allowCaching</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">withAllowCaching</span><span class="p">(</span><span class="n">_</span> <span class="nv">allowCaching</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MovinCacheProtocol</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowCaching</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value indicating whether caching is allowed according to this caching protocol.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A copy of this instance with allowCaching set to the specified value.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)withAllowSyncing:"></a>
+                    <a name="//apple_ref/objc/Method/-withAllowSyncing:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)withAllowSyncing:">-withAllowSyncing:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a copy of this instance with allowSyncing set to the specified value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">MovinCacheProtocol</span> <span class="o">*</span><span class="p">)</span><span class="nf">withAllowSyncing</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">allowSyncing</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">withAllowSyncing</span><span class="p">(</span><span class="n">_</span> <span class="nv">allowSyncing</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MovinCacheProtocol</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allowSyncing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value indicating whether the cache should be synced after it has been downloaded for the first time.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A copy of this instance with allowSyncing set to the specified value.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)withRefreshRate:"></a>
+                    <a name="//apple_ref/objc/Method/-withRefreshRate:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)withRefreshRate:">-withRefreshRate:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a copy of this instance with refreshRate set to the specified value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">MovinCacheProtocol</span> <span class="o">*</span><span class="p">)</span><span class="nf">withRefreshRate</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">refreshRate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">withRefreshRate</span><span class="p">(</span><span class="n">_</span> <span class="nv">refreshRate</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MovinCacheProtocol</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>refreshRate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The refresh rate of the cache. After the interval specified by this refresh rate the cache
+will be synchronized with the server. A value of 0 will ensure the cache is being synchronized every time the SDK is
+being initialized. If no Wi-Fi connection is available the cache will only be synchronized if the forced refresh rate
+has elapsed as well.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A copy of this instance with refreshRate set to the specified value.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)withForcedRefreshRate:"></a>
+                    <a name="//apple_ref/objc/Method/-withForcedRefreshRate:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)withForcedRefreshRate:">-withForcedRefreshRate:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a copy of this instance with forcedRefreshRate set to the specified value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">MovinCacheProtocol</span> <span class="o">*</span><span class="p">)</span><span class="nf">withForcedRefreshRate</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">forcedRefreshRate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">withForcedRefreshRate</span><span class="p">(</span><span class="n">_</span> <span class="nv">forcedRefreshRate</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MovinCacheProtocol</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>forcedRefreshRate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The forced refresh of the cache. If the interval specified by refreshRate has passed but
+no Wi-Fi connection is available, the cache will still be synchronized if the forced refresh interval has passed.
+A value of 0 will disable this functionality.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A copy of this instance with forcedRefreshRate set to the specified value.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)withTimeout:"></a>
+                    <a name="//apple_ref/objc/Method/-withTimeout:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)withTimeout:">-withTimeout:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a copy of this instance with timeout set to the specified value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">MovinCacheProtocol</span> <span class="o">*</span><span class="p">)</span><span class="nf">withTimeout</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">timeout</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">withTimeout</span><span class="p">(</span><span class="n">_</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MovinCacheProtocol</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The timeout interval for request sent out while no cached version of the response is available.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A copy of this instance with timeout set to the specified value.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)withTimeoutWithAvailableCache:"></a>
+                    <a name="//apple_ref/objc/Method/-withTimeoutWithAvailableCache:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)withTimeoutWithAvailableCache:">-withTimeoutWithAvailableCache:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a copy of this instance with timeoutWithAvailableCache set to the specified value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">MovinCacheProtocol</span> <span class="o">*</span><span class="p">)</span><span class="nf">withTimeoutWithAvailableCache</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">timeoutWithAvailableCache</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">withTimeoutWithAvailableCache</span><span class="p">(</span><span class="n">_</span> <span class="nv">timeoutWithAvailableCache</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MovinCacheProtocol</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeoutWithAvailableCache</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The timeout interval for requests sent out while an expired cached version of the
+response is available.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A copy of this instance with timeoutWithAvailableCache set to the specified value.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)shouldReadFromCache:"></a>
+                    <a name="//apple_ref/objc/Method/-shouldReadFromCache:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)shouldReadFromCache:">-shouldReadFromCache:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a value indicating whether the cache should be synced based on the specified time since last synchronization.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">shouldReadFromCache</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">timeSinceLastSync</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">shouldRead</span><span class="p">(</span><span class="n">fromCache</span> <span class="nv">timeSinceLastSync</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeSinceLastSync</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time since the last synchronization.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value indicating whether the cache should be synced based on the specified time since last synchronization.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)initWithCoder:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCoder:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)initWithCoder:">-initWithCoder:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinCacheProtocol</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinCacheProtocol(im)encodeWithCoder:"></a>
+                    <a name="//apple_ref/objc/Method/-encodeWithCoder:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinCacheProtocol(im)encodeWithCoder:">-encodeWithCoder:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinCacheProtocol</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2016 <a class="link" href="http://movin.io" target="_blank" rel="external">Movin</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
