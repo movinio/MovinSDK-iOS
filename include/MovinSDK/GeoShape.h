@@ -1,6 +1,8 @@
 //
-// Created by Tim Potze on 08/03/16.
-// Copyright (c) 2016 Movin. All rights reserved.
+// GeoShape.h
+// MovinSDK
+//
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,7 +14,7 @@
 /**
  * Represents a geographical shape.
  */
-@interface GeoShape : NSObject <NSCopying>
+@interface GeoShape : NSObject <NSCopying, NSCoding>
 /**
  * Gets the bounding box which fits around this instance.
  */

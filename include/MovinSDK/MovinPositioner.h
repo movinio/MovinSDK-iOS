@@ -1,9 +1,8 @@
 //
-//  MovinPositioner.h
-//  MovinSDK
+// MovinPositioner.h
+// MovinSDK
 //
-//  Created by Movin Software on 20/11/15.
-//  Copyright © 2015 Movin. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

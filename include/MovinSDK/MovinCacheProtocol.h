@@ -1,6 +1,8 @@
 //
-// Created by Tim Potze on 08/03/16.
-// Copyright (c) 2016 Movin. All rights reserved.
+// MovinCacheProtocol.h
+// MovinSDK
+//
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -8,7 +10,7 @@
 /**
  * Represents a protocol which defines the caching behaviour for a specific data type.
  */
-@interface MovinCacheProtocol : NSObject
+@interface MovinCacheProtocol : NSObject<NSCoding>
 /**
  * Gets a value indicating whether caching is allowed according to this caching protocol.
  */
@@ -136,4 +138,8 @@ andtimeoutWithAvailableCache:(NSTimeInterval)timeoutWithAvailableCache
  * @return A value indicating whether the cache should be synced based on the specified time since last synchronization.
  */
 - (BOOL)shouldReadFromCache:(NSTimeInterval)timeSinceLastSync;
+
+- (instancetype)initWithCoder:(NSCoder*)coder;
+
+- (void)encodeWithCoder:(NSCoder*)coder;
 @end

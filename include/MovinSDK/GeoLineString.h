@@ -1,6 +1,8 @@
 //
-// Created by Tim Potze on 02/03/16.
-// Copyright (c) 2016 Movin. All rights reserved.
+// GeoLineString.h
+// MovinSDK
+//
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

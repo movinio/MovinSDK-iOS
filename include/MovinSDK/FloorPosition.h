@@ -1,9 +1,8 @@
 //
-//  MovinPosition.h
-//  MovinCore
+// FloorPosition.h
+// MovinSDK
 //
-//  Created by Movin Software on 17/03/15.
-//  Copyright (c) 2015 Movin Software. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

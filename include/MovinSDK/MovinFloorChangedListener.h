@@ -1,6 +1,8 @@
 //
-// Created by Tim Potze on 12/04/16.
-// Copyright (c) 2016 Movin. All rights reserved.
+// MovinFloorChangedListener.h
+// MovinSDK
+//
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

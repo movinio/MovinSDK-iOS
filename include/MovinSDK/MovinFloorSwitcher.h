@@ -1,9 +1,8 @@
 //
-//  MovinFloorSwitcher.h
-//  MovinSDK
+// MovinFloorSwitcher.h
+// MovinSDK
 //
-//  Created by Tim Potze on 25/04/16.
-//  Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

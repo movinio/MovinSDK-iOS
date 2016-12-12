@@ -1,9 +1,8 @@
 //
-//  GeoLatLng.h
-//  MovinCore
+// GeoLatLng.h
+// MovinSDK
 //
-//  Created by Movin Software on 26/03/15.
-//  Copyright (c) 2015 Movin Software. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -46,11 +45,11 @@
 - (BOOL)isEqualToLatLng:(nullable GeoLatLng*)latLng;
 
 /**
- * Returns a newly created point with the specified latitude and longitude*
+ * Returns a newly created point with the specified latitude and longitude.
  *
  * @param lat The latitude of the point.
  * @param lng The longitude of the point.
- * @return A newly created point with the specified latitude and longitude
+ * @return A newly created point with the specified latitude and longitude.
  */
 + (nonnull GeoLatLng*)pointWithLat:(double)lat
                             andLng:(double)lng;

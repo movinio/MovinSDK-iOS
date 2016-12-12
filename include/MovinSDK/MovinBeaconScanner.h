@@ -1,9 +1,8 @@
 //
-//  MovinBeaconScanner.h
-//  libMovinSDK
+// MovinBeaconScanner.h
+// MovinSDK
 //
-//  Created by Movin Software on 07/03/16.
-//  Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -18,6 +17,21 @@
  * Scans for beacons in the area.
  */
 @interface MovinBeaconScanner : NSObject
+
+/**
+ * Gets or sets a value indicating whether background scanning enabled. To enable background scanning (ranging), Apple
+ * requires that also regular location updates are started using startUpdatingLocation. To waste as little battery as
+ * possible, the CLLocationAccuracy will be set to 3km, and the distance filter is set to 100000000m. The default
+ * background enabled value is NO.
+ *
+ * @warning When using background scanning enabled, the appropriate background mode needs to be enabled (background mode
+ * location). Also the NSAlwaysUsageDescription should be set in the info.plist and method
+ * [CLLocationManager requestAlwaysAuthorization]; must be granted for this to work.
+ *
+ * @warning When submitting an app that uses background scanning, you have to persuade the reviewers that your app
+ * actually needs background scanning, since it consumes more power than apple would like.
+ */
+@property BOOL isBackgroundEnabled;
 
 /**
  * Adds a map to the MovinBeaconScanner to scan for. The UUID's of the beacons in the map are necessary to start
@@ -81,24 +95,14 @@ withSuccessListener:(nullable void (^)(BOOL success, NSError* _Nullable error))l
 - (void)removeSilentListener:(nonnull id <MovinBeaconScannerListener>)listener;
 
 /**
- * Sets background scanning enabled. To enable background scanning (ranging), Apple requires that also regular
- * location updates are started using startUpdatingLocation. To waste as little battery as possible, the
- * CLLocationAccuracy will be set to 3km, and the distance filter is set to 100000000m. The default background enabled
- * value is false.
+ * DEPRECATED: Use isBackgroundEnabled instead.
  *
- * @warning When using background scanning enabled, the appropriate background mode needs to be enabled (background mode
- * location). Also the NSAlwaysUsageDescription should be set in the info.plist and method
- * [CLLocationManager requestAlwaysAuthorization]; must be granted for this to work.
- *
- * @warning When submitting an app that uses background scanning, you have to persuade the reviewers that your app
- * actually needs background scanning, since it consumes more power than apple would like.
+ * @param enabled
  */
-- (void)setBackgroundEnabled:(BOOL)enabled;
+- (void)setBackgroundEnabled:(BOOL)enabled DEPRECATED_MSG_ATTRIBUTE("Use isBackgroundEnabled instead.");
 
 /**
- * Gets the background enabled value.
- *
- * @return The background enabled value.
+ * DEPRECATED: Use isBackgroundEnabled instead.
  */
 - (BOOL)getBackgroundEnabled;
 

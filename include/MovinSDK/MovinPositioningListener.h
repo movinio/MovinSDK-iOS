@@ -1,6 +1,8 @@
 //
-// Created by Tim Potze on 01/11/2016.
-// Copyright (c) 2016 Movin. All rights reserved.
+// MovinPositioningListener.h
+// MovinSDK
+//
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,9 +1,8 @@
 //
-//  MovinLocationManager.h
-//  libMovinSDK
+// MovinLocationManager.h
+// MovinSDK
 //
-//  Created by Movin Software on 09/03/16.
-//  Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

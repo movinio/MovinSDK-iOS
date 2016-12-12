@@ -1,6 +1,8 @@
 //
-// Created by Tim Potze on 04/03/16.
-// Copyright (c) 2016 Movin. All rights reserved.
+// GeoAABB.h
+// MovinSDK
+//
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -10,6 +12,7 @@
  * Represents a geographical axis aligned bounding box.
  */
 @interface GeoAABB : GeoShape
+
 /**
  * Gets the origin of this axis aligned bounding box.
  */
@@ -70,6 +73,38 @@
 - (nonnull id)initWithOrigin:(nonnull GeoLatLng*)origin
                     andWidth:(double)width
                    andHeight:(double)height;
+
+/**
+ * Initializes a new GeoAABB object with the specified corners.
+ *
+ * @param corner1 A corner position.
+ * @param corner2 A corner position.
+ * @return A GeoAABB object with the specified corners.
+ */
+- (nonnull id)initWithCorner:(nonnull GeoLatLng*)corner1
+                   andCorner:(nonnull GeoLatLng*)corner2;
+
+/**
+ * Returns a newly created axis aligned bounding box with the specified corners.
+ *
+ * @param corner1 A corner position.
+ * @param corner2 A corner position.
+ * @return A newly created axis aligned bounding box with the specified corners.
+ */
++ (nonnull GeoAABB*) aabbWithCorner:(nonnull GeoLatLng*)corner1
+                          andCorner:(nonnull GeoLatLng*)corner2;
+
+/**
+ * Returns a newly created axis aligned bounding box with the specified origin and size.
+ *
+ * @param origin The origin.
+ * @param width The width.
+ * @param height The height.
+ * @return A newly created axis aligned bounding box with the specified origin and size.
+ */
++ (nonnull GeoAABB*)aabbWithOrigin:(nonnull GeoLatLng*)origin
+                          andWidth:(double)width
+                         andHeight:(double)height;
 
 /**
  * Gets a value indicating whether the specified box intersects with this instance.

@@ -1,6 +1,8 @@
 //
-// Created by Tim Potze on 17/10/2016.
-// Copyright (c) 2016 Movin. All rights reserved.
+// MovinScaledPOIUrl.h
+// MovinSDK
+//
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

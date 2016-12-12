@@ -1,9 +1,8 @@
 //
-//  AnalyticsService.h
-//  MovinSDK
+// AnalyticsService.h
+// MovinSDK
 //
-//  Created by Movin Software on 16/10/15.
-//  Copyright © 2015 Movin. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

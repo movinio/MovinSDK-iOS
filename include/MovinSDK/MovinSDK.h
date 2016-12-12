@@ -1,12 +1,9 @@
 //
-//  MovinSDK2.h
-//  MovinSDK
+// MovinSDK.h
+// MovinSDK
 //
-//  Created by Tim Potze on 25/04/16.
-//  Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
-
-
 
 //
 // Global Imports

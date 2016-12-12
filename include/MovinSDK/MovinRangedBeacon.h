@@ -1,9 +1,8 @@
 //
-//  MovinRangedBeacon.h
-//  libMovinSDK
+// MovinRangedBeacon.h
+// MovinSDK
 //
-//  Created by Movin Software on 07/03/16.
-//  Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

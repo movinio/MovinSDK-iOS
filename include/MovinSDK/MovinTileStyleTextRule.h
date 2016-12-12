@@ -1,6 +1,8 @@
+///
+// MovinTileStyleTextRule.h
+// MovinSDK
 //
-// Created by Tim Potze on 26/09/16.
-// Copyright (c) 2016 Movin. All rights reserved.
+// Copyright © 2016 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
