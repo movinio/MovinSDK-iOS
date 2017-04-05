@@ -2,7 +2,7 @@
 // MovinMapLayer.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -45,21 +45,16 @@
  * Gets the maximum zoom level available for this layer.
  */
 @property(readonly) float maxZoomLevel;
+
 /**
- * Initializes a new MovinMapLayer object with the specified tile manifest, name, tile width, tile height and zoom levels.
+ * Initializes a new MovinMapLayer object with the specified JSON data.
  *
- * @param tileManifest The tile manifest the layer is a member of.
- * @param name The name of the layer.
- * @param tileWidth The width of the tiles in the layer.
- * @param tileHeight The height of the tiles in the layer.
- * @param zoomLevels The zoom levels available in the layer.
- * @return A MovinMapLayer object with the specified tile manifest, name, tile width, tile height and zoom levels.
+ * @param json The JSON data.
+ * @param tileManifest The tile manifest.
+ * @return A MovinMapLayer object with the specified JSON data.
  */
-- (nonnull id)initWithTileManifest:(nonnull MovinTileManifest*)tileManifest
-                           andName:(nonnull NSString*)name
-                      andTileWidth:(int)tileWidth
-                     andTileHeight:(int)tileHeight
-                     andZoomLevels:(nonnull NSDictionary<NSNumber*, MovinMapZoomLevel*>*)zoomLevels;
+- (nonnull id)initWithJson:(nonnull NSDictionary*)json
+           andTileManifest:(nonnull MovinTileManifest*)tileManifest;
 
 /**
  * Create a MovinTileProvider for this layer with the specified style.

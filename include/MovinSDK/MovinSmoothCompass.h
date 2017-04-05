@@ -2,7 +2,7 @@
 // MovinSmoothCompass.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -16,17 +16,18 @@
  */
 typedef enum MovinCompassOffset {
     /// No compass offset.
-    MovinCompassOffsetNone,
+            MovinCompassOffsetNone,
     /// An offset of the compass heading based on the orientation of the status bar UI.
-    MovinCompassOffsetStatusBar,
+            MovinCompassOffsetStatusBar,
     /// An offset of the compass heading based on the orientation of the current device.
-    MovinCompassOffsetDevice,
+            MovinCompassOffsetDevice,
 } MovinCompassOffset;
 
 /**
  * Represents a compass which rotates smoothly.
  */
 @interface MovinSmoothCompass : NSObject
+
 /**
  * Gets or sets the interval at which the heading of the compass will be updated.
  */
@@ -34,7 +35,7 @@ typedef enum MovinCompassOffset {
 /**
  * Gets or sets the delegate to which events will be broadcasted.
  */
-@property id <MovinSmoothCompassDelegate> delegate;
+@property(weak) id<MovinSmoothCompassDelegate> delegate;
 
 /**
  * Gets or sets the offset at which this smooth canvas will operate.

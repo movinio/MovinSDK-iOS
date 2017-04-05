@@ -2,7 +2,7 @@
 // MovinPositioner.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -70,14 +70,4 @@
  * Internal method. Do not call.
  */
 - (void)callUnknownLocation;
-
-/**
- * Internal method. Do not call.
- */
-- (void)callLostConnection;
-
-/**
- * Internal method. Do not call.
- */
-- (nonnull NSArray*)getPositioningListeners;
 @end

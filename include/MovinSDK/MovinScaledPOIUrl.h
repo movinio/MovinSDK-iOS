@@ -2,7 +2,7 @@
 // MovinScaledPOIUrl.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

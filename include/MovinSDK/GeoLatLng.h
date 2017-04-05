@@ -2,7 +2,7 @@
 // GeoLatLng.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -37,7 +37,7 @@
                    andLng:(double)lng;
 
 /**
- * Returns a value indicating whether this instance and the specified GeoLatLng.
+ * Returns a value indicating whether this instance and the specified GeoLatLng are equal.
  *
  * @param latLng The other GeoLatLng.
  * @return YES if the values are equal, NO otherwise.
@@ -53,5 +53,13 @@
  */
 + (nonnull GeoLatLng*)pointWithLat:(double)lat
                             andLng:(double)lng;
+
+/**
+ * Returns a newly created point with the specified CLLocation.
+ *
+ * @param location The location of the point.
+ * @return A newly created point with the specified latitude and longitude.
+ */
++ (nonnull GeoLatLng*)pointWithLocation:(CLLocationCoordinate2D)location;
 @end
 

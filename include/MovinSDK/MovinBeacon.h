@@ -2,7 +2,7 @@
 // MovinBeacon.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -20,7 +20,7 @@
 /**
  * Gets the reference id of this instance.
  */
-@property(readonly, nonnull) NSString* referenceId;
+@property(readonly) int referenceId;
 /**
  * Gets the group this instance is a member of.
  */

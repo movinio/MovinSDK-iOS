@@ -2,7 +2,7 @@
 // MovinBeaconScanner.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -97,13 +97,13 @@ withSuccessListener:(nullable void (^)(BOOL success, NSError* _Nullable error))l
 /**
  * DEPRECATED: Use isBackgroundEnabled instead.
  *
- * @param enabled
+ * @param enabled DEPRECATED
  */
 - (void)setBackgroundEnabled:(BOOL)enabled DEPRECATED_MSG_ATTRIBUTE("Use isBackgroundEnabled instead.");
 
 /**
  * DEPRECATED: Use isBackgroundEnabled instead.
  */
-- (BOOL)getBackgroundEnabled;
+- (BOOL)getBackgroundEnabled DEPRECATED_MSG_ATTRIBUTE("Use isBackgroundEnabled instead.");
 
 @end

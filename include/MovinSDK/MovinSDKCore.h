@@ -2,7 +2,7 @@
 // MovinSDKCore.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,52 +11,59 @@
 @class MovinMap;
 @class MovinBeaconScanner;
 @class MovinTileStyle;
+@class MovinRoutingManager;
+@class MovinI18N;
 
 /**
  * A list of the Movin services.
  */
-typedef enum MovinService {
+typedef NS_OPTIONS(NSUInteger, MovinService) {
     /// No specific service.
-            MovinServiceUndefined = 0,
+            MovinServiceUndefined = (0),
     /// Positioning service.
-            MovinServicePositioning = 1,
+            MovinServicePositioning = (1 << 0),
     /// (DEPRECATED) Turn by turn service.
-            MovinServiceTurnByTurn = 2,
+            MovinServiceTurnByTurn = (1 << 1),
     /// (DEPRECATED) Proximity service.
-            MovinServiceProximity = 4,
+            MovinServiceProximity = (1 << 2),
     /// (DEPRECATED) Trigger service.
-            MovinServiceTrigger = 8,
-    /// (RESERVED) Routing service.
-            MovinServiceRouting = 16,
+            MovinServiceTrigger = (1 << 3),
+    /// Routing service.
+            MovinServiceRouting = (1 << 4),
     /// Data services.
-            MovinServiceData = 32
-} MovinService;
+            MovinServiceData = (1 << 5),
+};
 
 /**
  * A list of Movin data types which can be cached.
  */
-typedef enum MovinCacheableData {
+typedef NS_OPTIONS(NSUInteger, MovinCacheableData) {
     /// Data used by the MovinPositioningEngine.
-    MovinCacheableDataPositioning = 1,
+            MovinCacheableDataPositioning = (1 << 0),
     /// Data provided by MovinMap, such as buildings and entities.
-    MovinCacheableDataMapData = 2,
+            MovinCacheableDataMapData = (1 << 1),
     /// Tiles provided by the MovinTileProvider.
-    MovinCacheableDataTiles = 4,
+            MovinCacheableDataTiles = (1 << 2),
     /// Images provided by the MovinImageProvider.
-    MovinCacheableDataImages = 8,
+            MovinCacheableDataImages = (1 << 3),
     /// (RESERVED) Data used by the routing system.
-    MovinCacheableDataRouting = 16,
+            MovinCacheableDataRouting = (1 << 4),
     /// Beacon data provided by MovinMap and used by MovinBeaconScanner.
-    MovinCacheableDataBeacons = 32,
+            MovinCacheableDataBeacons = (1 << 5),
     /// All cacheable data types.
-    MovinCacheableDataAll = 63
-} MovinCacheableData;
+            MovinCacheableDataAll = (1 << 6) - 1
+};
 
 /**
- * Handler download requests. A value indicating whether the download was successful is provided together with an
+ * Handler for download requests. A value indicating whether the download was successful is provided together with an
  * error value. The error value is set when the success value is NO.
  */
 typedef void(^DownloadDataCallback)(BOOL success, NSError* _Nullable error);
+
+/**
+ * Handler for server version response.
+ */
+typedef void(^ServerVersionCallback)(NSString* _Nullable version);
 
 /**
  * Represents the entry point of MovinSDK.
@@ -138,6 +145,14 @@ typedef void(^DownloadDataCallback)(BOOL success, NSError* _Nullable error);
                                     andError:(NSError* _Nullable* _Nullable)error;
 
 /**
+ * Returns a shared MovinI18N object for internationalization of routing and maps.
+ *
+ * @param error A pointer to a NSError object. This error will be given a value if an error has occurred.
+ * @return A shared MovinI18N object.
+ */
++ (nullable MovinI18N*)getInternationalizationWithError:(NSError* _Nullable* _Nullable)error;
+
+/**
  * Returns whether or not the MovinSDK has already been initialized or not.
  */
 + (BOOL)isInitialized;
@@ -195,4 +210,12 @@ typedef void(^DownloadDataCallback)(BOOL success, NSError* _Nullable error);
  * @return The version string of the Movin SDK.
  */
 + (nonnull NSString*)getVersionString;
+
+/**
+ * Gets the version of the server.
+ *
+ * @param callback The callback called when the version was retrieved.
+ */
++ (void)getServerVersionWithCallback:(nonnull ServerVersionCallback)callback;
+
 @end

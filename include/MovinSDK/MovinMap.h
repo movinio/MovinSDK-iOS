@@ -2,7 +2,7 @@
 // MovinMap.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -85,6 +85,34 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
 @property(readonly) BOOL isDownloadingTileManifest;
 
 /**
+ * Gets all beacons available in this map. Returns nil if the beacon data has not yet been downloaded. Use
+ * [MovinMap downloadBeaconDataWithCallback:] to download the beacon data. Use [MovinMap getBeaconsWithCallback:] to
+ * receive all beacons once the beacon data has been downloaded.
+ */
+@property (nullable, readonly) NSArray<MovinBeacon*>* beacons;
+
+/**
+ * Gets all entities available in this map. Returns nil if the map data has not yet been downloaded. Use
+ * [MovinMap downloadMapDataWithCallback:] to download the map data. Use [MovinMap getEntitiesWithCallback:] to
+ * receive all entities once the map data has been downloaded.
+ */
+@property (nullable, readonly) NSArray<MovinEntity*>* entities;
+
+/**
+ * Gets all buildings available in this map. Returns nil if the map data has not yet been downloaded. Use
+ * [MovinMap downloadMapDataWithCallback:] to download the map data. Use [MovinMap getBuildingsWithCallback:] to
+ * receive all buildings once the map data has been downloaded.
+ */
+@property (nullable, readonly) NSArray<MovinBuilding*>* buildings;
+
+/**
+ * Gets the tile manifest for this map. Returns nil if the tile manifest has not yet been downloaded. Use
+ * [MovinMap downloadTileManifestWithcallback:] to download the tile manifest. Use [MovinMap getTileManifestWithCallback:]
+ * to receive all buildings once the tile manifest has been downloaded.
+ */
+@property (nullable, readonly) MovinTileManifest* tileManifest;
+
+/**
  * Initializes a new MovinMap object with the specified JSON data.
  *
  * @param json The JSON data.
@@ -149,11 +177,11 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
 - (void)getBeaconsWithCallback:(nonnull BeaconsCallback)callback;
 
 /**
- * Gets all beacon groups available in this map. The result is returned using a callback.
+ * DEPRECATED: Use getBeaconsWithCallback: instead.
  *
- * @param callback The callback to invoke once the result is ready.
+ * @param callback DEPRECATED
  */
-- (void)getBeaconGroupsWithCallback:(nonnull BeaconGroupsCallback)callback;
+- (void)getBeaconGroupsWithCallback:(nonnull BeaconGroupsCallback)callback DEPRECATED_MSG_ATTRIBUTE("Use getBeaconsWithCallback: instead.");
 
 /**
  * Gets all beacons in this map within the specified shape and floor. The result is returned using a callback.
@@ -165,6 +193,17 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
 - (void)getBeaconsInShape:(nonnull GeoShape*)shape
                  andFloor:(double)floor
               andCallback:(nonnull BeaconsCallback)callback;
+
+/**
+ * Gets all beacons in this map within the specified shape and floor. If the beacon data has not yet been
+ * downloaded, nil is returned.
+ *
+ * @param shape The shape in which to search.
+ * @param floor The floor on which to search.
+ * @return The found beacons or nil if the beacon data has not yet been downloaded.
+ */
+- (nullable NSArray<MovinBeacon*>*)getBeaconsInShape:(nonnull GeoShape*)shape
+                                            andFloor:(double)floor;
 
 /**
  * Gets all entities available in this map. The result is returned using a callback.
@@ -185,6 +224,17 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
                andCallback:(nonnull EntitiesCallback)callback;
 
 /**
+ * Gets all entities in this map within the specified shape and floor. If the map data has not yet been
+ * downloaded, nil is returned.
+ *
+ * @param shape The shape in which to search.
+ * @param floor The floor on which to search.
+ * @return The found entities or nil if the map data has not yet been downloaded.
+ */
+- (nullable NSArray<MovinEntity*>*)getEntitiesInShape:(nonnull GeoShape*)shape
+                                             andFloor:(double)floor;
+
+/**
  * Gets all buildings available in this map. The result is returned using a callback.
  *
  * @param callback The callback to invoke once the result is ready.
@@ -201,9 +251,26 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
                 andCallback:(nonnull BuildingsCallback)callback;
 
 /**
+ * Gets all buildings in this map within the specified shape . If the map data has not yet been
+ * downloaded, nil is returned.
+ *
+ * @param shape The shape in which to search.
+ * @return The found buildings or nil if the map data has not yet been downloaded.
+ */
+- (nullable NSArray<MovinBuilding*>*)getBuildingsInShape:(nonnull GeoShape*)shape;
+
+/**
  * Gets the tile manifest for this map. The result is returned using a callback.
  *
  * @param callback The callback to invoke once the result is ready.
  */
 - (void)getTileManifestWithCallback:(nonnull TileManifestCallback)callback;
+
+/**
+ * Gets the Movin routing manager for this map.
+ * @param error A pointer to a NSError object. This error wil lbe given a value if an error has occurred.
+ * @return A MovinRoutingManager object.
+ */
+- (nullable MovinRoutingManager*)getRouter:(NSError* _Nullable* _Nullable)error;
+
 @end

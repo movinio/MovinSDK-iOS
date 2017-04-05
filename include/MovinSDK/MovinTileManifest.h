@@ -2,7 +2,7 @@
 // MovinTileManifest.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -43,16 +43,11 @@
 @property(nonnull, readonly) MovinMapStyle* defaultStyle;
 
 /**
- * Initializes a new MovinTileManifest object with the specified version, map, layers and styles.
+ * Initializes a new MovinTileManifest object with the specified JSON data.
  *
- * @param version The version number of the latest tile package.
- * @param map The map of which the tile manifest represents the tiles.
- * @param layers The available map layers.
- * @param styles The available map styles.
- * @return A MovinTileManifest object with the specified version, map, layers and styles.
+ * @param json The JSON data.
+ * @param map The map.
+ * @return A MovinTileManifest object with the specified JSON data.
  */
-- (nonnull id)initWithVersion:(int)version
-               andMap:(nonnull MovinMap*)map
-            andLayers:(nonnull NSDictionary<NSString*, MovinMapLayer*>*)layers
-            andStyles:(nonnull NSDictionary<NSString*, MovinMapStyle*>*)styles;
+- (nonnull id)initWithJson:(nonnull NSDictionary*)json andMap:(nonnull MovinMap*) map;
 @end

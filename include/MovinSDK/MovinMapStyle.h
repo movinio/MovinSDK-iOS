@@ -2,7 +2,7 @@
 // MovinMapStyle.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -32,14 +32,14 @@
 @property(nonnull, readonly) NSString* name;
 
 /**
- * Initializes a new MovinMapStyle object with the specified tile manifest and name.
+ * Initializes a new MovinMapStyle object with the specified name.
  *
- * @param tileManifest The tile manifest the layer is a member of.
- * @param name The name of the layer.
- * @return A MovinMapStyle object with the specified tile manifest and name.
+ * @param name The name.
+ * @param tileManifest The tile manifest.
+ * @return A MovinMapStyle object with the specified name.
  */
-- (nonnull id)initWithTileManifest:(nonnull MovinTileManifest*)tileManifest
-                           andName:(nonnull NSString*)name;
+- (nonnull id)initWithName:(nonnull NSString*)name
+           andTileManifest:(nonnull MovinTileManifest*)tileManifest;
 
 /**
  * Create a MovinTileProvider for the specified layer with this style.

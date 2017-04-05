@@ -2,7 +2,7 @@
 // MovinPositioningListener.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -37,14 +37,6 @@
  */
 - (void)positioningEngine:(nonnull MovinPositioner*)engine
         didUpdatePosition:(nonnull FloorPosition*)position;
-
-/**
- * Optional method, called when the MovinPositioner lost connection to the internet. This is only relevant
- * for online-positioning. Offline-positioning will never call this. The SDK will default to OfflinePositioning, but if
- * that is unavailable it will use OnlinePositioning.
- * @param engine The positioner.
- */
-- (void)positioningEngineDidLoseConnection:(nonnull MovinPositioner*)engine;
 
 /**
  * Optional method, called when the MovinPositioner can no longer determine your position, because you are no

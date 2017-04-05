@@ -2,7 +2,7 @@
 // MovinSDK.h
 // MovinSDK
 //
-// Copyright © 2016 Movin. All rights reserved.
+// Copyright © 2017 Movin. All rights reserved.
 //
 
 //
@@ -22,6 +22,11 @@
 #import <MovinSDK/GeoPolygon.h>
 #import <MovinSDK/GeoLineString.h>
 #import <MovinSDK/GeoLatLng.h>
+
+//
+// I18N
+#import <MovinSDK/MovinI18N.h>
+#import <MovinSDK/MovinTranslatableString.h>
 
 //
 // Movin Data
@@ -57,6 +62,12 @@
 #import <MovinSDK/MovinPositioningEngine.h>
 #import <MovinSDK/MovinSmoothCompass.h>
 #import <MovinSDK/MovinSmoothCompassDelegate.h>
+
+//
+// Routing
+#import <MovinSDK/MovinRoutingManager.h>
+#import <MovinSDK/MovinRoute.h>
+#import <MovinSDK/MovinRouteInstruction.h>
 
 //
 // Analytics
