@@ -14,7 +14,7 @@
     <a title="GeoLatLng Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">MovinSDK Docs</a> (98% documented)</p>
+        <p><a href="../index.html">MovinSDK Docs</a> (99% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -252,10 +252,66 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinI18N.html">MovinI18N</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRoute.html">MovinRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRouteInstruction.html">MovinRouteInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRoutingManager.html">MovinRoutingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTranslatableString.html">MovinTranslatableString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Constants.html">Other Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Constants.html#/c:@MovinRouteInstructionFeatureFloors">MovinRouteInstructionFeatureFloors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Constants.html#/c:@MovinRouteInstructionFeatureToDestinationRoom">MovinRouteInstructionFeatureToDestinationRoom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Constants.html#/c:@MovinRouteInstructionFeatureToFloorChanger">MovinRouteInstructionFeatureToFloorChanger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Enums.html">Other Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/MovinCompassOffset.html">MovinCompassOffset</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinRouteInstructionIndicator.html">MovinRouteInstructionIndicator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinGMSMapViewListener.html">MovinGMSMapViewListener</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Type Definitions.html">Other Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinSDKCore.h@T@ServerVersionCallback">ServerVersionCallback</a>
               </li>
             </ul>
           </li>
@@ -456,7 +512,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a value indicating whether this instance and the specified GeoLatLng.</p>
+                        <p>Returns a value indicating whether this instance and the specified GeoLatLng are equal.</p>
 
                       </div>
                       <div class="declaration">
@@ -555,6 +611,63 @@
                               <td>
                                 <div>
                                   <p>The longitude of the point.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A newly created point with the specified latitude and longitude.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoLatLng(cm)pointWithLocation:"></a>
+                    <a name="//apple_ref/objc/Method/+pointWithLocation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoLatLng(cm)pointWithLocation:">+pointWithLocation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a newly created point with the specified CLLocation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">GeoLatLng</span> <span class="o">*</span><span class="p">)</span><span class="nf">pointWithLocation</span><span class="p">:(</span><span class="n">CLLocationCoordinate2D</span><span class="p">)</span><span class="nv">location</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">point</span><span class="p">(</span><span class="n">withLocation</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">GeoLatLng</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>location</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The location of the point.</p>
 
                                 </div>
                               </td>

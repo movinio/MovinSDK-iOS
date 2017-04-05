@@ -14,7 +14,7 @@
     <a title="FloorPosition Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">MovinSDK Docs</a> (98% documented)</p>
+        <p><a href="../index.html">MovinSDK Docs</a> (99% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -252,10 +252,66 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinI18N.html">MovinI18N</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRoute.html">MovinRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRouteInstruction.html">MovinRouteInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRoutingManager.html">MovinRoutingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTranslatableString.html">MovinTranslatableString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Constants.html">Other Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Constants.html#/c:@MovinRouteInstructionFeatureFloors">MovinRouteInstructionFeatureFloors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Constants.html#/c:@MovinRouteInstructionFeatureToDestinationRoom">MovinRouteInstructionFeatureToDestinationRoom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Constants.html#/c:@MovinRouteInstructionFeatureToFloorChanger">MovinRouteInstructionFeatureToFloorChanger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Enums.html">Other Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/MovinCompassOffset.html">MovinCompassOffset</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinRouteInstructionIndicator.html">MovinRouteInstructionIndicator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinGMSMapViewListener.html">MovinGMSMapViewListener</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Type Definitions.html">Other Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinSDKCore.h@T@ServerVersionCallback">ServerVersionCallback</a>
               </li>
             </ul>
           </li>
@@ -415,6 +471,77 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)FloorPosition(cm)positionWithPoint:andFloor:"></a>
+                    <a name="//apple_ref/objc/Method/+positionWithPoint:andFloor:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FloorPosition(cm)positionWithPoint:andFloor:">+positionWithPoint:andFloor:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a new FloorPosition for the given position and floor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">FloorPosition</span> <span class="o">*</span><span class="p">)</span><span class="nf">positionWithPoint</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span>
+                                    <span class="nf">andFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="cm">/*not inherited*/</span> <span class="nf">init</span><span class="p">(</span><span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span><span class="p">,</span> <span class="n">andFloor</span> <span class="nv">floor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The position of this FloorPosition.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor of this FloorPosition.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new instance of FloorPosition.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)FloorPosition(im)toJSON"></a>
                     <a name="//apple_ref/objc/Method/-toJSON" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)FloorPosition(im)toJSON">-toJSON</a>
@@ -440,6 +567,63 @@
                           <pre class="highlight"><code><span class="kd">func</span> <span class="nf">toJSON</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)FloorPosition(im)isEqualToPosition:"></a>
+                    <a name="//apple_ref/objc/Method/-isEqualToPosition:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)FloorPosition(im)isEqualToPosition:">-isEqualToPosition:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a value indicating whether this instance and the specified FloorPosition are equal.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isEqualToPosition</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">FloorPosition</span> <span class="o">*</span><span class="p">)</span><span class="nv">position</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="n">to</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">FloorPosition</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other FloorPosition.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the values are equal, NO otherwise.</p>
+
                       </div>
                     </section>
                   </div>

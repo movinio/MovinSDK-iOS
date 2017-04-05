@@ -14,7 +14,7 @@
     <a title="MovinMap Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">MovinSDK Docs</a> (98% documented)</p>
+        <p><a href="../index.html">MovinSDK Docs</a> (99% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -252,10 +252,66 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MovinI18N.html">MovinI18N</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRoute.html">MovinRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRouteInstruction.html">MovinRouteInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinRoutingManager.html">MovinRoutingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinTranslatableString.html">MovinTranslatableString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Constants.html">Other Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Constants.html#/c:@MovinRouteInstructionFeatureFloors">MovinRouteInstructionFeatureFloors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Constants.html#/c:@MovinRouteInstructionFeatureToDestinationRoom">MovinRouteInstructionFeatureToDestinationRoom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Constants.html#/c:@MovinRouteInstructionFeatureToFloorChanger">MovinRouteInstructionFeatureToFloorChanger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Enums.html">Other Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/MovinCompassOffset.html">MovinCompassOffset</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MovinRouteInstructionIndicator.html">MovinRouteInstructionIndicator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/MovinGMSMapViewListener.html">MovinGMSMapViewListener</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Type Definitions.html">Other Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinSDKCore.h@T@ServerVersionCallback">ServerVersionCallback</a>
               </li>
             </ul>
           </li>
@@ -496,6 +552,142 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="k">var</span> <span class="nv">isDownloadingTileManifest</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(py)beacons"></a>
+                    <a name="//apple_ref/objc/Property/beacons" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(py)beacons">beacons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all beacons available in this map. Returns nil if the beacon data has not yet been downloaded. Use
+[MovinMap downloadBeaconDataWithCallback:] to download the beacon data. Use [MovinMap getBeaconsWithCallback:] to
+receive all beacons once the beacon data has been downloaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MovinBeacon.html">MovinBeacon</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">beacons</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">beacons</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinBeacon.html">MovinBeacon</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(py)entities"></a>
+                    <a name="//apple_ref/objc/Property/entities" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(py)entities">entities</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all entities available in this map. Returns nil if the map data has not yet been downloaded. Use
+[MovinMap downloadMapDataWithCallback:] to download the map data. Use [MovinMap getEntitiesWithCallback:] to
+receive all entities once the map data has been downloaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MovinEntity.html">MovinEntity</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">entities</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">entities</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinEntity.html">MovinEntity</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(py)buildings"></a>
+                    <a name="//apple_ref/objc/Property/buildings" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(py)buildings">buildings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all buildings available in this map. Returns nil if the map data has not yet been downloaded. Use
+[MovinMap downloadMapDataWithCallback:] to download the map data. Use [MovinMap getBuildingsWithCallback:] to
+receive all buildings once the map data has been downloaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MovinBuilding.html">MovinBuilding</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">buildings</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">buildings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinBuilding.html">MovinBuilding</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(py)tileManifest"></a>
+                    <a name="//apple_ref/objc/Property/tileManifest" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(py)tileManifest">tileManifest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the tile manifest for this map. Returns nil if the tile manifest has not yet been downloaded. Use
+[MovinMap downloadTileManifestWithcallback:] to download the tile manifest. Use [MovinMap getTileManifestWithCallback:]
+to receive all buildings once the tile manifest has been downloaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/MovinTileManifest.html">MovinTileManifest</a></span> <span class="o">*</span><span class="n">tileManifest</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">tileManifest</span><span class="p">:</span> <span class="kt"><a href="../Classes/MovinTileManifest.html">MovinTileManifest</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -885,7 +1077,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets all beacon groups available in this map. The result is returned using a callback.</p>
+                        <p>DEPRECATED: Use getBeaconsWithCallback: instead.</p>
 
                       </div>
                       <div class="declaration">
@@ -913,7 +1105,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The callback to invoke once the result is ready.</p>
+                                  <p>DEPRECATED</p>
 
                                 </div>
                               </td>
@@ -1000,6 +1192,78 @@
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getBeaconsInShape:andFloor:"></a>
+                    <a name="//apple_ref/objc/Method/-getBeaconsInShape:andFloor:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getBeaconsInShape:andFloor:">-getBeaconsInShape:andFloor:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all beacons in this map within the specified shape and floor. If the beacon data has not yet been
+ downloaded, nil is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MovinBeacon.html">MovinBeacon</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">getBeaconsInShape</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoShape.html">GeoShape</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">shape</span>
+                                              <span class="nf">andFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getBeaconsIn</span><span class="p">(</span><span class="n">_</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoShape.html">GeoShape</a></span><span class="p">,</span> <span class="n">andFloor</span> <span class="nv">floor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinBeacon.html">MovinBeacon</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shape</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The shape in which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor on which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The found beacons or nil if the beacon data has not yet been downloaded.</p>
+
                       </div>
                     </section>
                   </div>
@@ -1139,6 +1403,79 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)MovinMap(im)getEntitiesInShape:andFloor:"></a>
+                    <a name="//apple_ref/objc/Method/-getEntitiesInShape:andFloor:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getEntitiesInShape:andFloor:">-getEntitiesInShape:andFloor:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all entities in this map within the specified shape and floor. If the map data has not yet been
+ downloaded, nil is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MovinEntity.html">MovinEntity</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">getEntitiesInShape</span><span class="p">:</span>
+                                         <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoShape.html">GeoShape</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">shape</span>
+                                               <span class="nf">andFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getEntitiesIn</span><span class="p">(</span><span class="n">_</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoShape.html">GeoShape</a></span><span class="p">,</span> <span class="n">andFloor</span> <span class="nv">floor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinEntity.html">MovinEntity</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shape</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The shape in which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor on which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The found entities or nil if the map data has not yet been downloaded.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)MovinMap(im)getBuildingsWithCallback:"></a>
                     <a name="//apple_ref/objc/Method/-getBuildingsWithCallback:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)MovinMap(im)getBuildingsWithCallback:">-getBuildingsWithCallback:</a>
@@ -1257,6 +1594,65 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)MovinMap(im)getBuildingsInShape:"></a>
+                    <a name="//apple_ref/objc/Method/-getBuildingsInShape:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getBuildingsInShape:">-getBuildingsInShape:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all buildings in this map within the specified shape . If the map data has not yet been
+ downloaded, nil is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MovinBuilding.html">MovinBuilding</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">getBuildingsInShape</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoShape.html">GeoShape</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">shape</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getBuildingsIn</span><span class="p">(</span><span class="n">_</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoShape.html">GeoShape</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinBuilding.html">MovinBuilding</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shape</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The shape in which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The found buildings or nil if the map data has not yet been downloaded.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)MovinMap(im)getTileManifestWithCallback:"></a>
                     <a name="//apple_ref/objc/Method/-getTileManifestWithCallback:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)MovinMap(im)getTileManifestWithCallback:">-getTileManifestWithCallback:</a>
@@ -1302,6 +1698,66 @@
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getRouter:"></a>
+                    <a name="//apple_ref/objc/Method/-getRouter:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getRouter:">-getRouter:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the Movin routing manager for this map.
+- parameter: error A pointer to a NSError object. This error wil lbe given a value if an error has occurred.
+- returns: A MovinRoutingManager object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/MovinRoutingManager.html">MovinRoutingManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getRouter</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getRouter</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/MovinRoutingManager.html">MovinRoutingManager</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A pointer to a NSError object. This error wil lbe given a value if an error has occurred.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A MovinRoutingManager object.</p>
+
                       </div>
                     </section>
                   </div>
