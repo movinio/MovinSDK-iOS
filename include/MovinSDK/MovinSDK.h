@@ -34,6 +34,7 @@
 #import <MovinSDK/MovinBeacon.h>
 #import <MovinSDK/MovinEntitySubType.h>
 #import <MovinSDK/MovinBuilding.h>
+#import <MovinSDK/MovinFloor.h>
 #import <MovinSDK/MovinMap.h>
 #import <MovinSDK/MovinEntity.h>
 #import <MovinSDK/BeaconIdentifier.h>

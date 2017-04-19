@@ -28,6 +28,14 @@
 - (nonnull id)initWithPoints:(nonnull NSArray<GeoLatLng*>*)points;
 
 /**
+ * Returns a newly created GeoLinearRing object with the specified points.
+ *
+ * @param points The points to initialize the ring with.
+ * @return A newly created GeoLinearRing object containing the specified points.
+ */
++ (nonnull GeoLinearRing *)ringWithPoints:(nonnull NSArray<GeoLatLng*>*)points;
+
+/**
  * Returns a value indicating whether this instance and the specified GeoLinearRing.
  *
  * @param linearRing The other GeoLinearRing.

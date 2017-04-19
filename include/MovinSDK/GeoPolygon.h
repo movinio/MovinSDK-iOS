@@ -28,6 +28,14 @@
 - (nonnull id)initWithRings:(nonnull NSArray<GeoLinearRing*>*)rings;
 
 /**
+ * Returns a newly created GeoPolygon object with the specified rings.
+ *
+ * @param rings The rings to initialize the ring with.
+ * @return A newly created GeoPolygon object containing the specified rings.
+ */
++ (nonnull GeoPolygon*)polygonWithRings:(nonnull NSArray<GeoLinearRing*>*)rings;
+
+/**
  * Returns a value indicating whether this instance and the specified GeoPolygon.
  *
  * @param polygon The other GeoPolygon.

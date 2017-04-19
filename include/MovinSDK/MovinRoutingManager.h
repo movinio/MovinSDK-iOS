@@ -24,7 +24,7 @@ typedef void(^RoutingCallback)(MovinRoute* _Nullable route, NSError* _Nullable e
 /**
  * Gets the map used when calculating routes.
  */
-@property(nonnull, readonly) MovinMap* map;
+@property(weak, nullable, readonly) MovinMap* map;
 
 /**
  * Initializes a new MovinRoutingManager object with the specified map.

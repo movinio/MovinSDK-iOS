@@ -16,9 +16,9 @@
 @class MovinBeaconGroup;
 @class MovinEntity;
 @class MovinBuilding;
-@class MovinTileProvider;
 @class MovinTileManifest;
-@class MovinTileStyle;
+@class MovinFloor;
+@class MovinRoutingManager;
 
 /**
  * Handler for getting beacon groups. An array of the resulting beacon groups and an error is supplied. If an error
@@ -104,6 +104,11 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
  * receive all buildings once the map data has been downloaded.
  */
 @property (nullable, readonly) NSArray<MovinBuilding*>* buildings;
+
+/**
+ * Gets all floors available in this map.
+ */
+@property (nonnull, readonly) NSArray<MovinFloor*>* floors;
 
 /**
  * Gets the tile manifest for this map. Returns nil if the tile manifest has not yet been downloaded. Use
@@ -268,9 +273,17 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
 
 /**
  * Gets the Movin routing manager for this map.
+ *
  * @param error A pointer to a NSError object. This error wil lbe given a value if an error has occurred.
  * @return A MovinRoutingManager object.
  */
 - (nullable MovinRoutingManager*)getRouter:(NSError* _Nullable* _Nullable)error;
 
+/**
+ * Gets the floor associated with the specified floor number.
+ *
+ * @param floorNumber The floor number.
+ * @return The floor associated with the specified floor number.
+ */
+- (nullable MovinFloor*)getFloor:(double)floorNumber;
 @end

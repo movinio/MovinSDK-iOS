@@ -72,4 +72,9 @@
  * @return A MovinFloorSwitcher object with the specified tile provider.
  */
 - (id)initWithTileProvider:(MovinTileProvider*)tileProvider;
+
+/**
+ * Reload the floor buttons.
+ */
+- (void)reload;
 @end

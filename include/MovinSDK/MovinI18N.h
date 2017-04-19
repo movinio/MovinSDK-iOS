@@ -7,13 +7,17 @@
 
 
 #import <Foundation/Foundation.h>
+#import "MovinSDKCore.h"
 
 /**
  * Represents the internationalization manager for routing and maps.
  */
 @interface MovinI18N : NSObject
-// TODO: Load language
-// TODO: Select active language
+/**
+ * Gets or sets the active language (e.g. en-US, nl-NL, nl-BE).
+ */
+@property NSString* activeLanguage;
+
 /**
  * Translates the specified key with the specified parameters.
  *
@@ -25,10 +29,21 @@
         withParameters:(NSArray*)parameters;
 
 /**
- * Gets a value indicating whether the translation for the specified key has support for plural values.
+ * Downloads the routing instructions translations. Once the translations have been downloaded, or if the download
+ * fails, the specified callback is invoked.
  *
- * @param key The key to check for.
- * @return YES if the translation has support for plural values; NO otherwise.
+ * @param callback The callback invoked once the download has been completed or has failed.
  */
-- (BOOL)isPluralKey:(NSString*)key;
+- (void)downloadRoutingTranslationsWithCallback:(DownloadDataCallback)callback;
+
+/**
+ * Downloads the translations for the specified map.Once the translations have been downloaded, or if the download
+ * fails, the specified callback is invoked.
+ *
+ * @param map The map to download the translations for.
+ * @param callback The callback invoked once the download has been completed or has failed.
+ */
+- (void)downloadTranslationsForMap:(MovinMap*)map
+                      withCallback:(DownloadDataCallback)callback;
+
 @end

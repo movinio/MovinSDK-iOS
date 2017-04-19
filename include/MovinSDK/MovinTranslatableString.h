@@ -30,7 +30,7 @@
 /**
  * Gets the translated value for this string using the language set to the MovinI18N instance.
  */
-@property(nonnull, readonly) NSString* translated;//TODO: implement
+@property(nonnull, readonly) NSString* translated;
 
 /**
  * Initializes a new MovinTranslatableString object with the specified key and parameters.

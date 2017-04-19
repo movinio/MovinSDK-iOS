@@ -28,6 +28,14 @@
 - (nonnull id)initWithPolygons:(nonnull NSArray<GeoPolygon*>*)polygons;
 
 /**
+ * Returns a newly created GeoMultiPolygon object with the specified polygons.
+ *
+ * @param polygons The polygons to initialize the collection with.
+ * @return A newly created GeoMultiPolygon object containing the specified collection of polygons.
+ */
++ (nonnull GeoMultiPolygon*)multiPolygonWithPolygons:(nonnull NSArray<GeoPolygon*>*)polygons;
+
+/**
  * Returns a value indicating whether this instance and the specified GeoMultiPolygon.
  *
  * @param multiPolygon The other GeoMultiPolygon.

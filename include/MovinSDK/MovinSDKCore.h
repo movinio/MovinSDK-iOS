@@ -11,7 +11,6 @@
 @class MovinMap;
 @class MovinBeaconScanner;
 @class MovinTileStyle;
-@class MovinRoutingManager;
 @class MovinI18N;
 
 /**
@@ -50,8 +49,10 @@ typedef NS_OPTIONS(NSUInteger, MovinCacheableData) {
             MovinCacheableDataRouting = (1 << 4),
     /// Beacon data provided by MovinMap and used by MovinBeaconScanner.
             MovinCacheableDataBeacons = (1 << 5),
+    /// Translation information.
+            MovinCacheableDataTranslations = (1 << 6),
     /// All cacheable data types.
-            MovinCacheableDataAll = (1 << 6) - 1
+            MovinCacheableDataAll = (1 << 7) - 1
 };
 
 /**

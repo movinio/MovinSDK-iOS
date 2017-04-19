@@ -26,6 +26,14 @@
 - (nonnull id)initWithGeometries:(nonnull NSArray<GeoShape*>*)geometries;
 
 /**
+ * Returns a newly created GeoGeometryCollection object with the specified geometries.
+ *
+ * @param geometries The geometries to initialize the collection with.
+ * @return A newly created GeoGeometryCollection object containing the specified collection of geometries.
+ */
++ (nonnull GeoGeometryCollection*)collectionWithGeometries:(nonnull NSArray<GeoShape*>*)geometries;
+
+/**
  * Returns a value indicating whether this instance and the specified GeoGeometryCollection.
  *
  * @param geometryCollection The other GeoGeometryCollection.

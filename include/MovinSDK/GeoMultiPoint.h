@@ -28,6 +28,14 @@
 - (nonnull id)initWithPoints:(nonnull NSArray<GeoLatLng*>*)points;
 
 /**
+ * Returns a newly created GeoMultiPoint object with the specified points.
+ *
+ * @param points The points to initialize the collection with.
+ * @return A newly created GeoMultiPoint object containing the specified collection of points.
+ */
++ (nonnull GeoMultiPoint*)multiPointWithPoints:(nonnull NSArray<GeoLatLng*>*)points;
+
+/**
  * Returns a value indicating whether this instance and the specified GeoMultiPoint.
  *
  * @param multiPoint The other GeoMultiPoint.

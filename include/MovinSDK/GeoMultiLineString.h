@@ -28,6 +28,15 @@
 - (nonnull id)initWithLineStrings:(nonnull NSArray<GeoLineString*>*)lineStrings;
 
 /**
+ * Returns a newly created GeoMultiLineString object with the specified line strings.
+ *
+ * @param lineStrings The line strings to initialize the collection with.
+ * @return A newly created GeoMultiLineString object containing the specified collection of line strings.
+ */
++ (nonnull GeoMultiLineString*)multiLineStringWithLineStrings:(nonnull NSArray<GeoLineString*>*)lineStrings;
+
+
+/**
  * Returns a value indicating whether this instance and the specified GeoMultiLineString.
  *
  * @param multiLineString The other GeoMultiLineString.
