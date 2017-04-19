@@ -255,6 +255,9 @@
             <a href="../Other Classes.html">Other Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/MovinFloor.html">MovinFloor</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/MovinI18N.html">MovinI18N</a>
               </li>
               <li class="nav-group-task">
@@ -654,6 +657,38 @@ receive all buildings once the map data has been downloaded.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="k">var</span> <span class="nv">buildings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinBuilding.html">MovinBuilding</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(py)floors"></a>
+                    <a name="//apple_ref/objc/Property/floors" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(py)floors">floors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all floors available in this map.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MovinFloor.html">MovinFloor</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">floors</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">floors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinFloor.html">MovinFloor</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1715,9 +1750,7 @@ to receive all buildings once the tile manifest has been downloaded.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the Movin routing manager for this map.
-- parameter: error A pointer to a NSError object. This error wil lbe given a value if an error has occurred.
-- returns: A MovinRoutingManager object.</p>
+                        <p>Gets the Movin routing manager for this map.</p>
 
                       </div>
                       <div class="declaration">
@@ -1757,6 +1790,63 @@ to receive all buildings once the tile manifest has been downloaded.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A MovinRoutingManager object.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getFloor:"></a>
+                    <a name="//apple_ref/objc/Method/-getFloor:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getFloor:">-getFloor:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the floor associated with the specified floor number.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/MovinFloor.html">MovinFloor</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floorNumber</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getFloor</span><span class="p">(</span><span class="n">_</span> <span class="nv">floorNumber</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/MovinFloor.html">MovinFloor</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floorNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor number.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The floor associated with the specified floor number.</p>
 
                       </div>
                     </section>
