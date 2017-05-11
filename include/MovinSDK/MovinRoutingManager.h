@@ -20,7 +20,6 @@ typedef void(^RoutingCallback)(MovinRoute* _Nullable route, NSError* _Nullable e
  * Represents the manager for route calculations.
  */
 @interface MovinRoutingManager : NSObject
-// TODO: Accessibility
 /**
  * Gets the map used when calculating routes.
  */
@@ -46,4 +45,51 @@ typedef void(^RoutingCallback)(MovinRoute* _Nullable route, NSError* _Nullable e
                      to:(nonnull FloorPosition*)to
 withInstructionFeatures:(nonnull NSArray<NSString*>*)instructionFeatures
                callback:(nonnull RoutingCallback)callback;
+
+/**
+ * Calculates a route from a certain point to a certain point with specific instruction features.
+ *
+ * @param from The point from which to calculate the route.
+ * @param to The point to which to calculate the route.
+ * @param instructionFeatures A collection of instruction features to be used.
+ * @param accessibilityMode A value indicating whether to enable accessibility mode, which, for example, avoids the use of stairs.
+ * @param callback The callback to invoke once the route has been calculated.
+ */
+- (void)   getRouteFrom:(nonnull FloorPosition*)from
+                     to:(nonnull FloorPosition*)to
+withInstructionFeatures:(nonnull NSArray<NSString*>*)instructionFeatures
+   andAccessibilityMode:(BOOL)accessibilityMode
+               callback:(nonnull RoutingCallback)callback;
+
+/**
+ * Calculates a route from a certain point to a certain point with specific instruction features.
+ *
+ * @param from The point from which to calculate the route.
+ * @param to The point to which to calculate the route.
+ * @param waypoints The waypoints to pass by during the route
+ * @param instructionFeatures A collection of instruction features to be used.
+ * @param callback The callback to invoke once the route has been calculated.
+ */
+- (void)  getRouteFrom:(nonnull FloorPosition*)from
+                    to:(nonnull FloorPosition*)to
+         withWaypoints:(nullable NSMutableArray<FloorPosition*>*)waypoints
+andInstructionFeatures:(nonnull NSArray<NSString*>*)instructionFeatures
+              callback:(nonnull RoutingCallback)callback;
+
+/**
+ * Calculates a route from a certain point to a certain point with specific instruction features.
+ *
+ * @param from The point from which to calculate the route.
+ * @param to The point to which to calculate the route.
+ * @param waypoints The waypoints to pass by during the route
+ * @param instructionFeatures A collection of instruction features to be used.
+ * @param accessibilityMode A value indicating whether to enable accessibility mode, which, for example, avoids the use of stairs.
+ * @param callback The callback to invoke once the route has been calculated.
+ */
+- (void)  getRouteFrom:(nonnull FloorPosition*)from
+                    to:(nonnull FloorPosition*)to
+         withWaypoints:(nullable NSMutableArray<FloorPosition*>*)waypoints
+andInstructionFeatures:(nonnull NSArray<NSString*>*)instructionFeatures
+  andAccessibilityMode:(BOOL)accessibilityMode
+              callback:(nonnull RoutingCallback)callback;
 @end

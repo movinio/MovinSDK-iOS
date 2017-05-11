@@ -8,9 +8,6 @@
 #import <Foundation/Foundation.h>
 
 @class MovinMap;
-@class MovinBeacon;
-@class MovinRangedBeacon;
-@class MovinBeaconScanner;
 @protocol MovinBeaconScannerListener;
 
 /**

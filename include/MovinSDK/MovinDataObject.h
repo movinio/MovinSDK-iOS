@@ -28,10 +28,10 @@
 /**
  * Initializes a new MovinDataObject object with the specified JSON data.
  *
- * @param json The JSON data.
+ * @param jsonData The JSON data.
  * @return A MovinDataObject object with the specified JSON data.
  */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)json;
+- (nonnull id)initWithJson:(nonnull NSDictionary*)jsonData;
 
 /**
  * Initializes a new MovinDataObject object with the specified JSON data and properties.

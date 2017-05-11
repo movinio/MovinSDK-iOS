@@ -12,6 +12,7 @@
 @class MovinEntitySubType;
 @class MovinPositioningEngine;
 @class GeoShape;
+@class GeoLatLng;
 @class MovinBeacon;
 @class MovinBeaconGroup;
 @class MovinEntity;
@@ -19,6 +20,8 @@
 @class MovinTileManifest;
 @class MovinFloor;
 @class MovinRoutingManager;
+@class MovinNavigationNode;
+@class FloorPosition;
 
 /**
  * Handler for getting beacon groups. An array of the resulting beacon groups and an error is supplied. If an error
@@ -33,6 +36,12 @@ typedef void(^BeaconGroupsCallback)(NSArray<MovinBeaconGroup*>* _Nullable beacon
 typedef void(^BeaconsCallback)(NSArray<MovinBeacon*>* _Nullable beacons, NSError* _Nullable error);
 
 /**
+ * Handler for getting a beacon. The resulting beacon and an error is supplied. If an error occurs, the beacon will be
+ * nil and an error is set.
+ */
+typedef void(^BeaconCallback)(MovinBeacon* _Nullable beacon, NSError* _Nullable error);
+
+/**
  * Handler for getting buildings. An array of the resulting buildings and an error is supplied. If an error occurs, the
  * array will be nil and an error is set.
  */
@@ -43,6 +52,18 @@ typedef void(^BuildingsCallback)(NSArray<MovinBuilding*>* _Nullable buildings, N
  * array will be nil and an error is set.
  */
 typedef void(^EntitiesCallback)(NSArray<MovinEntity*>* _Nullable entities, NSError* _Nullable error);
+
+/**
+ * Handler for getting navigation nodes. An array of the resulting navigation nodes and an error is supplied. If an
+ * error occurs, the array will be nil and an error is set.
+ */
+typedef void(^NavigationNodesCallback)(NSArray<MovinNavigationNode*>* _Nullable navigationNodes, NSError* _Nullable error);
+
+/**
+ * Handler for getting a navigation node. The resulting navigation node and an error is supplied. If an error occurs,
+ * the node will be nil and an error is set.
+ */
+typedef void(^NavigationNodeCallback)(MovinNavigationNode* _Nullable navigationNode, NSError* _Nullable error);
 
 /**
  * Handler for getting a tile manifest. The resulting tile manifest and an error is supplied. If an error occurs, the
@@ -72,50 +93,55 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
  */
 @property(readonly, nonnull) NSDictionary<NSString*, MovinEntitySubType*>* subTypes;
 /**
- * Gets whether or not the map is currently downloading map data.
+ * Gets a value indicating whether the map is currently downloading map data.
  */
 @property(readonly) BOOL isDownloadingMapData;
 /**
- * Gets whether or not the map is currently downloading beacon data.
+ * Gets a value indicating whether the map is currently downloading beacon data.
  */
 @property(readonly) BOOL isDownloadingBeaconData;
 /**
- * Gets whether or not the map is currently downloading the tile manifest.
+ * Gets a value indicating whether the map is currently downloading the tile manifest.
  */
 @property(readonly) BOOL isDownloadingTileManifest;
-
+/**
+ * Gets a value indicating whether the mis currently downloading the navigation nodes.
+ */
+@property(readonly) BOOL isDownloadingNavigationNodes;
 /**
  * Gets all beacons available in this map. Returns nil if the beacon data has not yet been downloaded. Use
  * [MovinMap downloadBeaconDataWithCallback:] to download the beacon data. Use [MovinMap getBeaconsWithCallback:] to
  * receive all beacons once the beacon data has been downloaded.
  */
-@property (nullable, readonly) NSArray<MovinBeacon*>* beacons;
-
+@property(nullable, readonly) NSArray<MovinBeacon*>* beacons;
 /**
  * Gets all entities available in this map. Returns nil if the map data has not yet been downloaded. Use
  * [MovinMap downloadMapDataWithCallback:] to download the map data. Use [MovinMap getEntitiesWithCallback:] to
  * receive all entities once the map data has been downloaded.
  */
-@property (nullable, readonly) NSArray<MovinEntity*>* entities;
-
+@property(nullable, readonly) NSArray<MovinEntity*>* entities;
 /**
  * Gets all buildings available in this map. Returns nil if the map data has not yet been downloaded. Use
  * [MovinMap downloadMapDataWithCallback:] to download the map data. Use [MovinMap getBuildingsWithCallback:] to
  * receive all buildings once the map data has been downloaded.
  */
-@property (nullable, readonly) NSArray<MovinBuilding*>* buildings;
-
+@property(nullable, readonly) NSArray<MovinBuilding*>* buildings;
+/**
+ * Gets all navigation nodes available in this map. Returns nil if the navigation nodes have not yet been downloaded.
+ * Use [MovinMap downloadNavigationNodesWithCallback:] to download the nodes. Use
+ * [MovinMap getNavigationNodesWithCallback:] to receive all navigation nodes once they has been downloaded.
+ */
+@property(nullable, readonly) NSArray<MovinNavigationNode*>* navigationNodes;
 /**
  * Gets all floors available in this map.
  */
-@property (nonnull, readonly) NSArray<MovinFloor*>* floors;
-
+@property(nonnull, readonly) NSArray<MovinFloor*>* floors;
 /**
  * Gets the tile manifest for this map. Returns nil if the tile manifest has not yet been downloaded. Use
  * [MovinMap downloadTileManifestWithcallback:] to download the tile manifest. Use [MovinMap getTileManifestWithCallback:]
  * to receive all buildings once the tile manifest has been downloaded.
  */
-@property (nullable, readonly) MovinTileManifest* tileManifest;
+@property(nullable, readonly) MovinTileManifest* tileManifest;
 
 /**
  * Initializes a new MovinMap object with the specified JSON data.
@@ -139,7 +165,7 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
  *    NSLog(@"An error occurred when getting a MovinPositioningEngine: %@", [error localizedDescription]);
  * } else {
  *    // positioningEngine != nil
- *    NSLog(@"Succesfully created a MovinPositioningEngine");
+ *    NSLog(@"Successfully created a MovinPositioningEngine");
  * }
  * @endcode
  */
@@ -168,6 +194,14 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
  * @param callback The callback to invoke once the downloading has been completed.
  */
 - (void)downloadTileManifestWithCallback:(nullable DownloadDataCallback)callback;
+
+/**
+ * Attempts to download the navigation nodes. After downloading the nodes, the callback, if present, will be invoked.
+ * If the nodes have already been loaded the callback will be invoked immediately.
+ *
+ * @param callback The callback to invoke once the downloading has been completed.
+ */
+- (void)downloadNavigationNodesWithCallback:(nullable DownloadDataCallback)callback;
 
 /**
  * Caches all image data associated with the sub types, map data and beacons.
@@ -200,8 +234,8 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
               andCallback:(nonnull BeaconsCallback)callback;
 
 /**
- * Gets all beacons in this map within the specified shape and floor. If the beacon data has not yet been
- * downloaded, nil is returned.
+ * Gets all beacons in this map within the specified shape and floor. If the beacon data has not yet been downloaded,
+ * nil is returned.
  *
  * @param shape The shape in which to search.
  * @param floor The floor on which to search.
@@ -209,6 +243,45 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
  */
 - (nullable NSArray<MovinBeacon*>*)getBeaconsInShape:(nonnull GeoShape*)shape
                                             andFloor:(double)floor;
+
+/**
+ * Gets the beacon nearest to the specified point on the specified floor. The result is returned using a callback.
+ *
+ * @param point The point near which to search.
+ * @param floor The floor on which to search.
+ * @param callback The callback to invoke once the result is ready.
+ */
+- (void)getBeaconNearestToPoint:(nonnull GeoLatLng*)point
+                        atFloor:(double)floor
+                   withCallback:(nonnull BeaconCallback)callback;
+
+/**
+ * Gets the beacon nearest to the specified point on the specified floor. If the beacon data has not yet been
+ * downloaded, nil is returned.
+ *
+ * @param point The point near which to search.
+ * @param floor The floor on which to search.
+ * @return The found beacon or nil if the beacon data has not yet been downloaded.
+ */
+- (nullable MovinBeacon*)getBeaconNearestToPoint:(nonnull GeoLatLng*)point
+                                         atFloor:(double)floor;
+
+/**
+ * Gets the beacon nearest to the specified point. The result is returned using a callback.
+ *
+ * @param point The point near which to search.
+ * @param callback The callback to invoke once the result is ready.
+ */
+- (void)getBeaconNearestToPoint:(nonnull FloorPosition*)point
+                   withCallback:(nonnull BeaconCallback)callback;
+
+/**
+ * Gets the beacon nearest to the specified point. If the beacon data has not yet been downloaded, nil is returned.
+ *
+ * @param point The point near which to search.
+ * @return The found beacon or nil if the beacon data has not yet been downloaded.
+ */
+- (nullable MovinBeacon*)getBeaconNearestToPoint:(nonnull FloorPosition*)point;
 
 /**
  * Gets all entities available in this map. The result is returned using a callback.
@@ -263,6 +336,76 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
  * @return The found buildings or nil if the map data has not yet been downloaded.
  */
 - (nullable NSArray<MovinBuilding*>*)getBuildingsInShape:(nonnull GeoShape*)shape;
+
+/**
+ * Gets all navigation nodes available in this map. The result is returned using a callback.
+ *
+ * @param callback The callback to invoke once the result is ready.
+ */
+- (void)getNavigationNodesWithCallback:(nonnull NavigationNodesCallback)callback;
+
+/**
+ * Gets all navigation nodes in this map within the specified shape and floor. The result is returned using a callback.
+ *
+ * @param shape The shape in which to search.
+ * @param floor The floor on which to search.
+ * @param callback The callback to invoke once the result is ready.
+ */
+- (void)getNavigationNodesInShape:(nonnull GeoShape*)shape
+                         andFloor:(double)floor
+                      andCallback:(nonnull NavigationNodesCallback)callback;
+
+/**
+ * Gets all navigation nodes in this map within the specified shape and floor. If the map data has not yet been
+ * downloaded, nil is returned.
+ *
+ * @param shape The shape in which to search.
+ * @param floor The floor on which to search.
+ * @return The found navigation nodes or nil if the nodes have not yet been downloaded.
+ */
+- (nullable NSArray<MovinNavigationNode*>*)getNavigationNodesInShape:(nonnull GeoShape*)shape
+                                                            andFloor:(double)floor;
+
+/**
+ * Gets the navigation node nearest to the specified point on the specified floor. The result is returned using a
+ * callback.
+ *
+ * @param point The point near which to search.
+ * @param floor The floor on which to search.
+ * @param callback The callback to invoke once the result is ready.
+ */
+- (void)getNavigationNodeNearestToPoint:(nonnull GeoLatLng*)point
+                                atFloor:(double)floor
+                           withCallback:(nonnull NavigationNodeCallback)callback;
+
+/**
+ * Gets the navigation node nearest to the specified point. The result is returned using a callback.
+ *
+ * @param point The point near which to search.
+ * @param callback The callback to invoke once the result is ready.
+ */
+- (void)getNavigationNodeNearestToPoint:(nonnull FloorPosition*)point
+                           withCallback:(nonnull NavigationNodeCallback)callback;
+
+/**
+ * Gets the navigation node nearest to the specified point. If the map data has not yet been downloaded, nil is
+ * returned.
+ *
+ * @param point The point near which to search.
+ * @return The found navigation nodes or nil if the nodes have not yet been downloaded.
+ */
+- (nullable MovinNavigationNode*)getNavigationNodeNearestToPoint:(nonnull FloorPosition*)point;
+
+/**
+ * Gets the navigation node nearest to the specified point on the specified floor. If the map data has not yet been
+ * downloaded, nil is returned.
+ *
+ * @param point The point near which to search.
+ * @param floor The floor on which to search.
+ * @return The found navigation nodes or nil if the nodes have not yet been downloaded.
+ */
+- (nullable MovinNavigationNode*)getNavigationNodeNearestToPoint:(nonnull GeoLatLng*)point
+                                                         atFloor:(double)floor;
 
 /**
  * Gets the tile manifest for this map. The result is returned using a callback.

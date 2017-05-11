@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MovinDataObject.h"
+#import "MovinPositionedDataObject.h"
 
 @class MovinBeaconGroup;
 @class GeoLatLng;
@@ -16,7 +16,7 @@
 /**
  * Represents a single beacon.
  */
-@interface MovinBeacon : MovinDataObject
+@interface MovinBeacon : MovinPositionedDataObject
 /**
  * Gets the reference id of this instance.
  */
@@ -25,10 +25,6 @@
  * Gets the group this instance is a member of.
  */
 @property(readonly, weak, nullable) MovinBeaconGroup* group;
-/**
- * Gets the position of this instance.
- */
-@property(readonly, nullable) FloorPosition* position;
 /**
  * Gets the beacon code of this instance.
  */

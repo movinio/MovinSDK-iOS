@@ -86,7 +86,7 @@
 @property (readonly) int minor;
 
 /**
- * Returns a pretty string of this BeaconIdentifier.
+ * DEPRECATED: Use description instead.
  */
--(nonnull NSString*) toString;
+-(nonnull NSString*) toString DEPRECATED_MSG_ATTRIBUTE("Use description instead.");
 @end

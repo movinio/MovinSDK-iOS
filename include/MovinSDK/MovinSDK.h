@@ -30,6 +30,10 @@
 
 //
 // Movin Data
+#import <MovinSDK/MovinDataObject.h>
+#import <MovinSDK/MovinPositionedDataObject.h>
+#import <MovinSDK/MovinFeatureObject.h>
+#import <MovinSDK/MovinFlooredFeatureObject.h>
 #import <MovinSDK/MovinBeaconGroup.h>
 #import <MovinSDK/MovinBeacon.h>
 #import <MovinSDK/MovinEntitySubType.h>
@@ -37,13 +41,13 @@
 #import <MovinSDK/MovinFloor.h>
 #import <MovinSDK/MovinMap.h>
 #import <MovinSDK/MovinEntity.h>
+#import <MovinSDK/MovinNavigationNode.h>
 #import <MovinSDK/BeaconIdentifier.h>
 #import <MovinSDK/FloorPosition.h>
 #import <MovinSDK/MovinTileProvider.h>
 #import <MovinSDK/MovinFloorChangedListener.h>
 #import <MovinSDK/MovinImagePoint.h>
 #import <MovinSDK/MovinScaledPOIUrl.h>
-
 #import <MovinSDK/MovinMapStyle.h>
 #import <MovinSDK/MovinMapLayer.h>
 #import <MovinSDK/MovinTileManifest.h>

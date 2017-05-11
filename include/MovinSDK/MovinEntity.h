@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MovinFeatureObject.h"
+#import "MovinFlooredFeatureObject.h"
 
 @class GeoShape;
 @class MovinBuilding;
@@ -15,15 +15,11 @@
 /**
  * Represents an entity of a map.
  */
-@interface MovinEntity : MovinFeatureObject
+@interface MovinEntity : MovinFlooredFeatureObject
 /**
  * Gets the building this instance is a member of.
  */
 @property(readonly, nullable, weak) MovinBuilding* building;
-/**
- * Gets the floor number of this instance.
- */
-@property(readonly) double floor;
 /**
  * Gets the sub type of this instance.
  */

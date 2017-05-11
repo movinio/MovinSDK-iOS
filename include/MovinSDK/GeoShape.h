@@ -57,6 +57,14 @@
 - (BOOL)containsShape:(nonnull GeoShape*)shape;
 
 /**
+ * Returns the distance between the specified point and this shape in meters.
+ * 
+ * @param point The point to measure the distance to.
+ * @return The distance between the specified point and this shape in meters.
+ */
+- (double)distanceToPoint:(nonnull GeoLatLng*)point;
+
+/**
  * Returns a value indicating whether the specified line intersects with this shape.
  *
  * @param start The starting point of the line.

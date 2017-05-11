@@ -19,11 +19,4 @@
  */
 @property(nonnull, readonly) GeoShape* geometry;
 
-/**
- * Initializes a new MovinFeatureObject object with the specified JSON data.
- *
- * @param json The JSON data.
- * @return A MovinFeatureObject object with the specified JSON data.
- */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)json;
 @end
