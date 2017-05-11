@@ -257,7 +257,16 @@
                 <a href="Classes/MovinFloor.html">MovinFloor</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/MovinFlooredFeatureObject.html">MovinFlooredFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/MovinI18N.html">MovinI18N</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MovinNavigationNode.html">MovinNavigationNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MovinPositionedDataObject.html">MovinPositionedDataObject</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/MovinRoute.html">MovinRoute</a>
@@ -310,6 +319,15 @@
             <a href="Other Type Definitions.html">Other Type Definitions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Other Type Definitions.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
               </li>
               <li class="nav-group-task">
@@ -327,6 +345,111 @@
 
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:MovinMap.h@T@BeaconCallback"></a>
+                    <a name="//apple_ref/objc/Alias/BeaconCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handler for getting a beacon. The resulting beacon and an error is supplied. If an error occurs, the beacon will be
+nil and an error is set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">BeaconCallback</span><span class="p">)(</span><span class="n"><a href="Classes/MovinBeacon.html">MovinBeacon</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">BeaconCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/MovinBeacon.html">MovinBeacon</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:MovinMap.h@T@NavigationNodesCallback"></a>
+                    <a name="//apple_ref/objc/Alias/NavigationNodesCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handler for getting navigation nodes. An array of the resulting navigation nodes and an error is supplied. If an
+error occurs, the array will be nil and an error is set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">NavigationNodesCallback</span><span class="p">)(</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/MovinNavigationNode.html">MovinNavigationNode</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">NavigationNodesCallback</span> <span class="o">=</span> <span class="p">([</span><span class="kt"><a href="Classes/MovinNavigationNode.html">MovinNavigationNode</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:MovinMap.h@T@NavigationNodeCallback"></a>
+                    <a name="//apple_ref/objc/Alias/NavigationNodeCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handler for getting a navigation node. The resulting navigation node and an error is supplied. If an error occurs,
+the node will be nil and an error is set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">NavigationNodeCallback</span><span class="p">)(</span><span class="n"><a href="Classes/MovinNavigationNode.html">MovinNavigationNode</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+                                       <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">NavigationNodeCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/MovinNavigationNode.html">MovinNavigationNode</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <ul>
                 <li class="item">

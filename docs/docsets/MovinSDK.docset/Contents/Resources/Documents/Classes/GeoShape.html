@@ -258,7 +258,16 @@
                 <a href="../Classes/MovinFloor.html">MovinFloor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MovinFlooredFeatureObject.html">MovinFlooredFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/MovinI18N.html">MovinI18N</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositionedDataObject.html">MovinPositionedDataObject</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/MovinRoute.html">MovinRoute</a>
@@ -310,6 +319,15 @@
           <li class="nav-group-name">
             <a href="../Other Type Definitions.html">Other Type Definitions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
               </li>
@@ -600,6 +618,63 @@ other shapes.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>YES if the shape is located within the boundaries of this shape; NO otherwise.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoShape(im)distanceToPoint:"></a>
+                    <a name="//apple_ref/objc/Method/-distanceToPoint:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoShape(im)distanceToPoint:">-distanceToPoint:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the distance between the specified point and this shape in meters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nf">distanceToPoint</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">distance</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point to measure the distance to.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The distance between the specified point and this shape in meters.</p>
 
                       </div>
                     </section>

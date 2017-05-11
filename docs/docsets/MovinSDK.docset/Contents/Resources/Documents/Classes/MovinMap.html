@@ -258,7 +258,16 @@
                 <a href="../Classes/MovinFloor.html">MovinFloor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MovinFlooredFeatureObject.html">MovinFlooredFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/MovinI18N.html">MovinI18N</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositionedDataObject.html">MovinPositionedDataObject</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/MovinRoute.html">MovinRoute</a>
@@ -310,6 +319,15 @@
           <li class="nav-group-name">
             <a href="../Other Type Definitions.html">Other Type Definitions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
               </li>
@@ -478,7 +496,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets whether or not the map is currently downloading map data.</p>
+                        <p>Gets a value indicating whether the map is currently downloading map data.</p>
 
                       </div>
                       <div class="declaration">
@@ -510,7 +528,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets whether or not the map is currently downloading beacon data.</p>
+                        <p>Gets a value indicating whether the map is currently downloading beacon data.</p>
 
                       </div>
                       <div class="declaration">
@@ -542,7 +560,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets whether or not the map is currently downloading the tile manifest.</p>
+                        <p>Gets a value indicating whether the map is currently downloading the tile manifest.</p>
 
                       </div>
                       <div class="declaration">
@@ -555,6 +573,38 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="k">var</span> <span class="nv">isDownloadingTileManifest</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(py)isDownloadingNavigationNodes"></a>
+                    <a name="//apple_ref/objc/Property/isDownloadingNavigationNodes" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(py)isDownloadingNavigationNodes">isDownloadingNavigationNodes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets a value indicating whether the mis currently downloading the navigation nodes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isDownloadingNavigationNodes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isDownloadingNavigationNodes</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -657,6 +707,41 @@ receive all buildings once the map data has been downloaded.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="k">var</span> <span class="nv">buildings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinBuilding.html">MovinBuilding</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(py)navigationNodes"></a>
+                    <a name="//apple_ref/objc/Property/navigationNodes" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(py)navigationNodes">navigationNodes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all navigation nodes available in this map. Returns nil if the navigation nodes have not yet been downloaded.
+Use [MovinMap downloadNavigationNodesWithCallback:] to download the nodes. Use
+[MovinMap getNavigationNodesWithCallback:] to receive all navigation nodes once they has been downloaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">navigationNodes</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">navigationNodes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -808,7 +893,7 @@ to receive all buildings once the tile manifest has been downloaded.</p>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@"An error occurred when getting a MovinPositioningEngine: %@"</span><span class="p">,</span> <span class="p">[</span><span class="n">error</span> <span class="nf">localizedDescription</span><span class="p">]);</span>
  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="c1">// positioningEngine != nil
-</span>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Succesfully created a MovinPositioningEngine"</span><span class="p">);</span>
+</span>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Successfully created a MovinPositioningEngine"</span><span class="p">);</span>
  <span class="p">}</span>
 </code></pre>
 
@@ -989,6 +1074,60 @@ to receive all buildings once the tile manifest has been downloaded.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">func</span> <span class="nf">downloadTileManifest</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="kt"><a href="../Core.html#/c:MovinSDKCore.h@T@DownloadDataCallback">DownloadDataCallback</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the downloading has been completed.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)downloadNavigationNodesWithCallback:"></a>
+                    <a name="//apple_ref/objc/Method/-downloadNavigationNodesWithCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)downloadNavigationNodesWithCallback:">-downloadNavigationNodesWithCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to download the navigation nodes. After downloading the nodes, the callback, if present, will be invoked.
+ If the nodes have already been loaded the callback will be invoked immediately.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">downloadNavigationNodesWithCallback</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Core.html#/c:MovinSDKCore.h@T@DownloadDataCallback">DownloadDataCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">downloadNavigationNodes</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="kt"><a href="../Core.html#/c:MovinSDKCore.h@T@DownloadDataCallback">DownloadDataCallback</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1244,8 +1383,8 @@ to receive all buildings once the tile manifest has been downloaded.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets all beacons in this map within the specified shape and floor. If the beacon data has not yet been
- downloaded, nil is returned.</p>
+                        <p>Gets all beacons in this map within the specified shape and floor. If the beacon data has not yet been downloaded,
+ nil is returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -1298,6 +1437,282 @@ to receive all buildings once the tile manifest has been downloaded.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>The found beacons or nil if the beacon data has not yet been downloaded.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getBeaconNearestToPoint:atFloor:withCallback:"></a>
+                    <a name="//apple_ref/objc/Method/-getBeaconNearestToPoint:atFloor:withCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getBeaconNearestToPoint:atFloor:withCallback:">-getBeaconNearestToPoint:atFloor:withCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the beacon nearest to the specified point on the specified floor. The result is returned using a callback.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getBeaconNearestToPoint</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span>
+                        <span class="nf">atFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floor</span>
+                   <span class="nf">withCallback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getBeaconNearest</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span><span class="p">,</span> <span class="n">atFloor</span> <span class="nv">floor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">withCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point near which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor on which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the result is ready.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getBeaconNearestToPoint:atFloor:"></a>
+                    <a name="//apple_ref/objc/Method/-getBeaconNearestToPoint:atFloor:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getBeaconNearestToPoint:atFloor:">-getBeaconNearestToPoint:atFloor:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the beacon nearest to the specified point on the specified floor. If the beacon data has not yet been
+ downloaded, nil is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/MovinBeacon.html">MovinBeacon</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getBeaconNearestToPoint</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span>
+                                          <span class="nf">atFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getBeaconNearest</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span><span class="p">,</span> <span class="n">atFloor</span> <span class="nv">floor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/MovinBeacon.html">MovinBeacon</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point near which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor on which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The found beacon or nil if the beacon data has not yet been downloaded.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getBeaconNearestToPoint:withCallback:"></a>
+                    <a name="//apple_ref/objc/Method/-getBeaconNearestToPoint:withCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getBeaconNearestToPoint:withCallback:">-getBeaconNearestToPoint:withCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the beacon nearest to the specified point. The result is returned using a callback.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getBeaconNearestToPoint</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span>
+                   <span class="nf">withCallback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getBeaconNearest</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">,</span> <span class="n">withCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point near which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the result is ready.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getBeaconNearestToPoint:"></a>
+                    <a name="//apple_ref/objc/Method/-getBeaconNearestToPoint:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getBeaconNearestToPoint:">-getBeaconNearestToPoint:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the beacon nearest to the specified point. If the beacon data has not yet been downloaded, nil is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/MovinBeacon.html">MovinBeacon</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getBeaconNearestToPoint</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getBeaconNearest</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/MovinBeacon.html">MovinBeacon</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point near which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The found beacon or nil if the beacon data has not yet been downloaded.</p>
 
                       </div>
                     </section>
@@ -1680,6 +2095,493 @@ to receive all buildings once the tile manifest has been downloaded.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>The found buildings or nil if the map data has not yet been downloaded.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getNavigationNodesWithCallback:"></a>
+                    <a name="//apple_ref/objc/Method/-getNavigationNodesWithCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getNavigationNodesWithCallback:">-getNavigationNodesWithCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all navigation nodes available in this map. The result is returned using a callback.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getNavigationNodesWithCallback</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getNavigationNodes</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the result is ready.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getNavigationNodesInShape:andFloor:andCallback:"></a>
+                    <a name="//apple_ref/objc/Method/-getNavigationNodesInShape:andFloor:andCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getNavigationNodesInShape:andFloor:andCallback:">-getNavigationNodesInShape:andFloor:andCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all navigation nodes in this map within the specified shape and floor. The result is returned using a callback.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getNavigationNodesInShape</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoShape.html">GeoShape</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">shape</span>
+                         <span class="nf">andFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floor</span>
+                      <span class="nf">andCallback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getNavigationNodes</span><span class="p">(</span><span class="k">in</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoShape.html">GeoShape</a></span><span class="p">,</span> <span class="n">andFloor</span> <span class="nv">floor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">andCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shape</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The shape in which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor on which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the result is ready.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getNavigationNodesInShape:andFloor:"></a>
+                    <a name="//apple_ref/objc/Method/-getNavigationNodesInShape:andFloor:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getNavigationNodesInShape:andFloor:">-getNavigationNodesInShape:andFloor:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets all navigation nodes in this map within the specified shape and floor. If the map data has not yet been
+ downloaded, nil is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span>
+<span class="nf">getNavigationNodesInShape</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoShape.html">GeoShape</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">shape</span>
+                 <span class="nf">andFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getNavigationNodes</span><span class="p">(</span><span class="k">in</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoShape.html">GeoShape</a></span><span class="p">,</span> <span class="n">andFloor</span> <span class="nv">floor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shape</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The shape in which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor on which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The found navigation nodes or nil if the nodes have not yet been downloaded.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getNavigationNodeNearestToPoint:atFloor:withCallback:"></a>
+                    <a name="//apple_ref/objc/Method/-getNavigationNodeNearestToPoint:atFloor:withCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getNavigationNodeNearestToPoint:atFloor:withCallback:">-getNavigationNodeNearestToPoint:atFloor:withCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the navigation node nearest to the specified point on the specified floor. The result is returned using a
+ callback.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getNavigationNodeNearestToPoint</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span>
+                                <span class="nf">atFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floor</span>
+                           <span class="nf">withCallback</span><span class="p">:</span>
+                               <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getNavigationNodeNearest</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span><span class="p">,</span> <span class="n">atFloor</span> <span class="nv">floor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="n">withCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point near which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor on which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the result is ready.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getNavigationNodeNearestToPoint:withCallback:"></a>
+                    <a name="//apple_ref/objc/Method/-getNavigationNodeNearestToPoint:withCallback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getNavigationNodeNearestToPoint:withCallback:">-getNavigationNodeNearestToPoint:withCallback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the navigation node nearest to the specified point. The result is returned using a callback.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getNavigationNodeNearestToPoint</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span>
+                           <span class="nf">withCallback</span><span class="p">:</span>
+                               <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getNavigationNodeNearest</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">,</span> <span class="n">withCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point near which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the result is ready.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getNavigationNodeNearestToPoint:"></a>
+                    <a name="//apple_ref/objc/Method/-getNavigationNodeNearestToPoint:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getNavigationNodeNearestToPoint:">-getNavigationNodeNearestToPoint:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the navigation node nearest to the specified point. If the map data has not yet been downloaded, nil is
+ returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getNavigationNodeNearestToPoint</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getNavigationNodeNearest</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point near which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The found navigation nodes or nil if the nodes have not yet been downloaded.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinMap(im)getNavigationNodeNearestToPoint:atFloor:"></a>
+                    <a name="//apple_ref/objc/Method/-getNavigationNodeNearestToPoint:atFloor:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinMap(im)getNavigationNodeNearestToPoint:atFloor:">-getNavigationNodeNearestToPoint:atFloor:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets the navigation node nearest to the specified point on the specified floor. If the map data has not yet been
+ downloaded, nil is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getNavigationNodeNearestToPoint</span><span class="p">:</span>
+                                      <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">point</span>
+                                                          <span class="nf">atFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">floor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getNavigationNodeNearest</span><span class="p">(</span><span class="n">toPoint</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Classes/GeoLatLng.html">GeoLatLng</a></span><span class="p">,</span> <span class="n">atFloor</span> <span class="nv">floor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>point</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point near which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor on which to search.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The found navigation nodes or nil if the nodes have not yet been downloaded.</p>
 
                       </div>
                     </section>

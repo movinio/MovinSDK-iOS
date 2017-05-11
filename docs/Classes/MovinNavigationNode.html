@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MovinDataObject Class Reference</title>
+    <title>MovinNavigationNode Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/objc/Class/MovinDataObject" class="dashAnchor"></a>
-    <a title="MovinDataObject Class Reference"></a>
+    <a name="//apple_ref/objc/Class/MovinNavigationNode" class="dashAnchor"></a>
+    <a title="MovinNavigationNode Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">MovinSDK Docs</a> (99% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">MovinSDK Reference</a>
         <img id="carat" src="../img/carat.png" />
-        MovinDataObject Class Reference
+        MovinNavigationNode Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -341,14 +341,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>MovinDataObject</h1>
+            <h1>MovinNavigationNode</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinDataObject</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinNavigationNode</span> <span class="p">:</span> <span class="nc">MovinPositionedDataObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Represents an object which can be initialized with JSON data.</p>
+            <p>Represents a node in a navigation grid.</p>
 
           </section>
           <section class="section task-group-section">
@@ -357,9 +357,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)MovinDataObject(py)id"></a>
-                    <a name="//apple_ref/objc/Property/id" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MovinDataObject(py)id">id</a>
+                    <a name="/c:objc(cs)MovinNavigationNode(py)map"></a>
+                    <a name="//apple_ref/objc/Property/map" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinNavigationNode(py)map">map</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -367,19 +367,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the identity of this instance.</p>
+                        <p>Gets the map this navigation node is a member of.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">id</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n"><a href="../Classes/MovinMap.html">MovinMap</a></span> <span class="o">*</span><span class="n">map</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">map</span><span class="p">:</span> <span class="kt"><a href="../Classes/MovinMap.html">MovinMap</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -389,9 +389,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)MovinDataObject(py)name"></a>
-                    <a name="//apple_ref/objc/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MovinDataObject(py)name">name</a>
+                    <a name="/c:objc(cs)MovinNavigationNode(py)neighbors"></a>
+                    <a name="//apple_ref/objc/Property/neighbors" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinNavigationNode(py)neighbors">neighbors</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -399,19 +399,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the name of this instance.</p>
+                        <p>Gets the neighboring navigation nodes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">MovinNavigationNode</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">neighbors</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">neighbors</span><span class="p">:</span> <span class="p">[</span><span class="kt">MovinNavigationNode</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -421,9 +421,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)MovinDataObject(py)properties"></a>
-                    <a name="//apple_ref/objc/Property/properties" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MovinDataObject(py)properties">properties</a>
+                    <a name="/c:objc(cs)MovinNavigationNode(im)initWithJson:andMap:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithJson:andMap:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinNavigationNode(im)initWithJson:andMap:">-initWithJson:andMap:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -431,51 +431,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets a collection of properties of this instance.</p>
+                        <p>Initializes a new MovinNavigationNode object with the specified JSON data.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">properties</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">initWithJson</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">jsonData</span>
+                    <span class="nf">andMap</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/MovinMap.html">MovinMap</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">map</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)MovinDataObject(im)initWithJson:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithJson:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MovinDataObject(im)initWithJson:">-initWithJson:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Initializes a new MovinDataObject object with the specified JSON data.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/MovinDataObject.html#/c:objc(cs)MovinDataObject(py)id">id</a></span><span class="p">)</span><span class="nf">initWithJson</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">jsonData</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">json</span> <span class="nv">jsonData</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">json</span> <span class="nv">jsonData</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="n">andMap</span> <span class="nv">map</span><span class="p">:</span> <span class="kt"><a href="../Classes/MovinMap.html">MovinMap</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -496,73 +465,15 @@
                                 </div>
                               </td>
                             </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A MovinDataObject object with the specified JSON data.</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)MovinDataObject(im)initWithJson:andProperties:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithJson:andProperties:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MovinDataObject(im)initWithJson:andProperties:">-initWithJson:andProperties:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Initializes a new MovinDataObject object with the specified JSON data and properties.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/MovinDataObject.html#/c:objc(cs)MovinDataObject(py)id">id</a></span><span class="p">)</span><span class="nf">initWithJson</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">json</span>
-             <span class="nf">andProperties</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">properties</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="n">andProperties</span> <span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
                             <tr>
                               <td>
                                 <code>
-                                <em>json</em>
+                                <em>map</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The JSON data.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>properties</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The properties of the instance.</p>
+                                  <p>The map.</p>
 
                                 </div>
                               </td>
@@ -572,53 +483,8 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A MovinDataObject object with the specified JSON data and properties.</p>
+                        <p>A MovinNavigationNode object with the specified JSON data.</p>
 
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)MovinDataObject(im)setCacheableImageExtractorForKey:andCallback:"></a>
-                    <a name="//apple_ref/objc/Method/-setCacheableImageExtractorForKey:andCallback:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MovinDataObject(im)setCacheableImageExtractorForKey:andCallback:">-setCacheableImageExtractorForKey:andCallback:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets a callback which can be invoked to determine which image files should be downloaded and cached for the
- specified property key.</p>
-
-<pre class="highlight objective_c"><code> <span class="p">[</span><span class="n">building</span> <span class="nf">setCacheableImageExtractorForKey</span><span class="p">:</span><span class="s">@"buildingImage"</span> <span class="nf">andCallback</span><span class="p">:</span> <span class="o">^</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">){</span>
-     <span class="n">NSArray</span><span class="o">*</span> <span class="n">result</span><span class="p">;</span>
-     <span class="k">if</span><span class="p">([[</span><span class="n">value</span> <span class="nf">substringToIndex</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="nf">isEqualToString</span><span class="p">:</span><span class="s">@"http"</span><span class="p">])</span> <span class="p">{</span>
-         <span class="n">result</span> <span class="o">=</span> <span class="p">@[</span><span class="n">value</span><span class="p">];</span>
-     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
- <span class="p">}];</span>
-</code></pre>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setCacheableImageExtractorForKey</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
-                             <span class="nf">andCallback</span><span class="p">:</span>
-                                 <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span>
-                                     <span class="n"><a href="../Classes/MovinDataObject.html#/c:objc(cs)MovinDataObject(py)id">id</a></span> <span class="n">_Nonnull</span><span class="p">))</span><span class="n">callback</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">setCacheableImageExtractorForKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">andCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?)</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>

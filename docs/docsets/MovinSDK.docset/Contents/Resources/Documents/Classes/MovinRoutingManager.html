@@ -258,7 +258,16 @@
                 <a href="../Classes/MovinFloor.html">MovinFloor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MovinFlooredFeatureObject.html">MovinFlooredFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/MovinI18N.html">MovinI18N</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositionedDataObject.html">MovinPositionedDataObject</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/MovinRoute.html">MovinRoute</a>
@@ -310,6 +319,15 @@
           <li class="nav-group-name">
             <a href="../Other Type Definitions.html">Other Type Definitions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
               </li>
@@ -496,6 +514,344 @@
                               <td>
                                 <div>
                                   <p>A collection of instruction features to be used.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the route has been calculated.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinRoutingManager(im)getRouteFrom:to:withInstructionFeatures:andAccessibilityMode:callback:"></a>
+                    <a name="//apple_ref/objc/Method/-getRouteFrom:to:withInstructionFeatures:andAccessibilityMode:callback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinRoutingManager(im)getRouteFrom:to:withInstructionFeatures:andAccessibilityMode:callback:">-getRouteFrom:to:withInstructionFeatures:andAccessibilityMode:callback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates a route from a certain point to a certain point with specific instruction features.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getRouteFrom</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">from</span>
+                         <span class="nf">to</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">to</span>
+    <span class="nf">withInstructionFeatures</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">instructionFeatures</span>
+       <span class="nf">andAccessibilityMode</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">accessibilityMode</span>
+                   <span class="nf">callback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getRouteFrom</span><span class="p">(</span><span class="n">_</span> <span class="nv">from</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">,</span> <span class="n">withInstructionFeatures</span> <span class="nv">instructionFeatures</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="n">andAccessibilityMode</span> <span class="nv">accessibilityMode</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point from which to calculate the route.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>to</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point to which to calculate the route.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>instructionFeatures</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A collection of instruction features to be used.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessibilityMode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value indicating whether to enable accessibility mode, which, for example, avoids the use of stairs.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the route has been calculated.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinRoutingManager(im)getRouteFrom:to:withWaypoints:andInstructionFeatures:callback:"></a>
+                    <a name="//apple_ref/objc/Method/-getRouteFrom:to:withWaypoints:andInstructionFeatures:callback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinRoutingManager(im)getRouteFrom:to:withWaypoints:andInstructionFeatures:callback:">-getRouteFrom:to:withWaypoints:andInstructionFeatures:callback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates a route from a certain point to a certain point with specific instruction features.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getRouteFrom</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">from</span>
+                        <span class="nf">to</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">to</span>
+             <span class="nf">withWaypoints</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">waypoints</span>
+    <span class="nf">andInstructionFeatures</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">instructionFeatures</span>
+                  <span class="nf">callback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getRouteFrom</span><span class="p">(</span><span class="n">_</span> <span class="nv">from</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">,</span> <span class="n">withWaypoints</span> <span class="nv">waypoints</span><span class="p">:</span> <span class="kt">NSMutableArray</span><span class="p">?,</span> <span class="n">andInstructionFeatures</span> <span class="nv">instructionFeatures</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point from which to calculate the route.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>to</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point to which to calculate the route.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>waypoints</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The waypoints to pass by during the route</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>instructionFeatures</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A collection of instruction features to be used.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The callback to invoke once the route has been calculated.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinRoutingManager(im)getRouteFrom:to:withWaypoints:andInstructionFeatures:andAccessibilityMode:callback:"></a>
+                    <a name="//apple_ref/objc/Method/-getRouteFrom:to:withWaypoints:andInstructionFeatures:andAccessibilityMode:callback:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinRoutingManager(im)getRouteFrom:to:withWaypoints:andInstructionFeatures:andAccessibilityMode:callback:">-getRouteFrom:to:withWaypoints:andInstructionFeatures:andAccessibilityMode:callback:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates a route from a certain point to a certain point with specific instruction features.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getRouteFrom</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">from</span>
+                        <span class="nf">to</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">to</span>
+             <span class="nf">withWaypoints</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">waypoints</span>
+    <span class="nf">andInstructionFeatures</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">instructionFeatures</span>
+      <span class="nf">andAccessibilityMode</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">accessibilityMode</span>
+                  <span class="nf">callback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getRouteFrom</span><span class="p">(</span><span class="n">_</span> <span class="nv">from</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">,</span> <span class="n">withWaypoints</span> <span class="nv">waypoints</span><span class="p">:</span> <span class="kt">NSMutableArray</span><span class="p">?,</span> <span class="n">andInstructionFeatures</span> <span class="nv">instructionFeatures</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="n">andAccessibilityMode</span> <span class="nv">accessibilityMode</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point from which to calculate the route.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>to</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The point to which to calculate the route.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>waypoints</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The waypoints to pass by during the route</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>instructionFeatures</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A collection of instruction features to be used.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessibilityMode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value indicating whether to enable accessibility mode, which, for example, avoids the use of stairs.</p>
 
                                 </div>
                               </td>

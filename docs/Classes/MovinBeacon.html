@@ -258,7 +258,16 @@
                 <a href="../Classes/MovinFloor.html">MovinFloor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MovinFlooredFeatureObject.html">MovinFlooredFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/MovinI18N.html">MovinI18N</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinNavigationNode.html">MovinNavigationNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MovinPositionedDataObject.html">MovinPositionedDataObject</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/MovinRoute.html">MovinRoute</a>
@@ -311,6 +320,15 @@
             <a href="../Other Type Definitions.html">Other Type Definitions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Type Definitions.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Other Type Definitions.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
               </li>
               <li class="nav-group-task">
@@ -326,7 +344,7 @@
             <h1>MovinBeacon</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinBeacon</span> <span class="p">:</span> <span class="nc">MovinDataObject</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinBeacon</span> <span class="p">:</span> <span class="nc">MovinPositionedDataObject</span></code></pre>
 
                 </div>
               </div>
@@ -394,38 +412,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">group</span><span class="p">:</span> <span class="kt"><a href="../Classes/MovinBeaconGroup.html">MovinBeaconGroup</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)MovinBeacon(py)position"></a>
-                    <a name="//apple_ref/objc/Property/position" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)MovinBeacon(py)position">position</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Gets the position of this instance.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/FloorPosition.html">FloorPosition</a></span> <span class="o">*</span><span class="n">position</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Classes/FloorPosition.html">FloorPosition</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
