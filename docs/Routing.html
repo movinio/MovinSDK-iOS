@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Routing  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Routing  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          MovinSDK Docs
+        </a>
+         (99% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">MovinSDK Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Routing  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Core.html">Core</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinSDK.html">MovinSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BeaconIdentifier.html">BeaconIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/FloorPosition.html">FloorPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinBeacon.html">MovinBeacon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinBeaconGroup.html">MovinBeaconGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinBuilding.html">MovinBuilding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinCacheProtocol.html">MovinCacheProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinEntity.html">MovinEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinEntitySubType.html">MovinEntitySubType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinFloor.html">MovinFloor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinFontFamily.html">MovinFontFamily</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinMap.html">MovinMap</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinMapZoomLevel.html">MovinMapZoomLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinImagePoint.html">MovinImagePoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinScaledPOIUrl.html">MovinScaledPOIUrl</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinDataObject.html">MovinDataObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinFeatureObject.html">MovinFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinPositionedDataObject.html">MovinPositionedDataObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinFlooredFeatureObject.html">MovinFlooredFeatureObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MovinCacheableData.html">MovinCacheableData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MovinService.html">MovinService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Core.html#/c:MovinSDKCore.h@T@DownloadDataCallback">DownloadDataCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Core.html#/c:MovinMap.h@T@BeaconCallback">BeaconCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Core.html#/c:MovinMap.h@T@BeaconsCallback">BeaconsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Core.html#/c:MovinMap.h@T@BuildingsCallback">BuildingsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Core.html#/c:MovinMap.h@T@EntitiesCallback">EntitiesCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Core.html#/c:MovinMap.h@T@BeaconGroupsCallback">BeaconGroupsCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Core.html#/c:MovinSDKCore.h@T@ServerVersionCallback">ServerVersionCallback</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Maps.html">Maps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinTileManifest.html">MovinTileManifest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Maps.html#/c:MovinMap.h@T@TileManifestCallback">TileManifestCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinTileProvider.html">MovinTileProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MovinFloorChangedListener.html">MovinFloorChangedListener</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Positioning.html">Positioning</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinBeaconScanner.html">MovinBeaconScanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MovinBeaconScannerListener.html">MovinBeaconScannerListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinPositioner.html">MovinPositioner</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinPositioningEngine.html">MovinPositioningEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MovinPositioningListener.html">MovinPositioningListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinRangedBeacon.html">MovinRangedBeacon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinLocationManager.html">MovinLocationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinSmoothCompass.html">MovinSmoothCompass</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MovinSmoothCompassDelegate.html">MovinSmoothCompassDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MovinCompassOffset.html">MovinCompassOffset</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Translating.html">Translating</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinI18N.html">MovinI18N</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinTranslatableString.html">MovinTranslatableString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Routing.html">Routing</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinNavigationNode.html">MovinNavigationNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinRoute.html">MovinRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinRouteInstruction.html">MovinRouteInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MovinRouteInstructionIndicator.html">MovinRouteInstructionIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinRoutingManager.html">MovinRoutingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Routing.html#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Routing.html#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Routing.html#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Routing.html#/c:@MovinRouteInstructionFeatureFloors">MovinRouteInstructionFeatureFloors</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Routing.html#/c:@MovinRouteInstructionFeatureToDestinationRoom">MovinRouteInstructionFeatureToDestinationRoom</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Routing.html#/c:@MovinRouteInstructionFeatureToFloorChanger">MovinRouteInstructionFeatureToFloorChanger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="User Interface.html">User Interface</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinFloorSwitcher.html">MovinFloorSwitcher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Analytics.html">Analytics</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AnalyticsService.html">AnalyticsService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Style.html">Style</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinMapLayer.html">MovinMapLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinMapStyle.html">MovinMapStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinTileStyle.html">MovinTileStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinTileStyleLayer.html">MovinTileStyleLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinTileStyleRule.html">MovinTileStyleRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinTileStyleTextRule.html">MovinTileStyleTextRule</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MovinTileStyleRotation.html">MovinTileStyleRotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MovinTileStyleScaling.html">MovinTileStyleScaling</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Geometry.html">Geometry</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoAABB.html">GeoAABB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoGeometryCollection.html">GeoGeometryCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoLatLng.html">GeoLatLng</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoLineString.html">GeoLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoLinearRing.html">GeoLinearRing</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoMultiLineString.html">GeoMultiLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoMultiPoint.html">GeoMultiPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoMultiPolygon.html">GeoMultiPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoPolygon.html">GeoPolygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/GeoShape.html">GeoShape</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Google Maps.html">Google Maps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinGMSMapView.html">MovinGMSMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MovinGMSMapViewListener.html">MovinGMSMapViewListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinGMSImageRenderer.html">MovinGMSImageRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinGMSImageRendererManager.html">MovinGMSImageRendererManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MovinGMSImageRendererManagerDelegate.html">MovinGMSImageRendererManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinGMSLabel.html">MovinGMSLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinGMSMarker.html">MovinGMSMarker</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MovinGMSTileLayer.html">MovinGMSTileLayer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Routing</h1>
+            
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinNavigationNode"></a>
+                    <a name="//apple_ref/objc/Class/MovinNavigationNode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinNavigationNode">MovinNavigationNode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a node in a navigation grid.</p>
+
+                        <a href="Classes/MovinNavigationNode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinNavigationNode</span> <span class="p">:</span> <span class="nc"><a href="Classes/MovinPositionedDataObject.html">MovinPositionedDataObject</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">MovinNavigationNode</span> <span class="p">:</span> <span class="kt"><a href="Classes/MovinPositionedDataObject.html">MovinPositionedDataObject</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinRoute"></a>
+                    <a name="//apple_ref/objc/Class/MovinRoute" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinRoute">MovinRoute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a set of route instructions.</p>
+
+                        <a href="Classes/MovinRoute.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinRoute</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">MovinRoute</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinRouteInstruction"></a>
+                    <a name="//apple_ref/objc/Class/MovinRouteInstruction" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinRouteInstruction">MovinRouteInstruction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a single instruction in a route.</p>
+
+                        <a href="Classes/MovinRouteInstruction.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinRouteInstruction</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">MovinRouteInstruction</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@MovinRouteInstructionIndicator"></a>
+                    <a name="//apple_ref/objc/Enum/MovinRouteInstructionIndicator" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@MovinRouteInstructionIndicator">MovinRouteInstructionIndicator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of route instruction indicators. These can be used to display specific icons for specific instructions.</p>
+
+                        <a href="Enums/MovinRouteInstructionIndicator.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">MovinRouteInstructionIndicator</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">enum</span> <span class="kt">MovinRouteInstructionIndicator</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@MovinRouteInstructionFeatureFloors"></a>
+                    <a name="//apple_ref/objc/Constant/MovinRouteInstructionFeatureFloors" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@MovinRouteInstructionFeatureFloors">MovinRouteInstructionFeatureFloors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instruction feature for floor changers (<q>take elevator/stairs to X</q>).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="k">const</span> <span class="n">_Nonnull</span> <span class="n">MovinRouteInstructionFeatureFloors</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">MovinRouteInstructionFeatureFloors</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@MovinRouteInstructionFeatureToDestinationRoom"></a>
+                    <a name="//apple_ref/objc/Constant/MovinRouteInstructionFeatureToDestinationRoom" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@MovinRouteInstructionFeatureToDestinationRoom">MovinRouteInstructionFeatureToDestinationRoom</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instruction feature for walking to destination room (<q>walk to room X</q>).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="k">const</span> <span class="n">_Nonnull</span> <span class="n">MovinRouteInstructionFeatureToDestinationRoom</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">MovinRouteInstructionFeatureToDestinationRoom</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@MovinRouteInstructionFeatureToFloorChanger"></a>
+                    <a name="//apple_ref/objc/Constant/MovinRouteInstructionFeatureToFloorChanger" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@MovinRouteInstructionFeatureToFloorChanger">MovinRouteInstructionFeatureToFloorChanger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instruction feature for walking to floor changers (<q>walk to staircase X/elevator Y</q>).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="k">const</span> <span class="n">_Nonnull</span> <span class="n">MovinRouteInstructionFeatureToFloorChanger</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">MovinRouteInstructionFeatureToFloorChanger</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)MovinRoutingManager"></a>
+                    <a name="//apple_ref/objc/Class/MovinRoutingManager" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)MovinRoutingManager">MovinRoutingManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents the manager for route calculations.</p>
+
+                        <a href="Classes/MovinRoutingManager.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">MovinRoutingManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">MovinRoutingManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:MovinRoutingManager.h@T@RoutingCallback"></a>
+                    <a name="//apple_ref/objc/Type/RoutingCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/c:MovinRoutingManager.h@T@RoutingCallback">RoutingCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handler for getting routes. The resulting route is supplied. If an error occurs, the route will be nil and an error is set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RoutingCallback</span><span class="p">)(</span><span class="n"><a href="Classes/MovinRoute.html">MovinRoute</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RoutingCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/MovinRoute.html">MovinRoute</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:MovinMap.h@T@NavigationNodeCallback"></a>
+                    <a name="//apple_ref/objc/Type/NavigationNodeCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/c:MovinMap.h@T@NavigationNodeCallback">NavigationNodeCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handler for getting a navigation node. The resulting navigation node and an error is supplied. If an error occurs,
+the node will be nil and an error is set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">NavigationNodeCallback</span><span class="p">)(</span><span class="n"><a href="Classes/MovinNavigationNode.html">MovinNavigationNode</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+                                       <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">NavigationNodeCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/MovinNavigationNode.html">MovinNavigationNode</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:MovinMap.h@T@NavigationNodesCallback"></a>
+                    <a name="//apple_ref/objc/Type/NavigationNodesCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/c:MovinMap.h@T@NavigationNodesCallback">NavigationNodesCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handler for getting navigation nodes. An array of the resulting navigation nodes and an error is supplied. If an
+error occurs, the array will be nil and an error is set.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">NavigationNodesCallback</span><span class="p">)(</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/MovinNavigationNode.html">MovinNavigationNode</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">NavigationNodesCallback</span> <span class="o">=</span> <span class="p">([</span><span class="kt"><a href="Classes/MovinNavigationNode.html">MovinNavigationNode</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2017 <a class="link" href="http://movin.io" target="_blank" rel="external">Movin</a>.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
