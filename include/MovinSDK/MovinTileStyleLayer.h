@@ -16,6 +16,7 @@
  * Represents a single layer in a tile style.
  */
 @interface MovinTileStyleLayer : MovinDataObject
+
 /**
  * Gets the sub type this layer contains the rules of.
  */

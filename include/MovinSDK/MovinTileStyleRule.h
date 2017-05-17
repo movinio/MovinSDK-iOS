@@ -32,19 +32,38 @@ typedef enum MovinTileStyleRotation {
     /// The POI or text will rotate. Text will flip when viewed upside down.
     MovinTileStyleRotationRotatedCanFlip = 2,
 } MovinTileStyleRotation;
+/**
+ * Contains all available symbolizers.
+ */
+typedef enum MovinTileStyleSymbolizer {
+    /// Do not draw the entity.
+    MovinTileStyleSymbolizerNone = 0,
+    /// Draw the entity as a polygon.
+    MovinTileStyleSymbolizerPolygon = 1,
+    /// Draw the entity as a line.
+    MovinTileStyleSymbolizerLine = 2,
+    /// Draw the entity as a single point.
+    MovinTileStyleSymbolizerPoint = 3,
+    /// Draw the entity as text.
+    MovinTileStyleSymbolizerText = 4
+} MovinTileStyleSymbolizer;
 
 /**
  * Represents a single style rule for a layer in a tile style.
  */
 @interface MovinTileStyleRule : MovinDataObject
 /**
+ * Gets a value indicating how to draw this rule.
+ */
+@property(readonly) MovinTileStyleSymbolizer symbolizer;
+/**
  * Gets the minimum zoom level at which this rule is applied.
  */
-@property(readonly) NSNumber* minZoom;
+@property(readonly, nullable) NSNumber* minZoom;
 /**
  * Gets the maximum zoom level at which this rule is applied.
  */
-@property(readonly) NSNumber* maxZoom;
+@property(readonly, nullable) NSNumber* maxZoom;
 /**
  * Gets the opacity with which to render entities. This is a value between 0.0 and 1.0. 0.0 is 100%
  * transparent, 1.0 is 100% opaque.
@@ -53,7 +72,36 @@ typedef enum MovinTileStyleRotation {
 /**
  * Gets the fill color.
  */
-@property(readonly) UIColor* fillColor;
+@property(readonly, nullable) UIColor* fillColor;
+/**
+ * Gets the stroke color.
+ */
+@property(readonly, nullable) UIColor* strokeColor;
+/**
+ * Gets the stroke width.
+ */
+@property(readonly, nullable) NSNumber* strokeWidth;
+/**
+ * Gets a value indicating whether the stroke line is scaled based  on a certain zoom level. This zoom level is defined
+ * in the [MovinTileStyleRule strokeZoomLevel] property.
+ */
+@property(readonly) BOOL strokeIsScaled;
+/**
+ * Gets the zoom level to which the stroked line is scaled.
+ */
+@property(readonly, nullable) NSNumber* strokeZoomLevel;
+/**
+ * Gets an array of dash sizes which describes the line to be rendered as a dashed line. The elements in this array
+ * describe how to alternately draw a line and a dash. In this case a line of 5 pixels is followed by a 2 pixels gap
+ * before it repeats. The array can be extended to any size. So a valid value can also be [5, 2, 10, 4, 20, 8] which
+ * describes a line of 5 pixels with a 2 pixels gap followed by a line of 10 pixels followed by a 4 pixels gap followed
+ * by a line of 20 pixels followed by a 8 pixels gap.
+ */
+@property(readonly, nullable)NSArray<NSNumber*>* dashArray;
+/**
+ * Gets the offset in pixels applied to the dashed line.
+ */
+@property(readonly, nullable)NSNumber* dashOffset;
 /**
  * Gets the scaling style of the object.
  */
