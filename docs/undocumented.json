@@ -34,6 +34,13 @@
       "symbol": "MovinTileStyleRotation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/timpotze/projects/XcodeProjects/sdk/build/docs/MovinSDK/MovinTileStyleRule.h",
+      "line": 38,
+      "symbol": "MovinTileStyleSymbolizer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/timpotze/projects/XcodeProjects/sdk"
