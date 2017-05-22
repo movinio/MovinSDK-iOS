@@ -22,9 +22,14 @@
  */
 @property(readonly) double lng;
 /**
+ * DEPRECATED: Use coordinate instead.
+ */
+@property(readonly) CLLocationCoordinate2D CLLocation DEPRECATED_MSG_ATTRIBUTE("Use coordinate instead.");
+
+/**
  * Gets a CLLocationCoordinate2D instance representing the same geographical coordinate.
  */
-@property(readonly) CLLocationCoordinate2D CLLocation;
+@property(readonly) CLLocationCoordinate2D coordinate;
 
 /**
  * Initializes a new GeoLatLng coordinate with a latitude and longitude values.
@@ -55,11 +60,19 @@
                             andLng:(double)lng;
 
 /**
- * Returns a newly created point with the specified CLLocation.
+ * Use pointWithCoordinate: instead.
  *
- * @param location The location of the point.
+ * @param DEPRECATED
+ * @return DEPRECATED
+ */
++ (nonnull GeoLatLng*)pointWithLocation:(CLLocationCoordinate2D)location DEPRECATED_MSG_ATTRIBUTE("Use pointWithCoordinate: instead.");
+
+/**
+ * Returns a newly created point with the specified CLLocationCoordinate2D.
+ *
+ * @param coordinate The position of the point.
  * @return A newly created point with the specified latitude and longitude.
  */
-+ (nonnull GeoLatLng*)pointWithLocation:(CLLocationCoordinate2D)location;
++ (nonnull GeoLatLng*)pointWithCoordinate:(CLLocationCoordinate2D)coordinate;
 @end
 
