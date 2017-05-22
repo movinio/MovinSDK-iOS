@@ -450,7 +450,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets a CLLocationCoordinate2D instance representing the same geographical coordinate.</p>
+                        <p>DEPRECATED: Use coordinate instead.</p>
 
                       </div>
                       <div class="declaration">
@@ -463,6 +463,38 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="k">var</span> <span class="nv">clLocation</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoLatLng(py)coordinate"></a>
+                    <a name="//apple_ref/objc/Property/coordinate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoLatLng(py)coordinate">coordinate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets a CLLocationCoordinate2D instance representing the same geographical coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">atomic</span><span class="p">)</span> <span class="n">CLLocationCoordinate2D</span> <span class="n">coordinate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -671,7 +703,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a newly created point with the specified CLLocation.</p>
+                        <p>Use pointWithCoordinate: instead.</p>
 
                       </div>
                       <div class="declaration">
@@ -694,12 +726,67 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>location</em>
+                                <em>DEPRECATED</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The location of the point.</p>
+                                  <p></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>DEPRECATED</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)GeoLatLng(cm)pointWithCoordinate:"></a>
+                    <a name="//apple_ref/objc/Method/+pointWithCoordinate:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)GeoLatLng(cm)pointWithCoordinate:">+pointWithCoordinate:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a newly created point with the specified CLLocationCoordinate2D.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">GeoLatLng</span> <span class="o">*</span><span class="p">)</span><span class="nf">pointWithCoordinate</span><span class="p">:(</span><span class="n">CLLocationCoordinate2D</span><span class="p">)</span><span class="nv">coordinate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">point</span><span class="p">(</span><span class="n">with</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">GeoLatLng</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>coordinate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The position of the point.</p>
                                 </div>
                               </td>
                             </tr>
