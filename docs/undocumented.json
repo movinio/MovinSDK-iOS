@@ -2,14 +2,14 @@
   "warnings": [
     {
       "file": "/Users/timpotze/projects/XcodeProjects/sdk/build/docs/MovinSDK/MovinCacheProtocol.h",
-      "line": 142,
+      "line": 145,
       "symbol": "MovinCacheProtocol.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/timpotze/projects/XcodeProjects/sdk/build/docs/MovinSDK/MovinCacheProtocol.h",
-      "line": 144,
+      "line": 147,
       "symbol": "MovinCacheProtocol.-encodeWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
