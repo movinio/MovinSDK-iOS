@@ -11,7 +11,6 @@
 @class GeoLatLng;
 @class MovinImagePoint;
 
-
 @class UIImage;
 @class MovinScaledPOIUrl;
 
@@ -19,6 +18,7 @@
  * Represents a (sub-)type of an entity.
  */
 @interface MovinEntitySubType : MovinDataObject
+
 /**
  * Gets the base type of this sub type.
  */
@@ -47,16 +47,6 @@
  * Gets the URLs of the scaled POI images.
  */
 @property(readonly, nullable) NSArray<MovinScaledPOIUrl*>* scaledPoiUrls;
-
-/**
- * Initializes a new MovinEntitySubType object with the specified name and base type name.
- *
- * @param name The name of the sub type.
- * @param baseType The name of the base type.
- * @return A MovinEntitySubType object with the specified name and base type.
- */
-- (nonnull id)initWithName:(nullable NSString*)name
-               andBaseType:(nullable NSString*)baseType;
 
 /**
  * Returns the POI image of this sub type.

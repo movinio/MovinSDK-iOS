@@ -16,9 +16,9 @@
 typedef enum MovinTileStyleScaling {
     /// The size will always be equal to the image or font size. Effectively this means that if the user zooms out the
     /// POI/text will appear to become larger.
-    MovinTileStyleScalingFixed = 0,
+            MovinTileStyleScalingFixed = 0,
     /// The size will only be equal to the image or font size on the zoom level defined by a fixed zoom level.
-    MovinTileStyleScalingScaled = 1,
+            MovinTileStyleScalingScaled = 1,
 } MovinTileStyleScaling;
 
 /**
@@ -26,32 +26,33 @@ typedef enum MovinTileStyleScaling {
  */
 typedef enum MovinTileStyleRotation {
     /// The POI or text will always keep a horizontal orientation.
-    MovinTileStyleRotationHorizontal = 0,
+            MovinTileStyleRotationHorizontal = 0,
     /// The POI or text will rotate. In this mode the POI or text can appear up side down.
-    MovinTileStyleRotationRotated = 1,
+            MovinTileStyleRotationRotated = 1,
     /// The POI or text will rotate. Text will flip when viewed upside down.
-    MovinTileStyleRotationRotatedCanFlip = 2,
+            MovinTileStyleRotationRotatedCanFlip = 2,
 } MovinTileStyleRotation;
 /**
  * Contains all available symbolizers.
  */
 typedef enum MovinTileStyleSymbolizer {
     /// Do not draw the entity.
-    MovinTileStyleSymbolizerNone = 0,
+            MovinTileStyleSymbolizerNone = 0,
     /// Draw the entity as a polygon.
-    MovinTileStyleSymbolizerPolygon = 1,
+            MovinTileStyleSymbolizerPolygon = 1,
     /// Draw the entity as a line.
-    MovinTileStyleSymbolizerLine = 2,
+            MovinTileStyleSymbolizerLine = 2,
     /// Draw the entity as a single point.
-    MovinTileStyleSymbolizerPoint = 3,
+            MovinTileStyleSymbolizerPoint = 3,
     /// Draw the entity as text.
-    MovinTileStyleSymbolizerText = 4
+            MovinTileStyleSymbolizerText = 4
 } MovinTileStyleSymbolizer;
 
 /**
  * Represents a single style rule for a layer in a tile style.
  */
 @interface MovinTileStyleRule : MovinDataObject
+
 /**
  * Gets a value indicating how to draw this rule.
  */
@@ -97,11 +98,11 @@ typedef enum MovinTileStyleSymbolizer {
  * describes a line of 5 pixels with a 2 pixels gap followed by a line of 10 pixels followed by a 4 pixels gap followed
  * by a line of 20 pixels followed by a 8 pixels gap.
  */
-@property(readonly, nullable)NSArray<NSNumber*>* dashArray;
+@property(readonly, nullable) NSArray<NSNumber*>* dashArray;
 /**
  * Gets the offset in pixels applied to the dashed line.
  */
-@property(readonly, nullable)NSNumber* dashOffset;
+@property(readonly, nullable) NSNumber* dashOffset;
 /**
  * Gets the scaling style of the object.
  */
@@ -118,5 +119,12 @@ typedef enum MovinTileStyleSymbolizer {
 /**
  * Gets a value indicating whether this rule is rendered on the server-side.
  */
-@property(readonly)BOOL preRendered;
+@property(readonly) BOOL preRendered;
+
+/**
+ * This class should not be manually initialized.
+ * :nodoc:
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
 @end

@@ -38,18 +38,9 @@
 @property(readonly, nonnull) BeaconIdentifier* beaconIdentifier;
 
 /**
- * Initializes a new MovinRangedBeacon.
- *
- * @param beacon The corresponding MovinBeacon.
- * @param distance The distance in meters. This is the accuracy parameter of a CLBeacon.
- * @param rssi The RSSI at which the beacon was measured in dBm.
- * @param proximity The CLProximity of the beacon
- * @param beaconIdentifier The BeaconIdentifier, consisting of its UUID, Major and Minor.
+ * This class should not be manually initialized.
+ * :nodoc:
  */
-- (nonnull id)initWithMovinBeacon:(nullable MovinBeacon*)beacon
-                      andDistance:(double)distance
-                          andRssi:(int)rssi
-                     andProximity:(CLProximity)proximity
-              andBeaconIdentifier:(nonnull BeaconIdentifier*)beaconIdentifier;
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 @end

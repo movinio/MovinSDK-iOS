@@ -15,6 +15,7 @@
  * Represents a data object with a position and a floor.
  */
 @interface MovinPositionedDataObject : MovinDataObject
+
 /**
  * Gets the position of this instance.
  */

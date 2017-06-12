@@ -11,6 +11,7 @@
  * Represents an object which can be initialized with JSON data.
  */
 @interface MovinDataObject : NSObject
+
 /**
  * Gets the identity of this instance.
  */
@@ -26,22 +27,10 @@
 @property(readonly, nonnull) NSDictionary* properties;
 
 /**
- * Initializes a new MovinDataObject object with the specified JSON data.
- *
- * @param jsonData The JSON data.
- * @return A MovinDataObject object with the specified JSON data.
+ * This class should not be manually initialized.
+ * :nodoc:
  */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)jsonData;
-
-/**
- * Initializes a new MovinDataObject object with the specified JSON data and properties.
- *
- * @param json The JSON data.
- * @param properties The properties of the instance.
- * @return A MovinDataObject object with the specified JSON data and properties.
- */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)json
-             andProperties:(nonnull NSDictionary*)properties;
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Sets a callback which can be invoked to determine which image files should be downloaded and cached for the
@@ -59,4 +48,5 @@
  */
 - (void)setCacheableImageExtractorForKey:(nonnull NSString*)key
                              andCallback:(nonnull NSArray<NSString*>* _Nullable (^)(id _Nonnull value))callback;
+
 @end

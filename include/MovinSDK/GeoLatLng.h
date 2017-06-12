@@ -13,6 +13,7 @@
  * Represents a geographical point.
  */
 @interface GeoLatLng : GeoShape
+
 /**
  * Gets the latitude of this geo coordinate.
  */
@@ -30,6 +31,11 @@
  * Gets a CLLocationCoordinate2D instance representing the same geographical coordinate.
  */
 @property(readonly) CLLocationCoordinate2D coordinate;
+
+/**
+ * Use initWithLat:andLng: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializes a new GeoLatLng coordinate with a latitude and longitude values.

@@ -15,17 +15,17 @@
  */
 typedef NS_ENUM(NSInteger, MovinRouteInstructionIndicator) {
     /** No indicator available. */
-    MovinRouteInstructionIndicatorNone,
+            MovinRouteInstructionIndicatorNone,
     /** Take an elevator up. */
-    MovinRouteInstructionIndicatorElevatorUp,
+            MovinRouteInstructionIndicatorElevatorUp,
     /** Take an elevator down. */
-    MovinRouteInstructionIndicatorElevatorDown,
+            MovinRouteInstructionIndicatorElevatorDown,
     /** Take stairs up. */
-    MovinRouteInstructionIndicatorStairsUp,
+            MovinRouteInstructionIndicatorStairsUp,
     /** Take stairs down. */
-    MovinRouteInstructionIndicatorStairsDown,
+            MovinRouteInstructionIndicatorStairsDown,
     /** Walk to a certain location. */
-    MovinRouteInstructionIndicatorGoTo,
+            MovinRouteInstructionIndicatorGoTo,
 };
 
 /** Instruction feature for floor changers ("take elevator/stairs to X"). */
@@ -39,6 +39,7 @@ FOUNDATION_EXPORT NSString* _Nonnull const MovinRouteInstructionFeatureToDestina
  * Represents a single instruction in a route.
  */
 @interface MovinRouteInstruction : NSObject
+
 /**
  * Gets the (feature) type of this instruction.
  */
@@ -55,25 +56,11 @@ FOUNDATION_EXPORT NSString* _Nonnull const MovinRouteInstructionFeatureToDestina
  * Gets a (translatable) textual representation of this instruction.
  */
 @property(nonnull, readonly) MovinTranslatableString* text;
-/**
- * Initializes a new MovinRouteInstruction object with the specified JSON data.
- *
- * @param json The JSON data.
- * @return A MovinRouteInstruction object with the specified JSON data.
- */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)json;
 
 /**
- * Initializes a new MovinRouteInstruction object with the specified type, indicator, path index and text.
- *
- * @param type The type of the instruction.
- * @param indicator The indicator for the instruction.
- * @param pathIndex The index of the way point within the path.
- * @param text The textual representation of the instruction.
- * @return A MovinRouteInstruction object with the specified type, indicator, path index and text.
+ * This class should not be manually initialized.
+ * :nodoc:
  */
-- (nonnull id)initWithType:(nonnull NSString*)type
-              andIndicator:(MovinRouteInstructionIndicator)indicator
-              andPathIndex:(uint)pathIndex
-                   andText:(nonnull MovinTranslatableString*)text;
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
 @end

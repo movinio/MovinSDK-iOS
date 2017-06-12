@@ -75,7 +75,7 @@ typedef void(^ServerVersionCallback)(NSString* _Nullable version);
  * Initializes the MovinSDK, which validates the given customer and apikey. The device will be checked for compatibility with Bluetooth Low Energy and some primary components are initialized.
  *
  * @param customer The customer name, provided by Movin
- * @param apikey The apikey associated with this customer, either provided by Movin or generated in the Movin portal
+ * @param apikey The API key associated with this customer, either provided by Movin or generated in the Movin portal
  * @param callback The block called once the initialization finished. Provides a boolean whether it has succeeded and if it has not succeeded an NSError containing the error which occurred.
  *
  * @code

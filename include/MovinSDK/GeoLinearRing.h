@@ -14,10 +14,16 @@
  * Represents a single component (ring) of a polygon.
  */
 @interface GeoLinearRing : GeoShape
+
 /**
  * Contains the points of this ring.
  */
 @property(readonly, nonnull) NSArray<GeoLatLng*>* points;
+
+/**
+ * Use initWithPoints: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializes a GeoLinearRing with the specified points.
@@ -33,7 +39,7 @@
  * @param points The points to initialize the ring with.
  * @return A newly created GeoLinearRing object containing the specified points.
  */
-+ (nonnull GeoLinearRing *)ringWithPoints:(nonnull NSArray<GeoLatLng*>*)points;
++ (nonnull GeoLinearRing*)ringWithPoints:(nonnull NSArray<GeoLatLng*>*)points;
 
 /**
  * Returns a value indicating whether this instance and the specified GeoLinearRing.

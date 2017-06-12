@@ -14,6 +14,7 @@
  * Represents a single text-style rule for a layer in a tile style.
  */
 @interface MovinTileStyleTextRule : MovinTileStyleRule
+
 /**
  * Gets font size. How to translate this font size in an actual size is dependent on the
  * `textScaling` property.
@@ -53,4 +54,5 @@
  * Gets the name of the property which contains the translation key which should be displayed by the text entity.
  */
 @property(readonly) NSString* translationKeyProperty;
+
 @end

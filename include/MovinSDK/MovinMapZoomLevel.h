@@ -11,6 +11,7 @@
  * Represents a single available zoom level of a map.
  */
 @interface MovinMapZoomLevel : NSObject
+
 /**
  * Gets the minimum tile row number for this zoom level.
  */
@@ -29,16 +30,9 @@
 @property(readonly) int columnMax;
 
 /**
- * Initializes a new MovinMapZoomLevel object with the specified row min, row max, column min and column max.
- *
- * @param rowMin The minimum tile row number for the zoom level.
- * @param rowMax The maximum tile row number for the zoom level.
- * @param columnMin The minimum tile column number for the zoom level.
- * @param columnMax The maximum tile column number for the zoom level.
- * @return A MovinMapZoomLevel object with the specified row min, row max, column min and column max.
+ * This class should not be manually initialized.
+ * :nodoc:
  */
-- (nonnull id)initWithRowMin:(int)rowMin
-           andRowMax:(int)rowMax
-        andColumnMin:(int)columnMin
-        andColumnMax:(int)columnMax;
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
 @end

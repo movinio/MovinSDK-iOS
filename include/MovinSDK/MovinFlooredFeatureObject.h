@@ -13,6 +13,7 @@
  * Represents a data object with a geometric shape and a floor.
  */
 @interface MovinFlooredFeatureObject : MovinFeatureObject
+
 /**
  * Gets the floor number of this instance.
  */

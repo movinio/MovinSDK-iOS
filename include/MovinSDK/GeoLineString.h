@@ -14,10 +14,16 @@
  * Represents a string of geographical lines.
  */
 @interface GeoLineString : GeoShape
+
 /**
  * Contains the points of this line string.
  */
 @property(readonly, nonnull) NSArray<GeoLatLng*>* points;
+
+/**
+ * Use initWithPoints: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializes a GeoLinearRing with the specified points.

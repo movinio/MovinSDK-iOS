@@ -12,14 +12,15 @@
  * Represents an URL of a POI image for a specific screen scale.
  */
 @interface MovinScaledPOIUrl : MovinDataObject
+
 /**
  * Gets the scale of the POI image which can be found at the URL.
  */
-@property (readonly)double scale;
+@property(readonly) double scale;
 /**
  * Gets the URL of of the POI image.
  */
-@property (readonly)NSString* url;
+@property(readonly) NSString* url;
 
 /**
  * Gets the image this MovinScaledPOIUrl represents.

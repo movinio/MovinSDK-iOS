@@ -12,11 +12,13 @@
 @class GeoLatLng;
 @class FloorPosition;
 @class BeaconIdentifier;
+@class MovinMap;
 
 /**
  * Represents a single beacon.
  */
 @interface MovinBeacon : MovinPositionedDataObject
+
 /**
  * Gets the reference id of this instance.
  */
@@ -25,6 +27,10 @@
  * Gets the group this instance is a member of.
  */
 @property(readonly, weak, nullable) MovinBeaconGroup* group;
+/**
+ * Gets the map this instance is a member of.
+ */
+@property(readonly, nonnull) MovinMap* map;
 /**
  * Gets the beacon code of this instance.
  */
@@ -54,13 +60,4 @@
  */
 @property(readonly, nullable) NSUUID* secureUuid;
 
-/**
- * Initializes a new MovinDataObject object with the specified JSON data and beacon group.
- *
- * @param group The beacon group.
- * @param json The JSON data.
- * @return A MovinDataObject object with the specified JSON data and beacon group.
- */
-- (nonnull id)initWithGroup:(nonnull MovinBeaconGroup*)group
-                    andJson:(nonnull NSDictionary*)json;
 @end

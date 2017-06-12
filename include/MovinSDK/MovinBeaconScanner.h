@@ -65,7 +65,7 @@ withSuccessListener:(nullable void (^)(BOOL success, NSError* _Nullable error))l
  *
  * @param listener The listener that will receive the events.
  */
-- (void)startWithListener:(nonnull id <MovinBeaconScannerListener>)listener;
+- (void)startWithListener:(nonnull id<MovinBeaconScannerListener>)listener;
 
 /**
  * Stops the MovinBeaconScanner for the given listener. Only when no more listeners remain this method will
@@ -73,7 +73,7 @@ withSuccessListener:(nullable void (^)(BOOL success, NSError* _Nullable error))l
  *
  * @param listener The listener that will no longer receive events.
  */
-- (void)stopWithListener:(nonnull id <MovinBeaconScannerListener>)listener;
+- (void)stopWithListener:(nonnull id<MovinBeaconScannerListener>)listener;
 
 /**
  * Adds a silent listener which will be informed of its implemented events. Adding such a listener will not
@@ -81,7 +81,7 @@ withSuccessListener:(nullable void (^)(BOOL success, NSError* _Nullable error))l
  *
  * @param listener The listener to add.
  */
-- (void)addSilentListener:(nonnull id <MovinBeaconScannerListener>)listener;
+- (void)addSilentListener:(nonnull id<MovinBeaconScannerListener>)listener;
 
 /**
  * Removes a silent listener. Removing such a listener will not affect whether or not the MovinBeaconScanner
@@ -89,7 +89,7 @@ withSuccessListener:(nullable void (^)(BOOL success, NSError* _Nullable error))l
  *
  * @param listener The listener to remove.
  */
-- (void)removeSilentListener:(nonnull id <MovinBeaconScannerListener>)listener;
+- (void)removeSilentListener:(nonnull id<MovinBeaconScannerListener>)listener;
 
 /**
  * DEPRECATED: Use isBackgroundEnabled instead.
@@ -102,5 +102,11 @@ withSuccessListener:(nullable void (^)(BOOL success, NSError* _Nullable error))l
  * DEPRECATED: Use isBackgroundEnabled instead.
  */
 - (BOOL)getBackgroundEnabled DEPRECATED_MSG_ATTRIBUTE("Use isBackgroundEnabled instead.");
+
+/**
+ * This class should not be manually initialized.
+ * :nodoc:
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 @end

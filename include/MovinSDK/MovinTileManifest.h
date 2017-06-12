@@ -15,6 +15,7 @@
  * Represents the tile manifest.
  */
 @interface MovinTileManifest : NSObject
+
 /**
  * Gets the version number of the latest tile package.
  */
@@ -31,23 +32,19 @@
  * Gets the available map styles for the map tiles.
  */
 @property(nonnull, readonly) NSDictionary<NSString*, MovinMapStyle*>* styles;
-
 /**
  * Gets the default layer.
  */
 @property(nonnull, readonly) MovinMapLayer* defaultLayer;
-
 /**
  * Gets the default style.
  */
 @property(nonnull, readonly) MovinMapStyle* defaultStyle;
 
 /**
- * Initializes a new MovinTileManifest object with the specified JSON data.
- *
- * @param json The JSON data.
- * @param map The map.
- * @return A MovinTileManifest object with the specified JSON data.
+ * This class should not be manually initialized.
+ * :nodoc:
  */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)json andMap:(nonnull MovinMap*) map;
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
 @end

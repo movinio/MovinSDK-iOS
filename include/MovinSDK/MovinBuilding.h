@@ -16,6 +16,7 @@
  * Represents a building.
  */
 @interface MovinBuilding : MovinFeatureObject
+
 /**
  * Gets the description of this building.
  */
@@ -30,15 +31,5 @@
  * Gets the map this instance is a member of.
  */
 @property(readonly, nullable, weak) MovinMap* map;
-
-/**
- * Initializes a new MovinBuilding object with the specified building and JSON data.
- *
- * @param map The map the building is a member of.
- * @param json The JSON data.
- * @return A MovinBuilding object with the specified building JSON data.
- */
-- (nonnull id)initWithMap:(nonnull MovinMap*)map
-                  andJson:(nonnull NSDictionary*)json;
 
 @end

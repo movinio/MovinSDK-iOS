@@ -20,9 +20,16 @@
 /**
  * Gets the sub type this layer contains the rules of.
  */
-@property(readonly) MovinEntitySubType* subType;
+@property(nonnull, readonly) MovinEntitySubType* subType;
 /**
  * Gets the rules associated with this layer.
  */
-@property(readonly) NSArray<MovinTileStyleRule*>* rules;
+@property(nonnull, readonly) NSArray<MovinTileStyleRule*>* rules;
+
+/**
+ * This class should not be manually initialized.
+ * :nodoc:
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
 @end

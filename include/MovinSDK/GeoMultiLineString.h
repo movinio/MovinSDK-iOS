@@ -14,10 +14,16 @@
  * Represents a collection of geographical line strings.
  */
 @interface GeoMultiLineString : GeoShape
+
 /**
  * Contains the line strings of this collection.
  */
 @property(readonly, nonnull) NSArray<GeoLineString*>* lineStrings;
+
+/**
+ * Use initWithLineStrings: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializes a GeoMultiLineString with the specified line strings.
@@ -34,7 +40,6 @@
  * @return A newly created GeoMultiLineString object containing the specified collection of line strings.
  */
 + (nonnull GeoMultiLineString*)multiLineStringWithLineStrings:(nonnull NSArray<GeoLineString*>*)lineStrings;
-
 
 /**
  * Returns a value indicating whether this instance and the specified GeoMultiLineString.

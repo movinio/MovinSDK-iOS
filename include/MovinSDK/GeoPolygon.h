@@ -14,10 +14,16 @@
  * Represents a geographical polygon.
  */
 @interface GeoPolygon : GeoShape
+
 /**
  * Contains the rings of this polygon.
  */
 @property(readonly, nonnull) NSArray<GeoLinearRing*>* rings;
+
+/**
+ * Use initWithRings: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializes a GeoPolygon with the specified rings.

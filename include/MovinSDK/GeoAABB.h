@@ -63,6 +63,11 @@
 @property(readonly, nonnull) GeoLatLng* bottomRight;
 
 /**
+ * Use initWithOrigin:andWidth:andHeight: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
+/**
  * Initializes a new GeoAABB object with the specified origin and size.
  *
  * @param origin The origin.
@@ -91,8 +96,8 @@
  * @param corner2 A corner position.
  * @return A newly created axis aligned bounding box with the specified corners.
  */
-+ (nonnull GeoAABB*) aabbWithCorner:(nonnull GeoLatLng*)corner1
-                          andCorner:(nonnull GeoLatLng*)corner2;
++ (nonnull GeoAABB*)aabbWithCorner:(nonnull GeoLatLng*)corner1
+                         andCorner:(nonnull GeoLatLng*)corner2;
 
 /**
  * Returns a newly created axis aligned bounding box with the specified origin and size.

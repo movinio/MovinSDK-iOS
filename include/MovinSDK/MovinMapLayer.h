@@ -17,6 +17,7 @@
  * Represents a tile layer of a map.
  */
 @interface MovinMapLayer : NSObject
+
 /**
  * Gets the tile manifest this layer is a member of.
  */
@@ -47,16 +48,6 @@
 @property(readonly) float maxZoomLevel;
 
 /**
- * Initializes a new MovinMapLayer object with the specified JSON data.
- *
- * @param json The JSON data.
- * @param tileManifest The tile manifest.
- * @return A MovinMapLayer object with the specified JSON data.
- */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)json
-           andTileManifest:(nonnull MovinTileManifest*)tileManifest;
-
-/**
  * Create a MovinTileProvider for this layer with the specified style.
  */
 - (nullable MovinTileProvider*)createTileProviderWithStyle:(nonnull MovinMapStyle*)style
@@ -67,4 +58,11 @@
  */
 - (nullable MovinTileProvider*)createTileProviderWithStyleName:(nonnull NSString*)styleName
                                                       andError:(NSError* _Nullable* _Nullable)error;
+
+/**
+ * This class should not be manually initialized.
+ * :nodoc:
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
 @end

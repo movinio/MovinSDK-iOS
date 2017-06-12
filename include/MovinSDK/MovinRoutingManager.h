@@ -20,18 +20,11 @@ typedef void(^RoutingCallback)(MovinRoute* _Nullable route, NSError* _Nullable e
  * Represents the manager for route calculations.
  */
 @interface MovinRoutingManager : NSObject
+
 /**
  * Gets the map used when calculating routes.
  */
 @property(weak, nullable, readonly) MovinMap* map;
-
-/**
- * Initializes a new MovinRoutingManager object with the specified map.
- *
- * @param map The map.
- * @return A MovinRoutingManager object with the specified map.
- */
-- (nonnull id)initWithMap:(nonnull MovinMap*)map;
 
 /**
  * Calculates a route from a certain point to a certain point with specific instruction features.
@@ -92,4 +85,11 @@ andInstructionFeatures:(nonnull NSArray<NSString*>*)instructionFeatures
 andInstructionFeatures:(nonnull NSArray<NSString*>*)instructionFeatures
   andAccessibilityMode:(BOOL)accessibilityMode
               callback:(nonnull RoutingCallback)callback;
+
+/**
+ * This class should not be manually initialized.
+ * :nodoc:
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
 @end

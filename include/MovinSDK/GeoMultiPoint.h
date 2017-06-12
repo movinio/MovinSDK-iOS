@@ -14,10 +14,16 @@
  * Represents a collection of geographical points.
  */
 @interface GeoMultiPoint : GeoShape
+
 /**
  * Contains the points of this collection.
  */
 @property(readonly, nonnull) NSArray<GeoLatLng*>* points;
+
+/**
+ * Use initWithPoints: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializes a GeoMultiPoint with the specified points.

@@ -1,13 +1,11 @@
 //
-// MovinTranslatableValueSingular.h
+// MovinTranslatableString.h
 // MovinSDK
 //
 // Copyright © 2017 Movin. All rights reserved.
 //
 
-
 #import <Foundation/Foundation.h>
-#import "MovinTranslatableString.h"
 
 @class MovinI18N;
 
@@ -31,6 +29,11 @@
  * Gets the translated value for this string using the language set to the MovinI18N instance.
  */
 @property(nonnull, readonly) NSString* translated;
+
+/**
+ * Use initWithKey:andParameters: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializes a new MovinTranslatableString object with the specified key and parameters.

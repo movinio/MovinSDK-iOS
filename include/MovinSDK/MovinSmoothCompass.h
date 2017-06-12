@@ -16,11 +16,11 @@
  */
 typedef enum MovinCompassOffset {
     /// No compass offset.
-            MovinCompassOffsetNone,
+    MovinCompassOffsetNone,
     /// An offset of the compass heading based on the orientation of the status bar UI.
-            MovinCompassOffsetStatusBar,
+    MovinCompassOffsetStatusBar,
     /// An offset of the compass heading based on the orientation of the current device.
-            MovinCompassOffsetDevice,
+    MovinCompassOffsetDevice,
 } MovinCompassOffset;
 
 /**

@@ -11,6 +11,7 @@
  * Represents a protocol which defines the caching behaviour for a specific data type.
  */
 @interface MovinCacheProtocol : NSObject<NSCoding>
+
 /**
  * Gets a value indicating whether caching is allowed according to this caching protocol.
  */
@@ -115,6 +116,7 @@ andtimeoutWithAvailableCache:(NSTimeInterval)timeoutWithAvailableCache
  * @return A copy of this instance with forcedRefreshRate set to the specified value.
  */
 - (MovinCacheProtocol*)withForcedRefreshRate:(NSTimeInterval)forcedRefreshRate;
+
 /**
  * Returns a copy of this instance with timeout set to the specified value.
  *
@@ -122,6 +124,7 @@ andtimeoutWithAvailableCache:(NSTimeInterval)timeoutWithAvailableCache
  * @return A copy of this instance with timeout set to the specified value.
  */
 - (MovinCacheProtocol*)withTimeout:(NSTimeInterval)timeout;
+
 /**
  * Returns a copy of this instance with timeoutWithAvailableCache set to the specified value.
  *

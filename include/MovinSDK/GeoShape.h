@@ -14,7 +14,8 @@
 /**
  * Represents a geographical shape.
  */
-@interface GeoShape : NSObject <NSCopying, NSCoding>
+@interface GeoShape : NSObject<NSCopying, NSCoding>
+
 /**
  * Gets the bounding box which fits around this instance.
  */

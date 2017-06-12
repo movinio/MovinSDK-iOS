@@ -17,26 +17,33 @@
  * Sets or gets the value that will be passed when the CLLocationManager asks to show heading calibration. Default value
  * is true.
  */
-@property (nonatomic) BOOL shouldDisplayHeadingCalibration;
+@property(nonatomic) BOOL shouldDisplayHeadingCalibration;
 
 /**
  * Returns the singleton instance of the MovinLocationManager.
  *
  * @return The singleton instance.
  */
-+(nonnull MovinLocationManager *) instance;
++ (nonnull MovinLocationManager*)instance;
 
 /**
  * Adds a delegate to the MovinLocationManager.
  *
  * @param delegate The delegate to add.
  */
--(void) addDelegate:(nonnull id<CLLocationManagerDelegate>) delegate;
+- (void)addDelegate:(nonnull id<CLLocationManagerDelegate>)delegate;
+
 /**
  * Removes a delegate from the MovinLocationManager.
  *
  * @param delegate The delegate to remove.
  */
--(void) removeDelegate:(nonnull id<CLLocationManagerDelegate>) delegate;
+- (void)removeDelegate:(nonnull id<CLLocationManagerDelegate>)delegate;
+
+/**
+ * This class should not be manually initialized.
+ * :nodoc:
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 @end

@@ -16,6 +16,7 @@
  * Represents a tile style.
  */
 @interface MovinTileStyle : MovinDataObject
+
 /**
  * Gets the layers of this tile style.
  */
@@ -27,5 +28,12 @@
  * @param subType The sub type to find the layer for.
  * @returns The found layer or nil if no layer could be found.
  */
--(nullable MovinTileStyleLayer*) getLayerForSubType:(nonnull MovinEntitySubType*)subType;
+- (nullable MovinTileStyleLayer*)getLayerForSubType:(nonnull MovinEntitySubType*)subType;
+
+/**
+ * This class should not be manually initialized.
+ * :nodoc:
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
 @end

@@ -144,14 +144,6 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
 @property(nullable, readonly) MovinTileManifest* tileManifest;
 
 /**
- * Initializes a new MovinMap object with the specified JSON data.
- *
- * @param json The JSON data.
- * @return A MovinMap object with the specified JSON data.
- */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)json;
-
-/**
  * Attempts to create a positioning engine. If it succeeds, a MovinPositioningEngine is returned, otherwise
  * the given NSError pointer points to the NSError describing what went wrong.
  *

@@ -14,6 +14,7 @@
  * Represents a data object with a geometric shape.
  */
 @interface MovinFeatureObject : MovinDataObject
+
 /**
  * Gets the geometric shape of this instance.
  */

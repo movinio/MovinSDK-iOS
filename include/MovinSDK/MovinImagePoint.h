@@ -28,6 +28,11 @@
 @property(readonly) CGPoint CGPoint;
 
 /**
+ * Use initWithX:andY: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
+/**
  * Initializes a new MovinImagePoint object with the specified x and y coordinates.
  *
  * @param x The X-coordinate.

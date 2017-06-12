@@ -12,6 +12,7 @@
  * Represents a font family.
  */
 @interface MovinFontFamily : MovinDataObject
+
 /**
  * Gets the URL of the font.
  */

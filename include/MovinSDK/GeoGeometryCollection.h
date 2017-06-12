@@ -12,10 +12,16 @@
  * Represents a collection of geometries.
  */
 @interface GeoGeometryCollection : GeoShape
+
 /**
  * Contains the geometries of this geometry collection.
  */
 @property(readonly, nonnull) NSArray<GeoShape*>* geometries;
+
+/**
+ * Use initWithGeometries: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializes a GeoGeometryCollection with the specified geometries.

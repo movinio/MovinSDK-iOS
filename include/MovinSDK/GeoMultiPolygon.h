@@ -14,10 +14,16 @@
  * Represents a collection of geographical polygons.
  */
 @interface GeoMultiPolygon : GeoShape
+
 /**
  * Contains the polygons of this collection.
  */
 @property(readonly, nonnull) NSArray<GeoPolygon*>* polygons;
+
+/**
+ * Use initWithPolygons: instead.
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 /**
  * Initializes a GeoMultiPolygon with the specified polygons.

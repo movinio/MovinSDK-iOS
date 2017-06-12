@@ -31,26 +31,6 @@
 @property(readonly) double distance;
 
 /**
- * Initializes a new MovinRoute object with the specified JSON data.
- *
- * @param json The JSON data.
- * @return A MovinRoute object with the specified JSON data.
- */
-- (nonnull id)initWithJson:(nonnull NSDictionary*)json;
-
-/**
- * Initializes a new MovinRoute object with the specified path, distance and instructions.
- *
- * @param path The path (way points) of the route.
- * @param distance The distance of the route.
- * @param instructions The instructions of the route.
- * @return A MovinRoute object with the specified path, distance and instructions.
- */
-- (nonnull id)initWithPath:(nonnull NSArray<FloorPosition*>*)path
-               andDistance:(double)distance
-           andInstructions:(nonnull NSArray<MovinRouteInstruction*>*)instructions;
-
-/**
  * Snaps a position to the path of this route.
  *
  * @param position The position to snap.
@@ -71,5 +51,11 @@
 - (nonnull FloorPosition*)snapToRoute:(nonnull FloorPosition*)position
                         withThreshold:(double)meter
                          andPathIndex:(nullable uint*)index;
+
+/**
+ * This class should not be manually initialized.
+ * :nodoc:
+ */
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
 @end

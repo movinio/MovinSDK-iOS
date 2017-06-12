@@ -13,6 +13,7 @@
  * A graphical interface of a floor switcher button.
  */
 @interface MovinFloorSwitcher : UIView
+
 /**
  * Gets or sets the background color of the current floor indicator and the floor switcher button.
  */
@@ -65,6 +66,7 @@
  * Gets or sets a value indicating whether the floor switcher is enabled and visible.
  */
 @property BOOL enabled;
+
 /**
  * Initializes a new MovinFloorSwitcher object with the specified tile provider.
  *
