@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MovinSDK"
-  s.version      = "2.7.3"
+  s.version      = "2.7.5"
   s.summary      = "Static iOS library of the MovinSDK."
   s.description  = <<-DESC
 This repository contains the static iOS library of the MovinSDK.
