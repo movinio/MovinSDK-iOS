@@ -16,7 +16,7 @@
 @interface MovinRoute : NSObject
 
 /**
- * Gets the path (a list of way points) of this route
+ * Gets the path (a list of way points) of this route.
  */
 @property(nonnull, readonly) NSArray<FloorPosition*>* path;
 

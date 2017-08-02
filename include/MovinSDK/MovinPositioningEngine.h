@@ -14,7 +14,7 @@
 @class MovinBeaconScanner;
 
 /**
- * Contains the position determining logic.
+ * Represents an engine for determining the position of the device.
  */
 @interface MovinPositioningEngine : MovinPositioner
 

@@ -13,7 +13,7 @@
 @interface MovinDataObject : NSObject
 
 /**
- * Gets the identity of this instance.
+ * Gets the identifier of this instance.
  */
 @property(readonly, nonnull) NSString* id;
 /**

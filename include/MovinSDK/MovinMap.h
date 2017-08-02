@@ -89,7 +89,7 @@ typedef void(^TileManifestCallback)(MovinTileManifest* _Nullable tileManifest, N
  */
 @property(readonly) double highestFloorNumber;
 /**
- * Gets an dictionary filled with the sub types available in this map.
+ * Gets a dictionary filled with the sub types available in this map.
  */
 @property(readonly, nonnull) NSDictionary<NSString*, MovinEntitySubType*>* subTypes;
 /**

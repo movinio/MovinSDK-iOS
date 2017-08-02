@@ -39,7 +39,7 @@
  */
 @property(nonnull, readonly) NSDictionary<NSNumber*, MovinMapZoomLevel*>* zoomLevels;
 /**
- * Gets minimum zoom level available for this layer.
+ * Gets the minimum zoom level available for this layer.
  */
 @property(readonly) float minZoomLevel;
 /**

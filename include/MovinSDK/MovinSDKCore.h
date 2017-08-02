@@ -185,9 +185,9 @@ typedef void(^ServerVersionCallback)(NSString* _Nullable version);
                               to:(nonnull MovinCacheProtocol*)cacheProtocol;
 
 /**
- * Gets a value indicating whether caching has been enabled fo the specified data type.
+ * Gets the cache protocol for the specified data type.
  *
- * @return Whether or not caching has been enabled for the specified data type.
+ * @return The cache protocol for the specified data type.
  */
 + (nonnull MovinCacheProtocol*)getCacheProtocolForType:(MovinCacheableData)type;
 

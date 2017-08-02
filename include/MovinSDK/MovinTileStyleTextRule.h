@@ -54,5 +54,4 @@
  * Gets the name of the property which contains the translation key which should be displayed by the text entity.
  */
 @property(readonly) NSString* translationKeyProperty;
-
 @end

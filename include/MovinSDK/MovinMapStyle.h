@@ -23,12 +23,12 @@
 @property(nullable, readonly, weak) MovinTileManifest* tileManifest;
 
 /**
- * Gets the associated map style.
+ * Gets the associated tile style.
  */
 @property(nullable, readonly) MovinTileStyle* tileStyle;
 
 /**
- * Gets the name of this layer.
+ * Gets the name of this style.
  */
 @property(nonnull, readonly) NSString* name;
 

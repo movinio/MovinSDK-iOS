@@ -11,7 +11,7 @@
 @protocol MovinBeaconScannerListener;
 
 /**
- * Scans for beacons in the area.
+ * Represents a scanner for discovering nearby beacons.
  */
 @interface MovinBeaconScanner : NSObject
 

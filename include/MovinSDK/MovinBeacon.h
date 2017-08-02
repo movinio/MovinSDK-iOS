@@ -48,7 +48,7 @@
  */
 @property(readonly, nonnull) NSString* type;
 /**
- * Gets whether or not the beacon's UUID, major and minor are shuffled.
+ * Gets a value indicating whether or not the beacon's UUID, major and minor are shuffled.
  */
 @property(readonly) BOOL shuffled;
 /**
