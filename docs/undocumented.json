@@ -1,47 +1,47 @@
 {
   "warnings": [
     {
-      "file": "/Users/timpotze/projects/XcodeProjects/sdk/build/docs/MovinSDK/MovinCacheProtocol.h",
+      "file": "/Users/timpotze/projects/sdk-ios/build/docs/MovinSDK/MovinCacheProtocol.h",
       "line": 145,
       "symbol": "MovinCacheProtocol.-initWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/timpotze/projects/XcodeProjects/sdk/build/docs/MovinSDK/MovinCacheProtocol.h",
+      "file": "/Users/timpotze/projects/sdk-ios/build/docs/MovinSDK/MovinCacheProtocol.h",
       "line": 147,
       "symbol": "MovinCacheProtocol.-encodeWithCoder:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/timpotze/projects/XcodeProjects/sdk/build/docs/MovinSDK/MovinSmoothCompass.h",
+      "file": "/Users/timpotze/projects/sdk-ios/build/docs/MovinSDK/MovinSmoothCompass.h",
       "line": 17,
       "symbol": "MovinCompassOffset",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/timpotze/projects/XcodeProjects/sdk/build/docs/MovinSDK/MovinTileStyleRule.h",
+      "file": "/Users/timpotze/projects/sdk-ios/build/docs/MovinSDK/MovinTileStyleRule.h",
       "line": 16,
       "symbol": "MovinTileStyleScaling",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/timpotze/projects/XcodeProjects/sdk/build/docs/MovinSDK/MovinTileStyleRule.h",
+      "file": "/Users/timpotze/projects/sdk-ios/build/docs/MovinSDK/MovinTileStyleRule.h",
       "line": 27,
       "symbol": "MovinTileStyleRotation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/timpotze/projects/XcodeProjects/sdk/build/docs/MovinSDK/MovinTileStyleRule.h",
+      "file": "/Users/timpotze/projects/sdk-ios/build/docs/MovinSDK/MovinTileStyleRule.h",
       "line": 38,
       "symbol": "MovinTileStyleSymbolizer",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/timpotze/projects/XcodeProjects/sdk"
+  "source_directory": "/Users/timpotze/projects/sdk-ios"
 }
