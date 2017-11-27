@@ -1,6 +1,27 @@
 {
   "warnings": [
     {
+      "file": "/Users/timpotze/projects/movin/sdk-ios/build/docs/MovinSDK/BaseFloorDetector.h",
+      "line": 11,
+      "symbol": "BaseFloorDetector",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/timpotze/projects/movin/sdk-ios/build/docs/MovinSDK/BaseSpaceDetector.h",
+      "line": 23,
+      "symbol": "BaseSpaceDetector.spacePerListener",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/timpotze/projects/movin/sdk-ios/build/docs/MovinSDK/BaseSpaceDetector.h",
+      "line": 24,
+      "symbol": "BaseSpaceDetector.listeners",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/timpotze/projects/movin/sdk-ios/build/docs/MovinSDK/MovinCacheProtocol.h",
       "line": 145,
       "symbol": "MovinCacheProtocol.-initWithCoder:",
@@ -15,10 +36,31 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/timpotze/projects/movin/sdk-ios/build/docs/MovinSDK/MovinFloorDetector.h",
+      "line": 12,
+      "symbol": "MovinFloorDetector",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/timpotze/projects/movin/sdk-ios/build/docs/MovinSDK/MovinFloorDetectorListener.h",
+      "line": 10,
+      "symbol": "MovinFloorDetectorListener",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/timpotze/projects/movin/sdk-ios/build/docs/MovinSDK/MovinSmoothCompass.h",
       "line": 17,
       "symbol": "MovinCompassOffset",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/timpotze/projects/movin/sdk-ios/build/docs/MovinSDK/MovinSpaceDetector.h",
+      "line": 14,
+      "symbol": "MovinSpaceDetector",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"
     },
     {
