@@ -67,6 +67,12 @@
 #import <MovinSDK/MovinPositioningEngine.h>
 #import <MovinSDK/MovinSmoothCompass.h>
 #import <MovinSDK/MovinSmoothCompassDelegate.h>
+#import <MovinSDK/MovinFloorDetector.h>
+#import <MovinSDK/MovinFloorDetectorListener.h>
+#import <MovinSDK/BaseFloorDetector.h>
+#import <MovinSDK/MovinSpaceDetector.h>
+#import <MovinSDK/MovinSpaceDetectorListener.h>
+#import <MovinSDK/BaseSpaceDetector.h>
 
 //
 // Routing
