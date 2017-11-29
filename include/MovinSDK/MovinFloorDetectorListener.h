@@ -18,6 +18,6 @@
  */
 - (void)   floorDetector:(nonnull id<MovinFloorDetector>)floorDetector
 didDetectChangeFromFloor:(nullable NSNumber*)previousFloor
-                 toFloor:(nonnull NSNumber*)newFloor;
+                 toFloor:(double)newFloor;
 
 @end

@@ -36,7 +36,7 @@
  * This method decides whether or not the listeners will be informed.
  * by comparing the new floor with the current floor.
  */
-- (void)detectFloor:(float)newFloor;
+- (void)detectFloor:(double)newFloor;
 
 /**
  * Method to be implemented by inheriting implementations if they need additional resources, apart from map and beacon data.
