@@ -37,7 +37,7 @@
     },
     {
       "file": "/Users/timpotze/projects/movin/sdk-ios/build/docs/MovinSDK/MovinFloorDetector.h",
-      "line": 12,
+      "line": 13,
       "symbol": "MovinFloorDetector",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
       "warning": "undocumented"

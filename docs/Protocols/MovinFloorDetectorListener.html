@@ -398,9 +398,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)MovinFloorDetectorListener(im)didDetectFloor:andNewFloor:"></a>
-                    <a name="//apple_ref/objc/Method/-didDetectFloor:andNewFloor:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)MovinFloorDetectorListener(im)didDetectFloor:andNewFloor:">-didDetectFloor:andNewFloor:</a>
+                    <a name="/c:objc(pl)MovinFloorDetectorListener(im)floorDetector:didDetectChangeFromFloor:toFloor:"></a>
+                    <a name="//apple_ref/objc/Method/-floorDetector:didDetectChangeFromFloor:toFloor:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)MovinFloorDetectorListener(im)floorDetector:didDetectChangeFromFloor:toFloor:">-floorDetector:didDetectChangeFromFloor:toFloor:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -408,20 +408,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Is called when the MovinFloorDetector detected a floor change</p>
+                        <p>Is called when the MovinFloorDetector detected a floor change.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didDetectFloor</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">previousFloor</span>
-           <span class="nf">andNewFloor</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">newFloor</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">floorDetector</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/MovinFloorDetector.html">MovinFloorDetector</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">floorDetector</span>
+    <span class="nf">didDetectChangeFromFloor</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">previousFloor</span>
+                     <span class="nf">toFloor</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">newFloor</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">didDetectFloor</span><span class="p">(</span><span class="n">_</span> <span class="nv">previousFloor</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="p">?,</span> <span class="n">andNewFloor</span> <span class="nv">newFloor</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">floorDetector</span><span class="p">(</span><span class="n">_</span> <span class="nv">floorDetector</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span> <span class="n">didDetectChangeFromFloor</span> <span class="nv">previousFloor</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="p">?,</span> <span class="n">toFloor</span> <span class="nv">newFloor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -432,12 +433,24 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>floorDetector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floor detector.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>previousFloor</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The previous selected floor, or nil if a floor is selected for the first time</p>
+                                  <p>The previously selected floor, or nil if a floor is selected for the first time.</p>
                                 </div>
                               </td>
                             </tr>
@@ -449,7 +462,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The floor that is detected</p>
+                                  <p>The floor that is detected.</p>
                                 </div>
                               </td>
                             </tr>

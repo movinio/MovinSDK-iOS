@@ -472,7 +472,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes the MovinFloorDetector</p>
+                        <p>Initializes the MovinFloorDetector.</p>
 
                       </div>
                       <div class="declaration">
@@ -500,12 +500,44 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to invoke when the initialization finished</p>
+                                  <p>The block to invoke when the initialization finished.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)MovinFloorDetector(im)start"></a>
+                    <a name="//apple_ref/objc/Method/-start" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)MovinFloorDetector(im)start">-start</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts the MovinFloorDetector.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">start</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -523,7 +555,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Starts the MovinFloorDetector and informs the given listener of each floor change</p>
+                        <p>Starts the MovinFloorDetector and informs the given listener of each floor change.</p>
 
                       </div>
                       <div class="declaration">
@@ -559,6 +591,39 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)MovinFloorDetector(im)stop"></a>
+                    <a name="//apple_ref/objc/Method/-stop" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)MovinFloorDetector(im)stop">-stop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stops the MovinFloorDetector.
+The underlying system will only stop when all listeners have been stopped and [MovinFloorDetector stop] has been called as many times as [MovinFloorDetector start].</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stop</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)MovinFloorDetector(im)stopWithListener:"></a>
                     <a name="//apple_ref/objc/Method/-stopWithListener:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)MovinFloorDetector(im)stopWithListener:">-stopWithListener:</a>
@@ -569,8 +634,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Stops informing the given listener of floor change events
- The underlying system will only stop when all listeners have been stopped</p>
+                        <p>Stops informing the given listener of floor change events.
+ The underlying system will only stop when all listeners have been stopped and [MovinFloorDetector stop] has been called as many times as [MovinFloorDetector start].</p>
 
                       </div>
                       <div class="declaration">
@@ -616,7 +681,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Checks if the MovinFloorDetector is started for the given listener</p>
+                        <p>Checks if the MovinFloorDetector is started for the given listener.</p>
 
                       </div>
                       <div class="declaration">
@@ -639,7 +704,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The listener to check for</p>
+                                  <p>The listener to check for.</p>
                                 </div>
                               </td>
                             </tr>
@@ -648,7 +713,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Whether or not the MovinFloorDetector is started or not</p>
+                        <p>Whether or not the MovinFloorDetector is started or not.</p>
                       </div>
                     </section>
                   </div>
