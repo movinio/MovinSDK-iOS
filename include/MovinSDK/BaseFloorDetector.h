@@ -8,15 +8,15 @@
 #import <Foundation/Foundation.h>
 #import "MovinFloorDetector.h"
 
-@interface BaseFloorDetector : NSObject <MovinFloorDetector>
+@interface BaseFloorDetector : NSObject<MovinFloorDetector>
 
 /**
- * Gets the map to detect floors for
+ * Gets the map to detect floors for.
  */
 @property(readonly, nonnull) MovinMap* map;
 
 /**
- * Gets the list that contains all listeners
+ * Gets the list that contains all listeners.
  */
 @property(nonnull) NSMutableArray<id<MovinFloorDetectorListener>>* listeners;
 
@@ -26,32 +26,32 @@
 @property(readonly, nullable) NSNumber* currentFloor;
 
 /**
- * Creates a new BaseFloorDetector
- * @param The map for which to detect floors
+ * Creates a new BaseFloorDetector.
+ * @param The map for which to detect floors.
  */
--(nonnull id) initWithMap:(nonnull MovinMap*) map;
+- (nonnull id)initWithMap:(nonnull MovinMap*)map;
 
 /**
  * Called by the implementations whenever they detect a new floor.
- * This method decides whether or not the listeners will be informed
+ * This method decides whether or not the listeners will be informed.
  * by comparing the new floor with the current floor.
  */
--(void) detectFloor:(float) newFloor;
+- (void)detectFloor:(float)newFloor;
 
 /**
- * Method to be implemented by inheriting implementations if they need additional resources, apart from map and beacon data
- * @param listener The listener to inform
+ * Method to be implemented by inheriting implementations if they need additional resources, apart from map and beacon data.
+ * @param listener The listener to inform.
  */
--(void) loadCustomResources:(nonnull void (^)(BOOL success, NSError* _Nullable error)) listener;
+- (void)loadCustomResources:(nonnull void (^)(BOOL success, NSError* _Nullable error))listener;
 
 /**
- * Called when the FloorDetector needs to start
+ * Called when the FloorDetector needs to start.
  */
--(void) onStart;
+- (void)onStart;
 
 /**
- * Called when the FloorDetector needs to stop
+ * Called when the FloorDetector needs to stop.
  */
--(void) onStop;
+- (void)onStop;
 
 @end

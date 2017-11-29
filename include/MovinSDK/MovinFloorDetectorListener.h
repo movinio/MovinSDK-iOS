@@ -10,11 +10,14 @@
 @protocol MovinFloorDetectorListener
 
 /**
- * Is called when the MovinFloorDetector detected a floor change
+ * Is called when the MovinFloorDetector detected a floor change.
  *
- * @param previousFloor The previous selected floor, or nil if a floor is selected for the first time
- * @param newFloor The floor that is detected
+ * @param floorDetector The floor detector.
+ * @param previousFloor The previously selected floor, or nil if a floor is selected for the first time.
+ * @param newFloor The floor that is detected.
  */
-- (void) didDetectFloor:(nullable NSNumber*) previousFloor andNewFloor:(nonnull NSNumber*) newFloor;
+- (void)   floorDetector:(nonnull id<MovinFloorDetector>)floorDetector
+didDetectChangeFromFloor:(nullable NSNumber*)previousFloor
+                 toFloor:(nonnull NSNumber*)newFloor;
 
 @end
