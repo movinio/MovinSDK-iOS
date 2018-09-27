@@ -199,6 +199,20 @@ typedef void(^ServerVersionCallback)(NSString* _Nullable version);
 + (void)setAnalyticsEnabled:(BOOL)toggle;
 
 /**
+ * Sets a value indicating how many entities will be rendered inside the maps viewport
+ * After max has been reached no more entities will be loaded. Be aware of the performance
+ * penalty for rendering too many entities at once
+ *
+ * @param max A value indicating whether the analytics service should be enabled.
+ */
++ (void)setMaxEntitiesInViewport:(NSInteger)max;
+
+/**
+ * Gets a value indicating how many entities will be rendered inside the maps viewport.
+*/
++ (NSInteger)getMaxEntitiesInViewport;
+
+/**
  * Returns the version number of the Movin SDK.
  *
  * @return The version number of the Movin SDK.
