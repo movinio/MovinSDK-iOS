@@ -94,6 +94,12 @@ typedef void(^ServerVersionCallback)(NSString* _Nullable version);
                andApikey:(nonnull NSString*)apikey
              andCallback:(nullable void (^)(BOOL success, NSError* _Nullable error))callback;
 
+
+/**
+ * Sets the hostname for the MovinSDK.
+ */
++ (void)setHostName:(nonnull NSString*)hostName;
+
 /**
  * Resets the state of the MovinSDK.
  */
